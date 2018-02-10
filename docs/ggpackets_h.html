@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./ggpackets.h</title>
+<!-- Source: ./ggpackets.h -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="./masterindex.html#top">Index</a>
+<a class="menuitem" href="./robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="./robo_functions.html#top">Functions</a>
+<a class="menuitem" href="./robo_modules.html#top">Modules</a>
+<a class="menuitem" href="./robo_strutures.html#top">Structures</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li><a href="#robo9">GGLib/ggpackets.h</a></li>
+<li><a href="#robo85">ggpackets.h/GGP_TYPE_#?</a></li>
+<li><a href="#robo86">ggpackets.h/GGPHeader</a></li>
+<li><a href="#robo87">ggpackets.h/GGPLoginOK</a></li>
+<li><a href="#robo88">ggpackets.h/GGPMultilogonInfo</a></li>
+<li><a href="#robo89">ggpackets.h/GGPPubDirInfo</a></li>
+<li><a href="#robo90">ggpackets.h/GGPRecvMsg</a></li>
+<li><a href="#robo91">ggpackets.h/GGPStatusChange</a></li>
+<li><a href="#robo92">ggpackets.h/GGPTypingNotify</a></li>
+<li><a href="#robo93">ggpackets.h/GGPUserList</a></li>
+<li><a href="#robo94">ggpackets.h/GGPUsersData</a></li>
+<li><a href="#robo95">ggpackets.h/GGPWelcome</a></li>
+</ul>
+<hr />
+<a name="GGLib2fggpackets2eh"></a>
+<a name="robo9"></a><h2>GGLib/ggpackets.h [ Modules ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ggpackets.h</strong> -- Plik zawierający definicje pakietów sieci GG oraz funkcji je obsługujących.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Filip Maryjański
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Deklaracje struktur opisujących pakiety sieci GG.
+    Deklaracje funkcji przeznaczonych do obsługi pakietów sieci GG.
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGP5fTYPE5f233f"></a>
+<a name="robo85"></a><h2>ggpackets.h/GGP_TYPE_#? [ Definitions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGP_TYPE_#?</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Typy pakietów sieci GG.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo86">GGPHeader</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">#define</span> GGP_TYPE_WELCOME                <span class="sign">(</span>0x0001UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_GGLOGIN                <span class="sign">(</span>0x0031UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_LOGIN_OK               <span class="sign">(</span>0x0035UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_LOGIN_FAIL             <span class="sign">(</span>0x0009UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_LOGIN_FAIL2            <span class="sign">(</span>0x0043UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_LIST_EMPTY             <span class="sign">(</span>0x0012UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_NOTIFY_NORMAL          <span class="sign">(</span>0x000FUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_NOTIFY_LAST            <span class="sign">(</span>0x0010UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_STATUS_CHANGE          <span class="sign">(</span>0x0036UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_LIST_STATUS            <span class="sign">(</span>0x0037UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_NEW_STATUS             <span class="sign">(</span>0x0038UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_PING                   <span class="sign">(</span>0x0008UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_TYPING_NOTIFY          <span class="sign">(</span>0x0059UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_MSG_ACK                <span class="sign">(</span>0x0046UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_RECV_MSG               <span class="sign">(</span>0x002EUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_RECV_OWN_MSG           <span class="sign">(</span>0x005AUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_SEND_MSG               <span class="sign">(</span>0x002DUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_SEND_MSG_OLD           <span class="sign">(</span>0x000BUL<span class="sign">)</span> <span class="comment">/* ze starej wersji protokołu, nadal używane przy przesyłaniu obrazków */</span>
+<span class="keyword">#define</span> GGP_TYPE_ADD_NOTIFY             <span class="sign">(</span>0x000DUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_REMOVE_NOTIFY          <span class="sign">(</span>0x000EUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_USER_DATA              <span class="sign">(</span>0x0044UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_USER_LIST_REQ          <span class="sign">(</span>0x0040UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_USER_LIST_REPLY        <span class="sign">(</span>0x0041UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_MULTILOGON_INFO        <span class="sign">(</span>0x005BUL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_MULTILOGON_DISCONNECT  <span class="sign">(</span>0x0062UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_PUBDIR_REQUEST         <span class="sign">(</span>0x0014UL<span class="sign">)</span>
+<span class="keyword">#define</span> GGP_TYPE_PUBDIR_RESPONSE        <span class="sign">(</span>0x000eUL<span class="sign">)</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPHeader"></a>
+<a name="robo86"></a><h2>ggpackets.h/GGPHeader [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPHeader</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje nagłówek pakietu sieci GG.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggph_Type -- typ pakietu;
+    - ggph_Length -- długość reszty pakietu (w bajtach).
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPHeader</strong>
+<span class="sign">{</span>
+        ULONG ggph_Type<span class="sign">;</span>
+        ULONG ggph_Length<span class="sign">;</span>
+<span class="sign">}</span> GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPLoginOK"></a>
+<a name="robo87"></a><h2>ggpackets.h/GGPLoginOK [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPLoginOK</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet potwierdzający zalogowanie do sieci GG.
+    Pakiet ten jest wysyłany przez serwer automatycznie po udanym logowaniu.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpl_Unknown -- nieznane pole.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo73">GGPacketHandlerLogin()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPLoginOK</strong>
+<span class="sign">{</span>
+        ULONG ggpl_Unknown<span class="sign">;</span>
+<span class="sign">}</span> GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPMultilogonInfo"></a>
+<a name="robo88"></a><h2>ggpackets.h/GGPMultilogonInfo [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPMultilogonInfo</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet otrzymania danych o liście kontaktów.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpmi_ClientsNo -- ilość równolegle zalogowanych klientów;
+    - ggpul_Data[] -- tablica struktur opisujących równolegle zalogowane klienty.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo74">GGPacketHandlerMultilogonInfo()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPMultilogonInfo</strong>
+<span class="sign">{</span>
+        ULONG ggpmi_ClientsNo<span class="sign">;</span>
+        UBYTE ggpmi_Data<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPPubDirInfo"></a>
+<a name="robo89"></a><h2>ggpackets.h/GGPPubDirInfo [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPPubDirInfo</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet odpowiedzi na zapytanie o katalogu publicznym.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggppdi_Type -- typ odpowiedzi:
+     - GG_PUBDIR_SEARCH_REPLY -- odpowiedź na wyszukiwanie;
+    - ggppdi_Seq -- numer sekwencyjny;
+    - ggppdi_Data -- treść odpowiedzi.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    GGP_PUBDIR_#?, <a href="./ggpackets_c.html#robo75">GGPacketHandlerPubDirInfo()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPPubDirInfo</strong>
+<span class="sign">{</span>
+        UBYTE ggppdi_Type<span class="sign">;</span>
+        ULONG ggppdi_Seq<span class="sign">;</span>
+        UBYTE ggppdi_Data<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPRecvMsg"></a>
+<a name="robo90"></a><h2>ggpackets.h/GGPRecvMsg [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPRecvMsg</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet otrzymania nowej wiadomości.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggprm_Uin -- numer GG nadawcy;
+    - ggprm_Seq -- numer sekwencyjny;
+    - ggprm_Time -- czas nadania (UTC, Unix era);
+    - ggprm_Class -- klasa wiadomości;
+    - ggprm_OffsetPlain -- położenie treści czystym tekstem;
+    - ggprm_OffsetAttrs -- położenie atrybutów;
+    - ggprm_HtmlTxt -- treść w formacie HTML (zakończona 0x00).
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo76">GGPacketHandlerRecvMsg()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPRecvMsg</strong>
+<span class="sign">{</span>
+        ULONG ggprm_Uin<span class="sign">;</span>
+        ULONG ggprm_Seq<span class="sign">;</span>
+        ULONG ggprm_Time<span class="sign">;</span>
+        ULONG ggprm_Class<span class="sign">;</span>
+        ULONG ggprm_OffsetPlain<span class="sign">;</span>
+        ULONG ggprm_OffsetAttrs<span class="sign">;</span>
+        UBYTE ggprm_HtmlTxt<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPStatusChange"></a>
+<a name="robo91"></a><h2>ggpackets.h/GGPStatusChange [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPStatusChange</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet informujący o zmiane statusu przez kontakt.
+    Pakiet ten jest wysyłany przez serwer automatycznie jeśli ktoś z listy
+    kontaktów przesłanej do serwera zmieni swój status.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpsc_Uin -- uin użytkownika zmieniającego status;
+    - ggpsc_Status -- nowo ustawiony status;
+    - ggpsc_Features -- opcje protokołu obsługiwane przez danego użytkownika;
+    - ggpsc_Unused -- nieużywane pola (pozostałości po starych wersjach protokołu, zawsze zera);
+    - ggpsc_ImageSize -- maksymalny rozmiar obrazków odbieranych przez danego użytkownika;
+    - ggpsc_Flags -- flagi statusu (takie jak przy logowaniu do sieci);
+    - ggpsc_DescLen -- długość opisu;
+    - ggpsc_Description -- opis, nie musi wystąpić (jeśli brak to ggpsc_DescLen == 0).
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo82">GGPacketHandlerWelcome()</a>, <a href="./ggdefs_h.html#robo16">GG_STATUS_#?</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPStatusChange</strong>
+<span class="sign">{</span>
+        ULONG ggpsc_Uin<span class="sign">;</span>
+        ULONG ggpsc_Status<span class="sign">;</span>
+        ULONG ggpsc_Features<span class="sign">;</span>
+        UBYTE ggpsc_Unused<span class="sign">[</span>6<span class="sign">]</span><span class="sign">;</span>
+        UBYTE ggpsc_ImageSize<span class="sign">;</span>
+        UBYTE ggpsc_Unknown<span class="sign">;</span>
+        ULONG ggpsc_Flags<span class="sign">;</span>
+        ULONG ggpsc_DescLen<span class="sign">;</span>
+        UBYTE ggpsc_Description<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span> GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPTypingNotify"></a>
+<a name="robo92"></a><h2>ggpackets.h/GGPTypingNotify [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPTypingNotify</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet powiadomienia o pisaniu ("pisak" w oryginalnym
+    kliencie). 
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggptn_Type -- długość wpisanego w pole wysyłki tekstu;
+    - ggptn_Uin -- uin użytkownika, który do nas pisze.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo78">GGPacketHandlerTypingNotify()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPTypingNotify</strong>
+<span class="sign">{</span>
+        USHORT ggptn_Type<span class="sign">;</span>
+        ULONG ggptn_Uin<span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPUserList"></a>
+<a name="robo93"></a><h2>ggpackets.h/GGPUserList [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPUserList</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet otrzymania danych o liście kontaktów.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpul_Type -- rodzaj pakietu:
+       - 0x00 -- w ggpul_Data znajduje się lista kontaktów;
+       - 0x10 -- potwierdzenie przyjęcia nowej listy;
+       - 0x12 -- odmowa przyjęcia nowej listy.
+    - ggpul_Version -- numer wersji konkaktów aktualnie przechowywanej przez serwer;
+    - ggpul_Format -- rodzaj formatu listy kontaktów:
+       - 0x02 -- lista w XML-u skompresowana algorytmem Deflate.
+    - ggpul_Data[] -- dane w zależności od ggpul_Type.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo81">GGPacketHandlerUserListReply()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPUserList</strong>
+<span class="sign">{</span>
+        UBYTE ggpul_Type<span class="sign">;</span>
+        ULONG ggpul_Version<span class="sign">;</span>
+        UBYTE ggpul_Format<span class="sign">;</span>
+        UBYTE ggpul_Dummy<span class="sign">;</span>
+        UBYTE ggpul_Data<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPUsersData"></a>
+<a name="robo94"></a><h2>ggpackets.h/GGPUsersData [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPUsersData</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet otrzymania danych o kontaktach.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpud_Type -- typ danych;
+    - ggpud_UsersNo -- ilość opisywanych użytkowników;
+    - ggpud_Data[] -- tablica struktur <a href="./gglib_h.html#robo63">GGUserData</a>.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo80">GGPacketHandlerUserData()</a>, <a href="./gglib_h.html#robo63">GGUserData</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPUsersData</strong>
+<span class="sign">{</span>
+        ULONG ggpud_Type<span class="sign">;</span>
+        ULONG ggpud_UsersNo<span class="sign">;</span>
+        UBYTE ggpud_Data<span class="sign">[</span><span class="sign">]</span><span class="sign">;</span>
+<span class="sign">}</span>GG_PACKED<span class="sign">;</span>
+</pre>
+
+<hr />
+<a name="ggpackets2eh2fGGPWelcome"></a>
+<a name="robo95"></a><h2>ggpackets.h/GGPWelcome [ Structures ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGPWelcome</strong>
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Struktura opisuje pakiet powitania sieci GG.
+    Pakiet ten jest wysyłany przez serwer automatycznie po nawiązaniu połączenia.
+</pre>
+<p class="item_name">ATTRIBUTES</p>
+<pre>    - ggpw_Key -- klucz szyfrowania hasła.
+</pre>
+<p class="item_name">SEE ALSO</p>
+<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo82">GGPacketHandlerWelcome()</a>
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source"><span class="keyword">struct</span> <strong>GGPWelcome</strong>
+<span class="sign">{</span>
+        ULONG ggpw_Key<span class="sign">;</span>
+<span class="sign">}</span> GG_PACKED<span class="sign">;</span>
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./ggpackets.h with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+</p>
+</div> <!-- footer -->
+</body>
+</html>

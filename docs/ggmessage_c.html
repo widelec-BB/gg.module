@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./robodoc.css" type="text/css" />
+<title>./ggmessage.c</title>
+<!-- Source: ./ggmessage.c -->
+<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+</head>
+<body>
+<div id="logo">
+<a name="robo_top_of_doc"></a>
+</div> <!-- logo -->
+<div id="navigation">
+<a class="menuitem" href="./toc_index.html#top">Table of Contents</a>
+<a class="menuitem" href="./robo_sourcefiles.html#top">Sourcefiles</a>
+<a class="menuitem" href="./masterindex.html#top">Index</a>
+<a class="menuitem" href="./robo_definitions.html#top">Definitions</a>
+<a class="menuitem" href="./robo_functions.html#top">Functions</a>
+<a class="menuitem" href="./robo_modules.html#top">Modules</a>
+<a class="menuitem" href="./robo_strutures.html#top">Structures</a>
+</div> <!-- navigation -->
+<div id="content">
+<h3>TABLE OF CONTENTS</h3>
+<ul>
+<li><a href="#robo6">GGLib/ggmessage.c</a></li>
+<li><a href="#robo66">ggmessage.c/GGMessageHTMLtoText()</a></li>
+<li><a href="#robo67">ggmessage.c/GGMessageTextToHTML()</a></li>
+</ul>
+<hr />
+<a name="GGLib2fggmessage2ec"></a>
+<a name="robo6"></a><h2>GGLib/ggmessage.c [ Modules ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>ggmessage.c</strong> -- Plik zawierający definicje funkcji obsługi wiadomości GG.
+</pre>
+<p class="item_name">AUTHOR</p>
+<pre>    Filip Maryjański
+</pre>
+<p class="item_name">DESCRIPTION</p>
+<pre>    Definicje funkcji obsługi wiadomości GG (konwersja z i do HTML)
+</pre>
+
+<hr />
+<a name="ggmessage2ec2fGGMessageHTMLtoText2829"></a>
+<a name="robo66"></a><h2>ggmessage.c/GGMessageHTMLtoText() [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">ggmessage.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGMessageHTMLtoText()</strong>
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    STRPTR GGMessageHTMLtoText(STRPTR html, STRPTR *image)
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Funkcja przeprowadza konwersję wiadomości GG zapisanej w formacie HTML
+    na czysty tekst. Dodatkowo sprawdza czy w wiadomości pojawiają się jakieś obrazki,
+    jeśli tak to alokuje bufor ich identyfikatory. Adres bufora zostaje zapisany
+    pod adresem wskazywanym przez image. Identyfikatory kolejnych obrazków są oddzielone
+    znakiem '|'. Wszelkie informacje o dodatkowym formatowaniu tekstu wiadomości zostają zignorowane.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    - html -- treść wiadomości w formacie HTML, zakończona 0x00;
+    - images -- miejsce na zapisanie adresu bufora z identyfikatorami obrazków.
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Wskaźnik na bufor zawierający tekst wiadomości zapisany czystym tekstem
+    w kodowaniu UTF-8.
+</pre>
+<p class="item_name">NOTES</p>
+<pre>    W przypadku wiadomości zawierających tylko obrazki (brak tekstu) funkcja zwróci NULL.
+</pre>
+
+<hr />
+<a name="ggmessage2ec2fGGMessageTextToHTML2829"></a>
+<a name="robo67"></a><h2>ggmessage.c/GGMessageTextToHTML() [ Functions ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo6">ggmessage.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p class="item_name">NAME</p>
+<pre>    <strong>GGMessageTextToHTML()</strong>
+</pre>
+<p class="item_name">SYNOPSIS</p>
+<pre>    STRPTR GGMessageTextToHTML(STRPTR txt, STRPTR image)
+</pre>
+<p class="item_name">FUNCTION</p>
+<pre>    Funkcja przeprowadza konwersję czystego tekstu na tekst w HTML-u zgodny
+    z formatem wiadomości sieci GG.
+</pre>
+<p class="item_name">INPUTS</p>
+<pre>    - txt -- treść wiadomości zakończona 0x00;
+    - images -- identyfikatory obrazków, które należy wstawić do wiadomości oddzielone
+     znakiem '|' (jeśli NULL to żaden obrazek nie będzie wstawiony).
+</pre>
+<p class="item_name">RESULT</p>
+<pre>    Wskaźnik na bufor zawierający tekst wiadomości zapisany w HTML-u
+    w kodowaniu UTF-8.
+</pre>
+
+</div> <!-- content -->
+<div id="footer">
+<p>Generated from ./ggmessage.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+</p>
+</div> <!-- footer -->
+</body>
+</html>
