@@ -124,21 +124,15 @@ Object *CreatePrefsPage(VOID)
 {
 	Object *result;/*, *pubdir_send, *pubdir_fetch;*/
 	Object *login_group, *pass_string;
-	/*static CONST_STRPTR genders[3];*/
-	BOOL hack = TRUE; /* need to use variable, if not gcc will fuck us up (will use memcpy())... */
 	ENTER();
-
-	/*genders[0] = GetString(MSG_GENDER_MALE);
-	genders[1] = GetString(MSG_GENDER_FEMALE);
-	genders[2] = NULL;*/
 
 	pass_string = 	MUI_NewObjectM(MUIC_String,
 		MUIA_ObjectID, USD_PREFS_GG_BASIC_PASS_STRING,
 		MUIA_UserData, USD_PREFS_GG_BASIC_PASS_STRING,
 		MUIA_Frame, MUIV_Frame_String,
 		MUIA_Background, MUII_StringBack,
-		MUIA_CycleChain, hack,
-		MUIA_String_Secret, hack,
+		MUIA_CycleChain, TRUE,
+		MUIA_String_Secret, TRUE,
 	TAG_END);
 
 	login_group = MUI_NewObjectM(MUIC_Group,
