@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./ggpackets.c</title>
 <!-- Source: ./ggpackets.c -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -27,23 +27,23 @@
 <h3>TABLE OF CONTENTS</h3>
 <ul>
 <li><a href="#robo8">GGLib/ggpackets.c</a></li>
-<li><a href="#robo68">ggpackets.c/GGAcceptMessage()</a></li>
-<li><a href="#robo69">ggpackets.c/GGAddToWriteBuffer()</a></li>
-<li><a href="#robo70">ggpackets.c/GGHandlePacket()</a></li>
-<li><a href="#robo71">ggpackets.c/GGPacketCreateTagList()</a></li>
-<li><a href="#robo72">ggpackets.c/GGPacketHandlerListStatus()</a></li>
-<li><a href="#robo73">ggpackets.c/GGPacketHandlerLogin()</a></li>
-<li><a href="#robo74">ggpackets.c/GGPacketHandlerMultilogonInfo()</a></li>
-<li><a href="#robo75">ggpackets.c/GGPacketHandlerPubDirInfo()</a></li>
-<li><a href="#robo76">ggpackets.c/GGPacketHandlerRecvMsg()</a></li>
-<li><a href="#robo77">ggpackets.c/GGPacketHandlerStatusChange()</a></li>
-<li><a href="#robo78">ggpackets.c/GGPacketHandlerTypingNotify()</a></li>
-<li><a href="#robo79">ggpackets.c/GGPacketHandlerUnknownPacket()</a></li>
-<li><a href="#robo80">ggpackets.c/GGPacketHandlerUserData()</a></li>
-<li><a href="#robo81">ggpackets.c/GGPacketHandlerUserListReply()</a></li>
-<li><a href="#robo82">ggpackets.c/GGPacketHandlerWelcome()</a></li>
-<li><a href="#robo83">ggpackets.c/GGReceivePacket()</a></li>
-<li><a href="#robo84">ggpackets.c/GGWriteData()</a></li>
+<li><a href="#robo66">ggpackets.c/GGAcceptMessage()</a></li>
+<li><a href="#robo67">ggpackets.c/GGAddToWriteBuffer()</a></li>
+<li><a href="#robo68">ggpackets.c/GGHandlePacket()</a></li>
+<li><a href="#robo69">ggpackets.c/GGPacketCreateTagList()</a></li>
+<li><a href="#robo70">ggpackets.c/GGPacketHandlerListStatus()</a></li>
+<li><a href="#robo71">ggpackets.c/GGPacketHandlerLogin()</a></li>
+<li><a href="#robo72">ggpackets.c/GGPacketHandlerMultilogonInfo()</a></li>
+<li><a href="#robo73">ggpackets.c/GGPacketHandlerPubDirInfo()</a></li>
+<li><a href="#robo74">ggpackets.c/GGPacketHandlerRecvMsg()</a></li>
+<li><a href="#robo75">ggpackets.c/GGPacketHandlerStatusChange()</a></li>
+<li><a href="#robo76">ggpackets.c/GGPacketHandlerTypingNotify()</a></li>
+<li><a href="#robo77">ggpackets.c/GGPacketHandlerUnknownPacket()</a></li>
+<li><a href="#robo78">ggpackets.c/GGPacketHandlerUserData()</a></li>
+<li><a href="#robo79">ggpackets.c/GGPacketHandlerUserListReply()</a></li>
+<li><a href="#robo80">ggpackets.c/GGPacketHandlerWelcome()</a></li>
+<li><a href="#robo81">ggpackets.c/GGReceivePacket()</a></li>
+<li><a href="#robo82">ggpackets.c/GGWriteData()</a></li>
 </ul>
 <hr />
 <a name="GGLib2fggpackets2ec"></a>
@@ -51,95 +51,95 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>ggpackets.c</strong> -- Plik zawierajÄ…cy definicje pakietÃ³w sieci GG oraz funkcji je obsÅ‚ugujÄ…cych.
+<pre>    <strong>ggpackets.c</strong> -- Plik zawieraj±cy definicje pakietów sieci GG oraz funkcji je obs³uguj±cych.
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip MaryjaÅ„ski
+<pre>    Filip Maryjañski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Definicje funkcji przeznaczonych do obsÅ‚ugi pakietÃ³w sieci GG.
+<pre>    Definicje funkcji przeznaczonych do obs³ugi pakietów sieci GG.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGAcceptMessage2829"></a>
-<a name="robo68"></a><h2>ggpackets.c/GGAcceptMessage() [ Functions ]</h2>
+<a name="robo66"></a><h2>ggpackets.c/GGAcceptMessage() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGAcceptMessage()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGAcceptMessage(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG seq)
+<pre>    BOOL GGAcceptMessage(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG seq)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja dodaje do bufora wysyÅ‚ania pakiet potwierdzenia otrzymania wiadomoÅ›ci.
+<pre>    Funkcja dodaje do bufora wysy³ania pakiet potwierdzenia otrzymania wiadomo¶ci.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - seq -- numer sekwencyjny otrzymanej wiadomoÅ›ci
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - seq -- numer sekwencyjny otrzymanej wiadomo¶ci
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li wszystko zakoÅ„czyÅ‚o siÄ™ sukcesem;
-    - FALSE -- w.p.p.  
+<pre>    - TRUE -- je¶li wszystko zakoñczy³o siê sukcesem;
+    - FALSE -- w.p.p.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGAddToWriteBuffer2829"></a>
-<a name="robo69"></a><h2>ggpackets.c/GGAddToWriteBuffer() [ Functions ]</h2>
+<a name="robo67"></a><h2>ggpackets.c/GGAddToWriteBuffer() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGAddToWriteBuffer()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGAddToWriteBuffer(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, BYTE *add, LONG len)
+<pre>    BOOL GGAddToWriteBuffer(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, BYTE *add, LONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja dodaje dane wskazywane przez add o dÅ‚ugoÅ›ci len na koniec bufora wysyÅ‚ania
+<pre>    Funkcja dodaje dane wskazywane przez add o d³ugo¶ci len na koniec bufora wysy³ania
     sesji opisanej przez gg_sess. Automatycznie ustawiane jest pole ggs_Check
-    struktury sesji tak, aby biblioteka informowaÅ‚a o chÄ™ci zapisania bufora do socketu.
+    struktury sesji tak, aby biblioteka informowa³a o chêci zapisania bufora do socketu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cej za poÅ‚Ä…czenie.
-    - add -- wskaÅºnik na bufor danych ktÃ³ry powinien zostaÄ‡ doÅ‚Ä…czony;
-    - len -- dÅ‚ugoÅ›Ä‡ danych wskazywanych przez add.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±cej za po³±czenie.
+    - add -- wska¼nik na bufor danych który powinien zostaæ do³±czony;
+    - len -- d³ugo¶æ danych wskazywanych przez add.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li udaÅ‚o siÄ™ doÅ‚Ä…czyÄ‡ dane;
-    - FALSE -- jeÅ›li nie udaÅ‚o siÄ™ doÅ‚Ä…czyÄ‡ danych (zabrakÅ‚o pamiÄ™ci).
+<pre>    - TRUE -- je¶li uda³o siê do³±czyæ dane;
+    - FALSE -- je¶li nie uda³o siê do³±czyæ danych (zabrak³o pamiêci).
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    JeÅ›li funkcja zakoÅ„czyÅ‚a siÄ™ sukcesem nie wolno zmieniaÄ‡ zawartoÅ›ci
-    danych wskazywanych przez add, nie wolno teÅ¼ prÃ³bowaÄ‡ zwalniaÄ‡ tej pamiÄ™ci!
+<pre>    Je¶li funkcja zakoñczy³a siê sukcesem nie wolno zmieniaæ zawarto¶ci
+    danych wskazywanych przez add, nie wolno te¿ próbowaæ zwalniaæ tej pamiêci!
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGHandlePacket2829"></a>
-<a name="robo70"></a><h2>ggpackets.c/GGHandlePacket() [ Functions ]</h2>
+<a name="robo68"></a><h2>ggpackets.c/GGHandlePacket() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGHandlePacket()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGHandlePacket(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    BOOL GGHandlePacket(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Funkcja uruchamia odpowiedni handler dla danego typu pakietu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na zaalokowanÄ… strukturÄ™ zdarzenia do wypeÅ‚nienia;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> danego pakietu.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na zaalokowan± strukturê zdarzenia do wype³nienia;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> danego pakietu.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li odpowiedni handler zostaÅ‚ znaleziony
+<pre>    - TRUE -- je¶li odpowiedni handler zosta³ znaleziony
     - FALSE -- handler dla danego typu pakietu nie istnieje
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketCreateTagList2829"></a>
-<a name="robo71"></a><h2>ggpackets.c/GGPacketCreateTagList() [ Functions ]</h2>
+<a name="robo69"></a><h2>ggpackets.c/GGPacketCreateTagList() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
@@ -150,340 +150,340 @@
     - BYTE *GGPacketCreateTags(ULONG type, ULONG *len, ULONG tag1, ...)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do utworzenia pakietu do wysÅ‚ania. Przeprowadza automatycznÄ… konwersjÄ™
-    miÄ™dzy big a little endianem. ZwrÃ³cony bufor naleÅ¼y zwolniÄ‡ przez FreeVec().
+<pre>    Funkcja s³u¿y do utworzenia pakietu do wys³ania. Przeprowadza automatyczn± konwersjê
+    miêdzy big a little endianem. Zwrócony bufor nale¿y zwolniæ przez FreeVec().
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    type -- typ pakietu;
-    len -- wskaÅºnik na zmiennÄ… do ktÃ³rej zostanie zapisana dÅ‚ugoÅ›Ä‡ przygotowanego bufora;
-    taglist -- lista tagÃ³w opisujÄ…ca kolejne pola pakietu, aktualnie rozpoznawane tagi to:
+    len -- wska¼nik na zmienn± do której zostanie zapisana d³ugo¶æ przygotowanego bufora;
+    taglist -- lista tagów opisuj±ca kolejne pola pakietu, aktualnie rozpoznawane tagi to:
     - GGA_CreatePacket_LONG;
     - GGA_CreatePacket_SHORT;
     - GGA_CreatePacket_BYTE;
     - GGA_CreatePacket_ULONG;
     - GGA_CreatePacket_USHORT;
     - GGA_CreatePacket_UBYTE;
-    - GGA_CreatePacket_QUAD -- ti_Data powinno zawieraÄ‡ wskaÅºnik na QUAD;
-    - GGA_CreatePacket_UQUAD -- ti_Data powinno zawieraÄ‡ wskaÅºnik na UQUAD;
+    - GGA_CreatePacket_QUAD -- ti_Data powinno zawieraæ wska¼nik na QUAD;
+    - GGA_CreatePacket_UQUAD -- ti_Data powinno zawieraæ wska¼nik na UQUAD;
     - GGA_CreatePacket_STRPTR;
-    - GGA_CreatePacket_ZEROIZE -- tag oznacza dÅ‚ugoÅ›Ä‡ bloku wypeÅ‚nionego zerami (w przypadku nieuÅ¼ywanych pÃ³l w pakietach).
-     KaÅ¼dy z tagÃ³w opisuje kolejnÄ… wartoÅ›Ä‡ ktÃ³ra ma zostaÄ‡ wÅ‚Ä…czona do pakietu. Rozmiar
-     jest obliczany na podstawie nazwy tagu, jako dane tagu powinny zostaÄ‡ podane dane,
-     ktÃ³re majÄ… zostaÄ‡ zawarte w pakiecie. Dane zostanÄ… wÅ‚Ä…czone do pakietu zgodnie z podanÄ…
-     kolejnoÅ›ciÄ…;
-    - GGA_CreatePacket_SHA1 -- wartoÅ›Ä‡ taga to wskaÅºnik na tablicÄ™ z hashem sha1 (64 bajty).
-    - GGA_CreatePacket_BLOCK -- wartoÅ›Ä‡ taga to wskaÅºnik na strukturÄ™ TagItem, gdzie w polu ti_Tag zawarta jest dÅ‚ugoÅ›Ä‡
-     bloku (w bajtach) jaki ma zostaÄ‡ wpisany do pakietu, a ti_Data to wskaÅºnik na blok danych jaki ma byÄ‡ wpisany do pakietu.
+    - GGA_CreatePacket_ZEROIZE -- tag oznacza d³ugo¶æ bloku wype³nionego zerami (w przypadku nieu¿ywanych pól w pakietach).
+     Ka¿dy z tagów opisuje kolejn± warto¶æ która ma zostaæ w³±czona do pakietu. Rozmiar
+     jest obliczany na podstawie nazwy tagu, jako dane tagu powinny zostaæ podane dane,
+     które maj± zostaæ zawarte w pakiecie. Dane zostan± w³±czone do pakietu zgodnie z podan±
+     kolejno¶ci±;
+    - GGA_CreatePacket_SHA1 -- warto¶æ taga to wska¼nik na tablicê z hashem sha1 (64 bajty).
+    - GGA_CreatePacket_BLOCK -- warto¶æ taga to wska¼nik na strukturê TagItem, gdzie w polu ti_Tag zawarta jest d³ugo¶æ
+     bloku (w bajtach) jaki ma zostaæ wpisany do pakietu, a ti_Data to wska¼nik na blok danych jaki ma byæ wpisany do pakietu.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na zaalokowany bufor pakietu lub NULL w przypadku bÅ‚Ä™du.
+<pre>    Wska¼nik na zaalokowany bufor pakietu lub NULL w przypadku b³êdu.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerListStatus2829"></a>
-<a name="robo72"></a><h2>ggpackets.c/GGPacketHandlerListStatus() [ Functions ]</h2>
+<a name="robo70"></a><h2>ggpackets.c/GGPacketHandlerListStatus() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerListStatus()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerListStatus(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerListStatus(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_LIST_STATUS generujÄ…c odpowiednie zdarzenie (GGE_TYPE_LIST_STATUS).
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_LIST_STATUS generuj±c odpowiednie zdarzenie (GGE_TYPE_LIST_STATUS).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ tablica <a href="./ggpackets_h.html#robo91">GGPStatusChange</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê tablica <a href="./ggpackets_h.html#robo89">GGPStatusChange</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo52">GGEventListStatus</a>, <a href="#robo77">GGPacketHandlerStatusChange()</a>, <a href="./ggpackets_h.html#robo91">GGPStatusChange</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo50">GGEventListStatus</a>, <a href="#robo75">GGPacketHandlerStatusChange()</a>, <a href="./ggpackets_h.html#robo89">GGPStatusChange</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerLogin2829"></a>
-<a name="robo73"></a><h2>ggpackets.c/GGPacketHandlerLogin() [ Functions ]</h2>
+<a name="robo71"></a><h2>ggpackets.c/GGPacketHandlerLogin() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerLogin()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerLogin(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerLogin(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiety: GGP_TYPE_LOGINOK, GGP_TYPE_LOGINFAIL i GGP_TYPE_LOGINFAIL2 generujÄ…c odpowiednie zdarzenie
+<pre>    Funkcja obs³uguje pakiety: GGP_TYPE_LOGINOK, GGP_TYPE_LOGINFAIL i GGP_TYPE_LOGINFAIL2 generuj±c odpowiednie zdarzenie
     (GGE_TYPE_LOGIN_SUCCESS lub GGE_TYPE_LOGIN_FAIL).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ <a href="./ggpackets_h.html#robo95">GGPWelcome</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê <a href="./ggpackets_h.html#robo93">GGPWelcome</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerMultilogonInfo2829"></a>
-<a name="robo74"></a><h2>ggpackets.c/GGPacketHandlerMultilogonInfo() [ Functions ]</h2>
+<a name="robo72"></a><h2>ggpackets.c/GGPacketHandlerMultilogonInfo() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerMultilogonInfo()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerMultilogonInfo(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerMultilogonInfo(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_MULTILOGON_INFO generujÄ…c odpowiednie zdarzenie GGE_TYPE_MULTILOGON_INFO.
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_MULTILOGON_INFO generuj±c odpowiednie zdarzenie GGE_TYPE_MULTILOGON_INFO.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> pakietu do wyÅ›wietlenia.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> pakietu do wy¶wietlenia.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerPubDirInfo2829"></a>
-<a name="robo75"></a><h2>ggpackets.c/GGPacketHandlerPubDirInfo() [ Functions ]</h2>
+<a name="robo73"></a><h2>ggpackets.c/GGPacketHandlerPubDirInfo() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerPubDirInfo()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerPubDirInfo(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerPubDirInfo(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_PUBDIR_RESPONSE generujÄ…c odpowiednie zdarzenie GGE_TYPE_PUBDIR_INFO.
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_PUBDIR_RESPONSE generuj±c odpowiednie zdarzenie GGE_TYPE_PUBDIR_INFO.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> pakietu do wyÅ›wietlenia.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> pakietu do wy¶wietlenia.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerRecvMsg2829"></a>
-<a name="robo76"></a><h2>ggpackets.c/GGPacketHandlerRecvMsg() [ Functions ]</h2>
+<a name="robo74"></a><h2>ggpackets.c/GGPacketHandlerRecvMsg() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerRecvMsg()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerRecvMsg(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerRecvMsg(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_RECV_MSG generujÄ…c odpowiednie zdarzenie (GGE_TYPE_RECV_MSG).
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_RECV_MSG generuj±c odpowiednie zdarzenie (GGE_TYPE_RECV_MSG).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ tablica <a href="./ggpackets_h.html#robo91">GGPStatusChange</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê tablica <a href="./ggpackets_h.html#robo89">GGPStatusChange</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo55">GGEventRecvMsg</a>, <a href="./gglib_h.html#robo48">GGEventImageData</a>, <a href="./ggpackets_h.html#robo90">GGPRecvMsg</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo53">GGEventRecvMsg</a>, <a href="./gglib_h.html#robo46">GGEventImageData</a>, <a href="./ggpackets_h.html#robo88">GGPRecvMsg</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerStatusChange2829"></a>
-<a name="robo77"></a><h2>ggpackets.c/GGPacketHandlerStatusChange() [ Functions ]</h2>
+<a name="robo75"></a><h2>ggpackets.c/GGPacketHandlerStatusChange() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerStatusChange()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerStatusChange(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerStatusChange(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_STATUS_CHANGE generujÄ…c odpowiednie zdarzenie (GGE_TYPE_STATUS_CHANGE).
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_STATUS_CHANGE generuj±c odpowiednie zdarzenie (GGE_TYPE_STATUS_CHANGE).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ <a href="./ggpackets_h.html#robo91">GGPStatusChange</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê <a href="./ggpackets_h.html#robo89">GGPStatusChange</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo56">GGEventStatusChange</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo54">GGEventStatusChange</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerTypingNotify2829"></a>
-<a name="robo78"></a><h2>ggpackets.c/GGPacketHandlerTypingNotify() [ Functions ]</h2>
+<a name="robo76"></a><h2>ggpackets.c/GGPacketHandlerTypingNotify() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerTypingNotify()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerTypingNotify(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerTypingNotify(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_TYPING_NOTIFY generujÄ…c odpowiednie zdarzenie (GGE_TYPE_TYPING_NOTIFY).
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_TYPING_NOTIFY generuj±c odpowiednie zdarzenie (GGE_TYPE_TYPING_NOTIFY).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ tablica <a href="./ggpackets_h.html#robo91">GGPStatusChange</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê tablica <a href="./ggpackets_h.html#robo89">GGPStatusChange</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo57">GGEventTypingNotify</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>, <a href="./gglib_h.html#robo55">GGEventTypingNotify</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerUnknownPacket2829"></a>
-<a name="robo79"></a><h2>ggpackets.c/GGPacketHandlerUnknownPacket() [ Functions ]</h2>
+<a name="robo77"></a><h2>ggpackets.c/GGPacketHandlerUnknownPacket() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerUnknownPacket()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerUnknownPacket(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerUnknownPacket(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania na debug log zawartoÅ›ci nieznanego pakietu w formie tekstowej.
+<pre>    Funkcja s³u¿y do wys³ania na debug log zawarto¶ci nieznanego pakietu w formie tekstowej.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> pakietu do wyÅ›wietlenia.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> pakietu do wy¶wietlenia.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Funkcja dostÄ™pna tylko przy kompilacji ze zdefiniowanym symbolem __DEBUG__.
+<pre>    Funkcja dostêpna tylko przy kompilacji ze zdefiniowanym symbolem __DEBUG__.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerUserData2829"></a>
-<a name="robo80"></a><h2>ggpackets.c/GGPacketHandlerUserData() [ Functions ]</h2>
+<a name="robo78"></a><h2>ggpackets.c/GGPacketHandlerUserData() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerUserData()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerUserData(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerUserData(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_USER_DATA generujÄ…c odpowiednie zdarzenie (GGE_TYPE_USER_DATA).
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_USER_DATA generuj±c odpowiednie zdarzenie (GGE_TYPE_USER_DATA).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ struktura <a href="./ggpackets_h.html#robo94">GGPUsersData</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê struktura <a href="./ggpackets_h.html#robo92">GGPUsersData</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerUserListReply2829"></a>
-<a name="robo81"></a><h2>ggpackets.c/GGPacketHandlerUserListReply() [ Functions ]</h2>
+<a name="robo79"></a><h2>ggpackets.c/GGPacketHandlerUserListReply() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerUserListReply()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerUserListReply(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerUserListReply(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet GGP_TYPE_USER_LIST_REPLY generujÄ…c odpowiednie zdarzenie GGE_TYPE_USER_LIST.
+<pre>    Funkcja obs³uguje pakiet GGP_TYPE_USER_LIST_REPLY generuj±c odpowiednie zdarzenie GGE_TYPE_USER_LIST.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> pakietu do wyÅ›wietlenia.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> pakietu do wy¶wietlenia.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./gglib_h.html#robo45">GGE_TYPE_#?</a>, <a href="./support_c.html#robo103">Inflate()</a>
+<pre>    <a href="./gglib_h.html#robo43">GGE_TYPE_#?</a>, <a href="./support_c.html#robo99">Inflate()</a>
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Funkcja wywoÅ‚uje funkcjÄ™ <a href="./support_c.html#robo103">Inflate()</a>, ktÃ³ra otwiera z.library.
+<pre>    Funkcja wywo³uje funkcjê <a href="./support_c.html#robo99">Inflate()</a>, która otwiera z.library.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGPacketHandlerWelcome2829"></a>
-<a name="robo82"></a><h2>ggpackets.c/GGPacketHandlerWelcome() [ Functions ]</h2>
+<a name="robo80"></a><h2>ggpackets.c/GGPacketHandlerWelcome() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPacketHandlerWelcome()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    static VOID GGPacketHandlerWelcome(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo86">GGPHeader</a> *pac)
+<pre>    static VOID GGPacketHandlerWelcome(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *event, struct <a href="./ggpackets_h.html#robo84">GGPHeader</a> *pac)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje pakiet typu GGP_TYPE_WELCOME, odsyÅ‚a pakiet logowania i odpowiednio wypeÅ‚nia strukturÄ™ zdarzenia.
+<pre>    Funkcja obs³uguje pakiet typu GGP_TYPE_WELCOME, odsy³a pakiet logowania i odpowiednio wype³nia strukturê zdarzenia.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - event -- wskaÅºnik na strukturÄ™ zdarzenia, ktÃ³rÄ… handler ma wypeÅ‚niÄ‡;
-    - pac -- wskaÅºnik na strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a>, po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci znajduje siÄ™ struct <a href="./ggpackets_h.html#robo95">GGPWelcome</a>.   
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - event -- wska¼nik na strukturê zdarzenia, któr± handler ma wype³niæ;
+    - pac -- wska¼nik na strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a>, po której bezpo¶rednio w pamiêci znajduje siê struct <a href="./ggpackets_h.html#robo93">GGPWelcome</a>.
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGReceivePacket2829"></a>
-<a name="robo83"></a><h2>ggpackets.c/GGReceivePacket() [ Functions ]</h2>
+<a name="robo81"></a><h2>ggpackets.c/GGReceivePacket() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGReceivePacket()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    <a href="./ggpackets_h.html#robo86">GGPHeader</a> *GGReceivePacket(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess)
+<pre>    <a href="./ggpackets_h.html#robo84">GGPHeader</a> *GGReceivePacket(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja najpierw odbiera nagÅ‚Ã³wek pakietu GG, pÃ³Åºniej resztÄ™ pakietu.
+<pre>    Funkcja najpierw odbiera nag³ówek pakietu GG, pó¼niej resztê pakietu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cej za poÅ‚Ä…czenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±cej za po³±czenie.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na zaalokowanÄ… strukturÄ™ <a href="./ggpackets_h.html#robo86">GGPHeader</a> po ktÃ³rej bezpoÅ›rednio w pamiÄ™ci
-    jest dalsza czÄ™Å›Ä‡ pakietu lub NULL w przypadku bÅ‚Ä™du. ZwrÃ³cony bufor naleÅ¼y zwolniÄ‡
-    uÅ¼ywajÄ…c FreeVec().
+<pre>    Wska¼nik na zaalokowan± strukturê <a href="./ggpackets_h.html#robo84">GGPHeader</a> po której bezpo¶rednio w pamiêci
+    jest dalsza czê¶æ pakietu lub NULL w przypadku b³êdu. Zwrócony bufor nale¿y zwolniæ
+    u¿ywaj±c FreeVec().
 </pre>
 
 <hr />
 <a name="ggpackets2ec2fGGWriteData2829"></a>
-<a name="robo84"></a><h2>ggpackets.c/GGWriteData() [ Functions ]</h2>
+<a name="robo82"></a><h2>ggpackets.c/GGWriteData() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo8">ggpackets.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGWriteData()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG GGWriteData(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess)
+<pre>    LONG GGWriteData(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja wysyÅ‚a dane z bufora wysyÅ‚anych danych sesji.
+<pre>    Funkcja wysy³a dane z bufora wysy³anych danych sesji.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cej za poÅ‚Ä…czenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±cej za po³±czenie.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    IloÅ›Ä‡ wysÅ‚anych danych lub w przypadku bÅ‚Ä™du:
-    - -1 -- bÅ‚Ä…d krytyczny;
-    - -2 -- bÅ‚Ä…d tymczasowy, bufor pozostaÅ‚ zachowany, naleÅ¼y sprÃ³bowaÄ‡ wysÅ‚aÄ‡ ponownie.
+<pre>    Ilo¶æ wys³anych danych lub w przypadku b³êdu:
+    - -1 -- b³±d krytyczny;
+    - -2 -- b³±d tymczasowy, bufor pozosta³ zachowany, nale¿y spróbowaæ wys³aæ ponownie.
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./ggpackets.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./ggpackets.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>

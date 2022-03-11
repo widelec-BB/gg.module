@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./ggpackets.h</title>
 <!-- Source: ./ggpackets.h -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -27,17 +27,17 @@
 <h3>TABLE OF CONTENTS</h3>
 <ul>
 <li><a href="#robo9">GGLib/ggpackets.h</a></li>
-<li><a href="#robo85">ggpackets.h/GGP_TYPE_#?</a></li>
-<li><a href="#robo86">ggpackets.h/GGPHeader</a></li>
-<li><a href="#robo87">ggpackets.h/GGPLoginOK</a></li>
-<li><a href="#robo88">ggpackets.h/GGPMultilogonInfo</a></li>
-<li><a href="#robo89">ggpackets.h/GGPPubDirInfo</a></li>
-<li><a href="#robo90">ggpackets.h/GGPRecvMsg</a></li>
-<li><a href="#robo91">ggpackets.h/GGPStatusChange</a></li>
-<li><a href="#robo92">ggpackets.h/GGPTypingNotify</a></li>
-<li><a href="#robo93">ggpackets.h/GGPUserList</a></li>
-<li><a href="#robo94">ggpackets.h/GGPUsersData</a></li>
-<li><a href="#robo95">ggpackets.h/GGPWelcome</a></li>
+<li><a href="#robo83">ggpackets.h/GGP_TYPE_#?</a></li>
+<li><a href="#robo84">ggpackets.h/GGPHeader</a></li>
+<li><a href="#robo85">ggpackets.h/GGPLoginOK</a></li>
+<li><a href="#robo86">ggpackets.h/GGPMultilogonInfo</a></li>
+<li><a href="#robo87">ggpackets.h/GGPPubDirInfo</a></li>
+<li><a href="#robo88">ggpackets.h/GGPRecvMsg</a></li>
+<li><a href="#robo89">ggpackets.h/GGPStatusChange</a></li>
+<li><a href="#robo90">ggpackets.h/GGPTypingNotify</a></li>
+<li><a href="#robo91">ggpackets.h/GGPUserList</a></li>
+<li><a href="#robo92">ggpackets.h/GGPUsersData</a></li>
+<li><a href="#robo93">ggpackets.h/GGPWelcome</a></li>
 </ul>
 <hr />
 <a name="GGLib2fggpackets2eh"></a>
@@ -45,29 +45,29 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>ggpackets.h</strong> -- Plik zawierajƒÖcy definicje pakiet√≥w sieci GG oraz funkcji je obs≈ÇugujƒÖcych.
+<pre>    <strong>ggpackets.h</strong> -- Plik zawieraj±cy definicje pakietÛw sieci GG oraz funkcji je obs≥uguj±cych.
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip Maryja≈Ñski
+<pre>    Filip MaryjaÒski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Deklaracje struktur opisujƒÖcych pakiety sieci GG.
-    Deklaracje funkcji przeznaczonych do obs≈Çugi pakiet√≥w sieci GG.
+<pre>    Deklaracje struktur opisuj±cych pakiety sieci GG.
+    Deklaracje funkcji przeznaczonych do obs≥ugi pakietÛw sieci GG.
 </pre>
 
 <hr />
 <a name="ggpackets2eh2fGGP5fTYPE5f233f"></a>
-<a name="robo85"></a><h2>ggpackets.h/GGP_TYPE_#? [ Definitions ]</h2>
+<a name="robo83"></a><h2>ggpackets.h/GGP_TYPE_#? [ Definitions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGP_TYPE_#?</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Typy pakiet√≥w sieci GG.
+<pre>    Typy pakietÛw sieci GG.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo86">GGPHeader</a>
+<pre>    <a href="#robo84">GGPHeader</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GGP_TYPE_WELCOME                <span class="sign">(</span>0x0001UL<span class="sign">)</span>
@@ -87,7 +87,7 @@
 <span class="keyword">#define</span> GGP_TYPE_RECV_MSG               <span class="sign">(</span>0x002EUL<span class="sign">)</span>
 <span class="keyword">#define</span> GGP_TYPE_RECV_OWN_MSG           <span class="sign">(</span>0x005AUL<span class="sign">)</span>
 <span class="keyword">#define</span> GGP_TYPE_SEND_MSG               <span class="sign">(</span>0x002DUL<span class="sign">)</span>
-<span class="keyword">#define</span> GGP_TYPE_SEND_MSG_OLD           <span class="sign">(</span>0x000BUL<span class="sign">)</span> <span class="comment">/* ze starej wersji protoko≈Çu, nadal u≈ºywane przy przesy≈Çaniu obrazk√≥w */</span>
+<span class="keyword">#define</span> GGP_TYPE_SEND_MSG_OLD           <span class="sign">(</span>0x000BUL<span class="sign">)</span> <span class="comment">/* ze starej wersji protoko≥u, nadal uøywane przy przesy≥aniu obrazkÛw */</span>
 <span class="keyword">#define</span> GGP_TYPE_ADD_NOTIFY             <span class="sign">(</span>0x000DUL<span class="sign">)</span>
 <span class="keyword">#define</span> GGP_TYPE_REMOVE_NOTIFY          <span class="sign">(</span>0x000EUL<span class="sign">)</span>
 <span class="keyword">#define</span> GGP_TYPE_USER_DATA              <span class="sign">(</span>0x0044UL<span class="sign">)</span>
@@ -101,21 +101,21 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPHeader"></a>
-<a name="robo86"></a><h2>ggpackets.h/GGPHeader [ Structures ]</h2>
+<a name="robo84"></a><h2>ggpackets.h/GGPHeader [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPHeader</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje nag≈Ç√≥wek pakietu sieci GG.
+<pre>    Struktura opisuje nag≥Ûwek pakietu sieci GG.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggph_Type -- typ pakietu;
-    - ggph_Length -- d≈Çugo≈õƒá reszty pakietu (w bajtach).
+    - ggph_Length -- d≥ugo∂Ê reszty pakietu (w bajtach).
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPHeader</strong>
@@ -127,21 +127,21 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPLoginOK"></a>
-<a name="robo87"></a><h2>ggpackets.h/GGPLoginOK [ Structures ]</h2>
+<a name="robo85"></a><h2>ggpackets.h/GGPLoginOK [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPLoginOK</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje pakiet potwierdzajƒÖcy zalogowanie do sieci GG.
-    Pakiet ten jest wysy≈Çany przez serwer automatycznie po udanym logowaniu.
+<pre>    Struktura opisuje pakiet potwierdzaj±cy zalogowanie do sieci GG.
+    Pakiet ten jest wysy≥any przez serwer automatycznie po udanym logowaniu.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggpl_Unknown -- nieznane pole.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo73">GGPacketHandlerLogin()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo71">GGPacketHandlerLogin()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPLoginOK</strong>
@@ -152,21 +152,21 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPMultilogonInfo"></a>
-<a name="robo88"></a><h2>ggpackets.h/GGPMultilogonInfo [ Structures ]</h2>
+<a name="robo86"></a><h2>ggpackets.h/GGPMultilogonInfo [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPMultilogonInfo</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje pakiet otrzymania danych o li≈õcie kontakt√≥w.
+<pre>    Struktura opisuje pakiet otrzymania danych o li∂cie kontaktÛw.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggpmi_ClientsNo -- ilo≈õƒá r√≥wnolegle zalogowanych klient√≥w;
-    - ggpul_Data[] -- tablica struktur opisujƒÖcych r√≥wnolegle zalogowane klienty.
+<pre>    - ggpmi_ClientsNo -- ilo∂Ê rÛwnolegle zalogowanych klientÛw;
+    - ggpul_Data[] -- tablica struktur opisuj±cych rÛwnolegle zalogowane klienty.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo74">GGPacketHandlerMultilogonInfo()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo72">GGPacketHandlerMultilogonInfo()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPMultilogonInfo</strong>
@@ -178,7 +178,7 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPPubDirInfo"></a>
-<a name="robo89"></a><h2>ggpackets.h/GGPPubDirInfo [ Structures ]</h2>
+<a name="robo87"></a><h2>ggpackets.h/GGPPubDirInfo [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -189,12 +189,12 @@
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggppdi_Type -- typ odpowiedzi:
-     - GG_PUBDIR_SEARCH_REPLY -- odpowied≈∫ na wyszukiwanie;
+     - GG_PUBDIR_SEARCH_REPLY -- odpowiedº na wyszukiwanie;
     - ggppdi_Seq -- numer sekwencyjny;
-    - ggppdi_Data -- tre≈õƒá odpowiedzi.
+    - ggppdi_Data -- tre∂Ê odpowiedzi.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    GGP_PUBDIR_#?, <a href="./ggpackets_c.html#robo75">GGPacketHandlerPubDirInfo()</a>
+<pre>    GGP_PUBDIR_#?, <a href="./ggpackets_c.html#robo73">GGPacketHandlerPubDirInfo()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPPubDirInfo</strong>
@@ -207,26 +207,26 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPRecvMsg"></a>
-<a name="robo90"></a><h2>ggpackets.h/GGPRecvMsg [ Structures ]</h2>
+<a name="robo88"></a><h2>ggpackets.h/GGPRecvMsg [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPRecvMsg</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje pakiet otrzymania nowej wiadomo≈õci.
+<pre>    Struktura opisuje pakiet otrzymania nowej wiadomo∂ci.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggprm_Uin -- numer GG nadawcy;
     - ggprm_Seq -- numer sekwencyjny;
     - ggprm_Time -- czas nadania (UTC, Unix era);
-    - ggprm_Class -- klasa wiadomo≈õci;
-    - ggprm_OffsetPlain -- po≈Ço≈ºenie tre≈õci czystym tekstem;
-    - ggprm_OffsetAttrs -- po≈Ço≈ºenie atrybut√≥w;
-    - ggprm_HtmlTxt -- tre≈õƒá w formacie HTML (zako≈Ñczona 0x00).
+    - ggprm_Class -- klasa wiadomo∂ci;
+    - ggprm_OffsetPlain -- po≥oøenie tre∂ci czystym tekstem;
+    - ggprm_OffsetAttrs -- po≥oøenie atrybutÛw;
+    - ggprm_HtmlTxt -- tre∂Ê w formacie HTML (zakoÒczona 0x00).
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo76">GGPacketHandlerRecvMsg()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo74">GGPacketHandlerRecvMsg()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPRecvMsg</strong>
@@ -243,29 +243,29 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPStatusChange"></a>
-<a name="robo91"></a><h2>ggpackets.h/GGPStatusChange [ Structures ]</h2>
+<a name="robo89"></a><h2>ggpackets.h/GGPStatusChange [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPStatusChange</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje pakiet informujƒÖcy o zmiane statusu przez kontakt.
-    Pakiet ten jest wysy≈Çany przez serwer automatycznie je≈õli kto≈õ z listy
-    kontakt√≥w przes≈Çanej do serwera zmieni sw√≥j status.
+<pre>    Struktura opisuje pakiet informuj±cy o zmiane statusu przez kontakt.
+    Pakiet ten jest wysy≥any przez serwer automatycznie je∂li kto∂ z listy
+    kontaktÛw przes≥anej do serwera zmieni swÛj status.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggpsc_Uin -- uin u≈ºytkownika zmieniajƒÖcego status;
+<pre>    - ggpsc_Uin -- uin uøytkownika zmieniaj±cego status;
     - ggpsc_Status -- nowo ustawiony status;
-    - ggpsc_Features -- opcje protoko≈Çu obs≈Çugiwane przez danego u≈ºytkownika;
-    - ggpsc_Unused -- nieu≈ºywane pola (pozosta≈Ço≈õci po starych wersjach protoko≈Çu, zawsze zera);
-    - ggpsc_ImageSize -- maksymalny rozmiar obrazk√≥w odbieranych przez danego u≈ºytkownika;
+    - ggpsc_Features -- opcje protoko≥u obs≥ugiwane przez danego uøytkownika;
+    - ggpsc_Unused -- nieuøywane pola (pozosta≥o∂ci po starych wersjach protoko≥u, zawsze zera);
+    - ggpsc_ImageSize -- maksymalny rozmiar obrazkÛw odbieranych przez danego uøytkownika;
     - ggpsc_Flags -- flagi statusu (takie jak przy logowaniu do sieci);
-    - ggpsc_DescLen -- d≈Çugo≈õƒá opisu;
-    - ggpsc_Description -- opis, nie musi wystƒÖpiƒá (je≈õli brak to ggpsc_DescLen == 0).
+    - ggpsc_DescLen -- d≥ugo∂Ê opisu;
+    - ggpsc_Description -- opis, nie musi wyst±piÊ (je∂li brak to ggpsc_DescLen == 0).
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo82">GGPacketHandlerWelcome()</a>, <a href="./ggdefs_h.html#robo16">GG_STATUS_#?</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo80">GGPacketHandlerWelcome()</a>, <a href="./ggdefs_h.html#robo15">GG_STATUS_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPStatusChange</strong>
@@ -284,7 +284,7 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPTypingNotify"></a>
-<a name="robo92"></a><h2>ggpackets.h/GGPTypingNotify [ Structures ]</h2>
+<a name="robo90"></a><h2>ggpackets.h/GGPTypingNotify [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -292,14 +292,14 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Struktura opisuje pakiet powiadomienia o pisaniu ("pisak" w oryginalnym
-    kliencie). 
+    kliencie).
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggptn_Type -- d≈Çugo≈õƒá wpisanego w pole wysy≈Çki tekstu;
-    - ggptn_Uin -- uin u≈ºytkownika, kt√≥ry do nas pisze.
+<pre>    - ggptn_Type -- d≥ugo∂Ê wpisanego w pole wysy≥ki tekstu;
+    - ggptn_Uin -- uin uøytkownika, ktÛry do nas pisze.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo78">GGPacketHandlerTypingNotify()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo76">GGPacketHandlerTypingNotify()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPTypingNotify</strong>
@@ -311,27 +311,27 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPUserList"></a>
-<a name="robo93"></a><h2>ggpackets.h/GGPUserList [ Structures ]</h2>
+<a name="robo91"></a><h2>ggpackets.h/GGPUserList [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPUserList</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje pakiet otrzymania danych o li≈õcie kontakt√≥w.
+<pre>    Struktura opisuje pakiet otrzymania danych o li∂cie kontaktÛw.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggpul_Type -- rodzaj pakietu:
-       - 0x00 -- w ggpul_Data znajduje siƒô lista kontakt√≥w;
-       - 0x10 -- potwierdzenie przyjƒôcia nowej listy;
-       - 0x12 -- odmowa przyjƒôcia nowej listy.
-    - ggpul_Version -- numer wersji konkakt√≥w aktualnie przechowywanej przez serwer;
-    - ggpul_Format -- rodzaj formatu listy kontakt√≥w:
+       - 0x00 -- w ggpul_Data znajduje siÍ lista kontaktÛw;
+       - 0x10 -- potwierdzenie przyjÍcia nowej listy;
+       - 0x12 -- odmowa przyjÍcia nowej listy.
+    - ggpul_Version -- numer wersji konkaktÛw aktualnie przechowywanej przez serwer;
+    - ggpul_Format -- rodzaj formatu listy kontaktÛw:
        - 0x02 -- lista w XML-u skompresowana algorytmem Deflate.
-    - ggpul_Data[] -- dane w zale≈ºno≈õci od ggpul_Type.
+    - ggpul_Data[] -- dane w zaleøno∂ci od ggpul_Type.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo81">GGPacketHandlerUserListReply()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo79">GGPacketHandlerUserListReply()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPUserList</strong>
@@ -346,7 +346,7 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPUsersData"></a>
-<a name="robo94"></a><h2>ggpackets.h/GGPUsersData [ Structures ]</h2>
+<a name="robo92"></a><h2>ggpackets.h/GGPUsersData [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -357,11 +357,11 @@
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggpud_Type -- typ danych;
-    - ggpud_UsersNo -- ilo≈õƒá opisywanych u≈ºytkownik√≥w;
-    - ggpud_Data[] -- tablica struktur <a href="./gglib_h.html#robo63">GGUserData</a>.
+    - ggpud_UsersNo -- ilo∂Ê opisywanych uøytkownikÛw;
+    - ggpud_Data[] -- tablica struktur <a href="./gglib_h.html#robo61">GGUserData</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo80">GGPacketHandlerUserData()</a>, <a href="./gglib_h.html#robo63">GGUserData</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo78">GGPacketHandlerUserData()</a>, <a href="./gglib_h.html#robo61">GGUserData</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPUsersData</strong>
@@ -374,7 +374,7 @@
 
 <hr />
 <a name="ggpackets2eh2fGGPWelcome"></a>
-<a name="robo95"></a><h2>ggpackets.h/GGPWelcome [ Structures ]</h2>
+<a name="robo93"></a><h2>ggpackets.h/GGPWelcome [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo9">ggpackets.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -382,13 +382,13 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Struktura opisuje pakiet powitania sieci GG.
-    Pakiet ten jest wysy≈Çany przez serwer automatycznie po nawiƒÖzaniu po≈ÇƒÖczenia.
+    Pakiet ten jest wysy≥any przez serwer automatycznie po nawi±zaniu po≥±czenia.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggpw_Key -- klucz szyfrowania has≈Ça.
+<pre>    - ggpw_Key -- klucz szyfrowania has≥a.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo85">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo82">GGPacketHandlerWelcome()</a>
+<pre>    <a href="#robo83">GGP_TYPE_#?</a>, <a href="./ggpackets_c.html#robo80">GGPacketHandlerWelcome()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGPWelcome</strong>
@@ -399,7 +399,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./ggpackets.h with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./ggpackets.h with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>

@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./gglib.c</title>
 <!-- Source: ./gglib.c -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -27,26 +27,25 @@
 <h3>TABLE OF CONTENTS</h3>
 <ul>
 <li><a href="#robo4">GGLib/gglib.c</a></li>
-<li><a href="#robo21">gglib.c/GGAddNotify()</a></li>
-<li><a href="#robo22">gglib.c/GGAskHub()</a></li>
-<li><a href="#robo23">gglib.c/GGChangeStatus()</a></li>
-<li><a href="#robo24">gglib.c/GGConnect()</a></li>
-<li><a href="#robo25">gglib.c/GGCreateImageId()</a></li>
-<li><a href="#robo26">gglib.c/GGCreateSessionTagList()</a></li>
-<li><a href="#robo27">gglib.c/GGDisconnectMultilogon()</a></li>
-<li><a href="#robo28">gglib.c/GGExportContactList()</a></li>
-<li><a href="#robo29">gglib.c/GGFindInPubDir()</a></li>
-<li><a href="#robo30">gglib.c/GGFreeEvent()</a></li>
-<li><a href="#robo31">gglib.c/GGFreeSession()</a></li>
-<li><a href="#robo32">gglib.c/GGNotifyList()</a></li>
-<li><a href="#robo33">gglib.c/GGPing()</a></li>
-<li><a href="#robo34">gglib.c/GGRemoveNotify()</a></li>
-<li><a href="#robo35">gglib.c/GGRequestContactList()</a></li>
-<li><a href="#robo36">gglib.c/GGRequestImage()</a></li>
-<li><a href="#robo37">gglib.c/GGSendImageData()</a></li>
-<li><a href="#robo38">gglib.c/GGSendMessage()</a></li>
-<li><a href="#robo39">gglib.c/GGTypingNotify()</a></li>
-<li><a href="#robo40">gglib.c/GGWatchEvent()</a></li>
+<li><a href="#robo20">gglib.c/GGAddNotify()</a></li>
+<li><a href="#robo21">gglib.c/GGChangeStatus()</a></li>
+<li><a href="#robo22">gglib.c/GGConnect()</a></li>
+<li><a href="#robo23">gglib.c/GGCreateImageId()</a></li>
+<li><a href="#robo24">gglib.c/GGCreateSessionTagList()</a></li>
+<li><a href="#robo25">gglib.c/GGDisconnectMultilogon()</a></li>
+<li><a href="#robo26">gglib.c/GGExportContactList()</a></li>
+<li><a href="#robo27">gglib.c/GGFindInPubDir()</a></li>
+<li><a href="#robo28">gglib.c/GGFreeEvent()</a></li>
+<li><a href="#robo29">gglib.c/GGFreeSession()</a></li>
+<li><a href="#robo30">gglib.c/GGNotifyList()</a></li>
+<li><a href="#robo31">gglib.c/GGPing()</a></li>
+<li><a href="#robo32">gglib.c/GGRemoveNotify()</a></li>
+<li><a href="#robo33">gglib.c/GGRequestContactList()</a></li>
+<li><a href="#robo34">gglib.c/GGRequestImage()</a></li>
+<li><a href="#robo35">gglib.c/GGSendImageData()</a></li>
+<li><a href="#robo36">gglib.c/GGSendMessage()</a></li>
+<li><a href="#robo37">gglib.c/GGTypingNotify()</a></li>
+<li><a href="#robo38">gglib.c/GGWatchEvent()</a></li>
 </ul>
 <hr />
 <a name="GGLib2fgglib2ec"></a>
@@ -54,36 +53,36 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>gglib.c</strong> -- GÅ‚Ã³wny plik ÅºrÃ³dÅ‚owy biblioteki
+<pre>    <strong>gglib.c</strong> -- G³ówny plik ¼ród³owy biblioteki
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip MaryjaÅ„ski
+<pre>    Filip Maryjañski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Definicje funkcji przeznaczonych do komunikacji z sieciÄ… GG.
+<pre>    Definicje funkcji przeznaczonych do komunikacji z sieci± GG.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGAddNotify2829"></a>
-<a name="robo21"></a><h2>gglib.c/GGAddNotify() [ Functions ]</h2>
+<a name="robo20"></a><h2>gglib.c/GGAddNotify() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGAddNotify()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGAddNotify(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, UBYTE type)
+<pre>    BOOL GGAddNotify(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, UBYTE type)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do dodania do listy obserwowanych statusÃ³w nowego kontaktu.
+<pre>    Funkcja s³u¿y do dodania do listy obserwowanych statusów nowego kontaktu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer, ktÃ³ry chcemy dodaÄ‡;
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer, który chcemy dodaæ;
     - type -- typ kontaktu.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -91,95 +90,62 @@
 </pre>
 
 <hr />
-<a name="gglib2ec2fGGAskHub2829"></a>
-<a name="robo22"></a><h2>gglib.c/GGAskHub() [ Functions ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
-<p class="item_name">NAME</p>
-<pre>    <strong>GGAskHub()</strong>
-</pre>
-<p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGAskHub(ULONG uin, UBYTE *server, USHORT *port)
-</pre>
-<p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do odpytania HUBa sieci GG o adres serwera, z ktÃ³rym
-    moÅ¼na siÄ™ poÅ‚Ä…czyÄ‡. WskaÅºnik na adres IP w formie Å‚aÅ„cucha znakÃ³w zostanie wpisany
-    do bufora wskazywanego przez server, natomiast port w zmiennej wskazywanej przez port.
-</pre>
-<p class="item_name">INPUTS</p>
-<pre>    uin -- numer GG, ktÃ³ry chce siÄ™ poÅ‚aczyÄ‡;
-    server -- wskaÅºnik na bufor, do ktÃ³rego zostanie wpisany adres serwera;
-    port -- wskaÅºnik na zmiennÄ…, do ktÃ³rej zostanie wpisany numer portu.
-</pre>
-<p class="item_name">RESULT</p>
-<pre>    - TRUE -- sukces
-    - FALSE -- w.p.p.
-</pre>
-<p class="item_name">NOTES</p>
-<pre>    Funkcja blokuje wykonywany proces na czas wykonania zapytania HTTP.
-    Bufor na adres serwera powinien mieÄ‡ przynajmniej 16 bajtÃ³w.
-</pre>
-
-<hr />
 <a name="gglib2ec2fGGChangeStatus2829"></a>
-<a name="robo23"></a><h2>gglib.c/GGChangeStatus() [ Functions ]</h2>
+<a name="robo21"></a><h2>gglib.c/GGChangeStatus() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGChangeStatus()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGChangeStatus(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG status, STRPTR desc)
+<pre>    BOOL GGChangeStatus(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG status, STRPTR desc)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do zmiany statusu aktualnie zalogowanego uÅ¼ytkownika.
-    ObsÅ‚ugiwane statusy to:
-    - GG_STATUS_NOT_AVAIL -- "niedostÄ™pny";
-    - GG_STATUS_FFC -- "poGGadaj ze mnÄ…";
-    - GG_STATUS_AVAIL -- "dostÄ™pny";
+<pre>    Funkcja s³u¿y do zmiany statusu aktualnie zalogowanego u¿ytkownika.
+    Obs³ugiwane statusy to:
+    - GG_STATUS_NOT_AVAIL -- "niedostêpny";
+    - GG_STATUS_FFC -- "poGGadaj ze mn±";
+    - GG_STATUS_AVAIL -- "dostêpny";
     - GG_STATUS_BUSY -- "zaraz wracam";
-    - GG_STATUS_DND -- "nie przeszkadzaÄ‡";
+    - GG_STATUS_DND -- "nie przeszkadzaæ";
     - GG_STATUS_INVISIBLE -- "niewidoczny".
-    DokÅ‚adanie bitu oznaczajÄ…cego wystÄ…pienie opisu realizowane jest automatycznie
+    Dok³adanie bitu oznaczaj±cego wyst±pienie opisu realizowane jest automatycznie
     w przypadku gdy desc != NULL.
-    Funkcja automatycznie aktualizuje pola dotyczÄ…ce statusu i opisu
-    w strukturze opisujÄ…cej sesjÄ™.
+    Funkcja automatycznie aktualizuje pola dotycz±ce statusu i opisu
+    w strukturze opisuj±cej sesjê.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - status -- maska bitowa opisujÄ…ca status;
-    - desc -- opis statusu (moÅ¼e byÄ‡ NULL -&gt; brak opisu).
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - status -- maska bitowa opisuj±ca status;
+    - desc -- opis statusu (mo¿e byæ NULL -&gt; brak opisu).
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>     <a href="./gglib_h.html#robo62">GGSession</a>
+<pre>     <a href="./gglib_h.html#robo60">GGSession</a>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGConnect2829"></a>
-<a name="robo24"></a><h2>gglib.c/GGConnect() [ Functions ]</h2>
+<a name="robo22"></a><h2>gglib.c/GGConnect() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGConnect()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGConnect(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, STRPTR server, USHORT port)
+<pre>    BOOL GGConnect(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, STRPTR server, USHORT port)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do rozpoczÄ™cia nawiÄ…zywania poÅ‚Ä…czenia z sieciÄ… GG. NawiÄ…zywanie
-    jest tylko rozpoczynane, poniewaÅ¼ poÅ‚Ä…czenie jest asynchroniczne. 
-    W przypadku kiedy adres serwera nie jest podany (server == NULL) funkcja
-    "blokuje" wykonywany proces w celu wykonania zapytania HTTP do HUB-a sieci GG.
-    PÃ³Åºniej nastÄ™puje rozpoczÄ™cie nawiÄ…zywania bezpoÅ›redniego poÅ‚Ä…czenia
-    do podanego przez HUB serwera. Po wykonaniu tej funkcji naleÅ¼y przejÅ›Ä‡ do oczekiwania
-    na zdarzenia dotyczÄ…ce socketu poÅ‚Ä…czenia i jeÅ›li takie wystÄ…piÄ… wywoÅ‚aÄ‡ <a href="#robo40">GGWatchEvent()</a>.
+<pre>    Funkcja s³u¿y do rozpoczêcia nawi±zywania po³±czenia z sieci± GG. Nawi±zywanie
+    jest tylko rozpoczynane, poniewa¿ po³±czenie jest asynchroniczne. Po wykonaniu
+    tej funkcji nale¿y przej¶æ do oczekiwania na zdarzenia dotycz±ce socketu
+    po³±czenia i je¶li takie wyst±pi± wywo³aæ <a href="#robo38">GGWatchEvent()</a>.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- struktura <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie.
+<pre>    gg_sess -- struktura <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie.
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    - TRUE -- sukces
@@ -188,7 +154,7 @@
 
 <hr />
 <a name="gglib2ec2fGGCreateImageId2829"></a>
-<a name="robo25"></a><h2>gglib.c/GGCreateImageId() [ Functions ]</h2>
+<a name="robo23"></a><h2>gglib.c/GGCreateImageId() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
@@ -198,68 +164,68 @@
 <pre>    STRPTR GGCreateImageId(BPTR fh)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wygenerowania identyfikatora obrazka.
+<pre>    Funkcja s³u¿y do wygenerowania identyfikatora obrazka.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - fh -- uchwyt do pliku dla ktÃ³rego ma zostataÄ‡ wygenerowany identyfikator.
+<pre>    - fh -- uchwyt do pliku dla którego ma zostataæ wygenerowany identyfikator.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - wskaÅºnik na statyczny bufor zawierajÄ…cy wygenerowany identyfikator.
+<pre>    - wska¼nik na statyczny bufor zawieraj±cy wygenerowany identyfikator.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo37">GGSendImageData()</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo49">GGEventImageRequest</a>
+<pre>    <a href="#robo35">GGSendImageData()</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo47">GGEventImageRequest</a>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGCreateSessionTagList2829"></a>
-<a name="robo26"></a><h2>gglib.c/GGCreateSessionTagList() [ Functions ]</h2>
+<a name="robo24"></a><h2>gglib.c/GGCreateSessionTagList() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGCreateSessionTagList()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    - struct <a href="./gglib_h.html#robo62">GGSession</a> *GGCreateSessionTagList(ULONG uin, STRPTR password, struct TagItem *taglist)
-    - struct <a href="./gglib_h.html#robo62">GGSession</a> *GGCreateSessionTags(ULONG uin, STRPTR password, ULONG tag1, ...)
+<pre>    - struct <a href="./gglib_h.html#robo60">GGSession</a> *GGCreateSessionTagList(ULONG uin, STRPTR password, struct TagItem *taglist)
+    - struct <a href="./gglib_h.html#robo60">GGSession</a> *GGCreateSessionTags(ULONG uin, STRPTR password, ULONG tag1, ...)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja rozpoczyna asynchroniczne nawiÄ…zywanie poÅ‚Ä…czenia z sieciÄ… GG.
+<pre>    Funkcja rozpoczyna asynchroniczne nawi±zywanie po³±czenia z sieci± GG.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    - uin -- numer GG;
-    - password -- hasÅ‚o;
-    - taglist -- lista tagÃ³w z opcjonalnymi parametrami.
+    - password -- has³o;
+    - taglist -- lista tagów z opcjonalnymi parametrami.
 </pre>
 <p class="item_name">TAGS</p>
-<pre>    - GGA_CreateSession_Status -- ULONG -- status do ustawienia po nawiÄ…zaniu poÅ‚Ä…czenia;
-    - GGA_CreateSession_Status_Desc -- STRPTR -- opis statusu do ustawienia po nawiÄ…zaniu poÅ‚Ä…czenia,
+<pre>    - GGA_CreateSession_Status -- ULONG -- status do ustawienia po nawi±zaniu po³±czenia;
+    - GGA_CreateSession_Status_Desc -- STRPTR -- opis statusu do ustawienia po nawi±zaniu po³±czenia,
        NULL oznacza brak opisu;
-    - GGA_CreateSession_ImageSize -- UBYTE -- maksymalny rozmiar odbieranych obrazkÃ³w.
+    - GGA_CreateSession_ImageSize -- UBYTE -- maksymalny rozmiar odbieranych obrazków.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>     Funkcja zwraca wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> lub NULL w przypadku bÅ‚Ä™du.
+<pre>     Funkcja zwraca wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> lub NULL w przypadku b³êdu.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGDisconnectMultilogon2829"></a>
-<a name="robo27"></a><h2>gglib.c/GGDisconnectMultilogon() [ Functions ]</h2>
+<a name="robo25"></a><h2>gglib.c/GGDisconnectMultilogon() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGDisconnectMultilogon()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGDisconnectMultilogon(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, QUAD id)
+<pre>    BOOL GGDisconnectMultilogon(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, QUAD id)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania listy kontaktÃ³w na serwer.
+<pre>    Funkcja s³u¿y do wys³ania listy kontaktów na serwer.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - id -- 64-bitowy identyfikator okreÅ›lajÄ…cy poÅ‚Ä…czenie, ktÃ³re ma zostaÄ‡ rozÅ‚Ä…czone.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - id -- 64-bitowy identyfikator okre¶laj±cy po³±czenie, które ma zostaæ roz³±czone.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -268,176 +234,176 @@
 
 <hr />
 <a name="gglib2ec2fGGExportContactList2829"></a>
-<a name="robo28"></a><h2>gglib.c/GGExportContactList() [ Functions ]</h2>
+<a name="robo26"></a><h2>gglib.c/GGExportContactList() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGExportContactList()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGExportContactList(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG ver, UBYTE format, STRPTR list, LONG len)
+<pre>    BOOL GGExportContactList(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG ver, UBYTE format, STRPTR list, LONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania listy kontaktÃ³w na serwer.
+<pre>    Funkcja s³u¿y do wys³ania listy kontaktów na serwer.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - ver -- najnowsza znana wersja listy kontaktÃ³w;
-    - format -- jedna ze staÅ‚ych <a href="./ggdefs_h.html#robo14">GG_LIST_FORMAT_#?</a> okreÅ›lajÄ…ca format listy;
-    - list -- lista kontaktÃ³w w wybranym formacie;
-    - len -- dÅ‚ugoÅ›Ä‡ listy kontaktÃ³w.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - ver -- najnowsza znana wersja listy kontaktów;
+    - format -- jedna ze sta³ych <a href="./ggdefs_h.html#robo13">GG_LIST_FORMAT_#?</a> okre¶laj±ca format listy;
+    - list -- lista kontaktów w wybranym formacie;
+    - len -- d³ugo¶æ listy kontaktów.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggdefs_h.html#robo14">GG_LIST_FORMAT_#?</a>, <a href="#robo35">GGRequestContactList()</a>
+<pre>    <a href="./ggdefs_h.html#robo13">GG_LIST_FORMAT_#?</a>, <a href="#robo33">GGRequestContactList()</a>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGFindInPubDir2829"></a>
-<a name="robo29"></a><h2>gglib.c/GGFindInPubDir() [ Functions ]</h2>
+<a name="robo27"></a><h2>gglib.c/GGFindInPubDir() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGFindInPubDir()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    ULONG GGFindInPubDir(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin)
+<pre>    ULONG GGFindInPubDir(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania zapytania do katalogu publicznego, w celu uzyskania
-    danych dotyczÄ…cych podanego numeru.
+<pre>    Funkcja s³u¿y do wys³ania zapytania do katalogu publicznego, w celu uzyskania
+    danych dotycz±cych podanego numeru.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer, ktÃ³rego danych Å¼Ä…damy.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer, którego danych ¿±damy.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    Numer sekwencyjny zapytania lub 0 w przypadku bÅ‚Ä™du.
+<pre>    Numer sekwencyjny zapytania lub 0 w przypadku b³êdu.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    GGE_TYPE_PUBDIR_INFO, 
+<pre>    GGE_TYPE_PUBDIR_INFO,
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGFreeEvent2829"></a>
-<a name="robo30"></a><h2>gglib.c/GGFreeEvent() [ Functions ]</h2>
+<a name="robo28"></a><h2>gglib.c/GGFreeEvent() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGFreeEvent()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    VOID GGFreeEvent(struct <a href="./gglib_h.html#robo46">GGEvent</a> *event)
+<pre>    VOID GGFreeEvent(struct <a href="./gglib_h.html#robo44">GGEvent</a> *event)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do zwalniania pamiÄ™ci zaalokowanej na strukturÄ™ <a href="./gglib_h.html#robo46">GGEvent</a>.
+<pre>    Funkcja s³u¿y do zwalniania pamiêci zaalokowanej na strukturê <a href="./gglib_h.html#robo44">GGEvent</a>.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    event -- wskaÅºnik na strukturÄ™ do zwolnienia.
+<pre>    event -- wska¼nik na strukturê do zwolnienia.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGFreeSession2829"></a>
-<a name="robo31"></a><h2>gglib.c/GGFreeSession() [ Functions ]</h2>
+<a name="robo29"></a><h2>gglib.c/GGFreeSession() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGFreeSession()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    VOID GGFreeSession(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess)
+<pre>    VOID GGFreeSession(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja zwalnia zasoby zaalokowane przez poÅ‚Ä…czenie z sieciÄ… GG.
+<pre>    Funkcja zwalnia zasoby zaalokowane przez po³±czenie z sieci± GG.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- struktura <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za zwalniane poÅ‚Ä…czenie.
+<pre>    gg_sess -- struktura <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za zwalniane po³±czenie.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGNotifyList2829"></a>
-<a name="robo32"></a><h2>gglib.c/GGNotifyList() [ Functions ]</h2>
+<a name="robo30"></a><h2>gglib.c/GGNotifyList() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGNotifyList()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGNotifyList(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG *uins, UBYTE *types, LONG no)
+<pre>    BOOL GGNotifyList(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG *uins, UBYTE *types, LONG no)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania do serwera listy kontaktÃ³w, aby serwer wiedziaÅ‚,
-    o ktÃ³rych kontaktach nas informowaÄ‡. Lista powinna zostaÄ‡ podana w formie wskaÅºnika
-    na tablicÄ™ ULONGÃ³w oraz wskaÅºnika na tablicÄ™ UBYTEÃ³w. W tablicy ULONGÃ³w powinny znaleÅºÄ‡
-    siÄ™ numery GG kontkatkÃ³w (uin GG), a w odpowiadajÄ…cych indeksach tablicy UBYTEÃ³w rodzaje.
+<pre>    Funkcja s³u¿y do wys³ania do serwera listy kontaktów, aby serwer wiedzia³,
+    o których kontaktach nas informowaæ. Lista powinna zostaæ podana w formie wska¼nika
+    na tablicê ULONGów oraz wska¼nika na tablicê UBYTEów. W tablicy ULONGów powinny znale¼æ
+    siê numery GG kontkatków (uin GG), a w odpowiadaj±cych indeksach tablicy UBYTEów rodzaje.
     Rozpoznawane rodzaje to:
-    - GG_USER_NORMAL -- zwykÅ‚y kontakt;
-    - GG_USER_OFFLINE -- kontakt, dla ktÃ³rego bÄ™dziemy niewidoczni;
-    - GG_USER_BLOCKED -- kontakt, od ktÃ³rego nie chcemy otrzymywaÄ‡ wiadomoÅ›ci.
-    JeÅ›li uins bÄ™dzie rÃ³wne NULL zostanie wysÅ‚any pakiet odpowiadajÄ…cy za pustÄ… listÄ™ kontaktÃ³w.
-    JeÅ›li types bÄ™dzie rÃ³wne NULL wszystkie kontakty zostanÄ… wysÅ‚ane jako GG_USER_NORMAL.
+    - GG_USER_NORMAL -- zwyk³y kontakt;
+    - GG_USER_OFFLINE -- kontakt, dla którego bêdziemy niewidoczni;
+    - GG_USER_BLOCKED -- kontakt, od którego nie chcemy otrzymywaæ wiadomo¶ci.
+    Je¶li uins bêdzie równe NULL zostanie wys³any pakiet odpowiadaj±cy za pust± listê kontaktów.
+    Je¶li types bêdzie równe NULL wszystkie kontakty zostan± wys³ane jako GG_USER_NORMAL.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uins -- wskaÅºnik na tablicÄ™ numerÃ³w GG (uin GG) kontaktÃ³w z listy;
-    - types -- wskaÅºnik na tablicÄ™ rodzajÃ³w kontkatÃ³w z listy;
-    - no -- dÅ‚ugoÅ›Ä‡ tablicy uins i types
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uins -- wska¼nik na tablicê numerów GG (uin GG) kontaktów z listy;
+    - types -- wska¼nik na tablicê rodzajów kontkatów z listy;
+    - no -- d³ugo¶æ tablicy uins i types
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>     Tablice, na ktÃ³re wskazujÄ… uins i types muszÄ… mieÄ‡ dÅ‚ugoÅ›Ä‡ dokÅ‚adnie rÃ³wnÄ… no!
+<pre>     Tablice, na które wskazuj± uins i types musz± mieæ d³ugo¶æ dok³adnie równ± no!
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGPing2829"></a>
-<a name="robo33"></a><h2>gglib.c/GGPing() [ Functions ]</h2>
+<a name="robo31"></a><h2>gglib.c/GGPing() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGPing()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGPing(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess)
+<pre>    BOOL GGPing(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania do serwera pakietu utrzymania poÅ‚Ä…czenia.
-    Pakiet ten naleÅ¼y wysyÅ‚aÄ‡ co 60 sekund, aby serwer nie zamknÄ…Å‚ poÅ‚Ä…czenia.
+<pre>    Funkcja s³u¿y do wys³ania do serwera pakietu utrzymania po³±czenia.
+    Pakiet ten nale¿y wysy³aæ co 60 sekund, aby serwer nie zamkn±³ po³±czenia.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGRemoveNotify2829"></a>
-<a name="robo34"></a><h2>gglib.c/GGRemoveNotify() [ Functions ]</h2>
+<a name="robo32"></a><h2>gglib.c/GGRemoveNotify() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <a href="#robo21">GGAddNotify()</a>
+<pre>    <a href="#robo20">GGAddNotify()</a>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGAddNotify(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, UBYTE type)
+<pre>    BOOL GGAddNotify(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, UBYTE type)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do usuniÄ™cia kontaktu z listy obserwowanych statusÃ³w.
+<pre>    Funkcja s³u¿y do usuniêcia kontaktu z listy obserwowanych statusów.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer, ktÃ³ry chcemy usunÄ…Ä‡;
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer, który chcemy usun±æ;
     - type -- typ kontaktu.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
@@ -446,158 +412,158 @@
 
 <hr />
 <a name="gglib2ec2fGGRequestContactList2829"></a>
-<a name="robo35"></a><h2>gglib.c/GGRequestContactList() [ Functions ]</h2>
+<a name="robo33"></a><h2>gglib.c/GGRequestContactList() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGRequestContactList()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGRequestContactList(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, UBYTE format)
+<pre>    BOOL GGRequestContactList(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, UBYTE format)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania proÅºby do serwera o przesÅ‚anie wczeÅ›niej wykesportowanej
-    listy kontaktÃ³w.
+<pre>    Funkcja s³u¿y do wys³ania pro¼by do serwera o przes³anie wcze¶niej wykesportowanej
+    listy kontaktów.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - format -- jedna ze staÅ‚ych <a href="./ggdefs_h.html#robo14">GG_LIST_FORMAT_#?</a> okreÅ›lajÄ…ca format listy.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - format -- jedna ze sta³ych <a href="./ggdefs_h.html#robo13">GG_LIST_FORMAT_#?</a> okre¶laj±ca format listy.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggdefs_h.html#robo14">GG_LIST_FORMAT_#?</a>, <a href="#robo28">GGExportContactList()</a>
+<pre>    <a href="./ggdefs_h.html#robo13">GG_LIST_FORMAT_#?</a>, <a href="#robo26">GGExportContactList()</a>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGRequestImage2829"></a>
-<a name="robo36"></a><h2>gglib.c/GGRequestImage() [ Functions ]</h2>
+<a name="robo34"></a><h2>gglib.c/GGRequestImage() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGRequestImage()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGRequestImage(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, STRPTR id)
+<pre>    BOOL GGRequestImage(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, STRPTR id)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania proÅºby o przesÅ‚anie obrazka.
+<pre>    Funkcja s³u¿y do wys³ania pro¼by o przes³anie obrazka.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer, od ktÃ³rego Å¼Ä…damy obrazka;
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer, od którego ¿±damy obrazka;
     - id -- identyfikator obrazka.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    GGE_TYPE_IMAGE_DATA, <a href="./gglib_h.html#robo48">GGEventImageData</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo49">GGEventImageRequest</a>, <a href="#robo37">GGSendImageData()</a>
+<pre>    GGE_TYPE_IMAGE_DATA, <a href="./gglib_h.html#robo46">GGEventImageData</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo47">GGEventImageRequest</a>, <a href="#robo35">GGSendImageData()</a>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGSendImageData2829"></a>
-<a name="robo37"></a><h2>gglib.c/GGSendImageData() [ Functions ]</h2>
+<a name="robo35"></a><h2>gglib.c/GGSendImageData() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGSendImageData()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGSendImageData(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, BPTR fh)
+<pre>    BOOL GGSendImageData(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, BPTR fh)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania danych obrazka w odpowiedzi na Å¼Ä…danie obrazka.
+<pre>    Funkcja s³u¿y do wys³ania danych obrazka w odpowiedzi na ¿±danie obrazka.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer, ktÃ³ry Å¼Ä…daÅ‚ obrazka;
-    - fh -- uchwyt do pliku zawierajÄ…cego obrazek.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer, który ¿±da³ obrazka;
+    - fh -- uchwyt do pliku zawieraj±cego obrazek.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    GGE_TYPE_IMAGE_DATA, <a href="./gglib_h.html#robo48">GGEventImageData</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo49">GGEventImageRequest</a>, <strong>GGSendImageData()</strong>
+<pre>    GGE_TYPE_IMAGE_DATA, <a href="./gglib_h.html#robo46">GGEventImageData</a>, GGE_TYPE_IMAGE_REQUEST, <a href="./gglib_h.html#robo47">GGEventImageRequest</a>, <strong>GGSendImageData()</strong>
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGSendMessage2829"></a>
-<a name="robo38"></a><h2>gglib.c/GGSendMessage() [ Functions ]</h2>
+<a name="robo36"></a><h2>gglib.c/GGSendMessage() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGSendMessage()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGSendMessage(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, STRPTR msg, STRPTR image)
+<pre>    BOOL GGSendMessage(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, STRPTR msg, STRPTR image)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania wiadomoÅ›ci.
+<pre>    Funkcja s³u¿y do wys³ania wiadomo¶ci.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer do ktÃ³rego piszemy;
-    - msg -- treÅ›Ä‡ wiadomoÅ›ci, czysty tekst, kodowanie UTF-8;
-    - image -- identyfikator obrazka do wysÅ‚ania wraz z wiadomoÅ›ciÄ….
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer do którego piszemy;
+    - msg -- tre¶æ wiadomo¶ci, czysty tekst, kodowanie UTF-8;
+    - image -- identyfikator obrazka do wys³ania wraz z wiadomo¶ci±.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGTypingNotify2829"></a>
-<a name="robo39"></a><h2>gglib.c/GGTypingNotify() [ Functions ]</h2>
+<a name="robo37"></a><h2>gglib.c/GGTypingNotify() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGTypingNotify()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    BOOL GGTypingNotify(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, ULONG uin, USHORT len)
+<pre>    BOOL GGTypingNotify(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, ULONG uin, USHORT len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do wysÅ‚ania do serwera pakietu informujÄ…cego o pisaniu.
+<pre>    Funkcja s³u¿y do wys³ania do serwera pakietu informuj±cego o pisaniu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za poÅ‚Ä…czenie;
-    - uin -- numer do ktÃ³rego piszemy;
-    - len -- dÅ‚ugoÅ›Ä‡ tekstu juÅ¼ napisanego.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za po³±czenie;
+    - uin -- numer do którego piszemy;
+    - len -- d³ugo¶æ tekstu ju¿ napisanego.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    - TRUE -- jeÅ›li siÄ™ udaÅ‚o;
+<pre>    - TRUE -- je¶li siê uda³o;
     - FALSE -- w.p.p.
 </pre>
 
 <hr />
 <a name="gglib2ec2fGGWatchEvent2829"></a>
-<a name="robo40"></a><h2>gglib.c/GGWatchEvent() [ Functions ]</h2>
+<a name="robo38"></a><h2>gglib.c/GGWatchEvent() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo4">gglib.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGWatchEvent()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    struct <a href="./gglib_h.html#robo46">GGEvent</a> *GGWatchEvent(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess)
+<pre>    struct <a href="./gglib_h.html#robo44">GGEvent</a> *GGWatchEvent(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja sÅ‚uÅ¼y do obserwacji poÅ‚Ä…czenia z sieciÄ… GG.
+<pre>    Funkcja s³u¿y do obserwacji po³±czenia z sieci± GG.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…cÄ… za obserwowane poÅ‚Ä…czenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±c± za obserwowane po³±czenie.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo46">GGEvent</a> opisujÄ…cÄ… aktualne zdarzenie.
+<pre>    Wska¼nik na strukturê <a href="./gglib_h.html#robo44">GGEvent</a> opisuj±c± aktualne zdarzenie.
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./gglib.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./gglib.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>

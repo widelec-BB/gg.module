@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./gghandlers.c</title>
 <!-- Source: ./gghandlers.c -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -27,9 +27,9 @@
 <h3>TABLE OF CONTENTS</h3>
 <ul>
 <li><a href="#robo2">GGLib/gghandlers.c</a></li>
-<li><a href="#robo18">gghandlers.c/GGHandleConnected()</a></li>
-<li><a href="#robo19">gghandlers.c/GGHandleConnecting()</a></li>
-<li><a href="#robo20">gghandlers.c/GGHandleDisconnecting()</a></li>
+<li><a href="#robo17">gghandlers.c/GGHandleConnected()</a></li>
+<li><a href="#robo18">gghandlers.c/GGHandleConnecting()</a></li>
+<li><a href="#robo19">gghandlers.c/GGHandleDisconnecting()</a></li>
 </ul>
 <hr />
 <a name="GGLib2fgghandlers2ec"></a>
@@ -37,89 +37,89 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>gghandlers.c</strong> -- Plik zawierajÄ…cy funkcje obsÅ‚ugi zdarzeÅ„.
+<pre>    <strong>gghandlers.c</strong> -- Plik zawieraj±cy funkcje obs³ugi zdarzeñ.
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip MaryjaÅ„ski
+<pre>    Filip Maryjañski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Definicje funkcji przeznaczonych do obsÅ‚ugi zdarzeÅ„ zwiÄ…zanych z sieciÄ… GG.
+<pre>    Definicje funkcji przeznaczonych do obs³ugi zdarzeñ zwi±zanych z sieci± GG.
 </pre>
 
 <hr />
 <a name="gghandlers2ec2fGGHandleConnected2829"></a>
-<a name="robo18"></a><h2>gghandlers.c/GGHandleConnected() [ Functions ]</h2>
+<a name="robo17"></a><h2>gghandlers.c/GGHandleConnected() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">gghandlers.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGHandleConnected()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG GGHandleConnected(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *gg_event)
+<pre>    LONG GGHandleConnected(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *gg_event)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje stan GGS_STATE_CONNECTED.
+<pre>    Funkcja obs³uguje stan GGS_STATE_CONNECTED.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    gg_event -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo46">GGEvent</a> opisujÄ…cÄ… nastÄ™pne zdarzenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    gg_event -- wska¼nik na strukturê <a href="./gglib_h.html#robo44">GGEvent</a> opisuj±c± nastêpne zdarzenie.
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    Kod powrotu z <a href="./gghandlers_h.html#robo3">gghandlers.h</a>.
-    W przypadku bÅ‚Ä™du modyfikowany jest status poÅ‚Ä…czenia i kod bÅ‚Ä™du w gg_sess.
+    W przypadku b³êdu modyfikowany jest status po³±czenia i kod b³êdu w gg_sess.
 </pre>
 
 <hr />
 <a name="gghandlers2ec2fGGHandleConnecting2829"></a>
-<a name="robo19"></a><h2>gghandlers.c/GGHandleConnecting() [ Functions ]</h2>
+<a name="robo18"></a><h2>gghandlers.c/GGHandleConnecting() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">gghandlers.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGHandleConnecting()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG GGHandleConnecting(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *gg_event)
+<pre>    LONG GGHandleConnecting(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *gg_event)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje stan GGS_STATE_CONNECTING, sprawdza czy nieblokujÄ…cy socket nawiÄ…zaÅ‚
-    poÅ‚Ä…czenie i jest gotowy do uÅ¼ycia. Przenosi poÅ‚Ä…czenie w stan GG_STATE_CONNECTED. W przypadku
-    braku poÅ‚Ä…czenia zwraca GGH_RETURN_WAIT.
+<pre>    Funkcja obs³uguje stan GGS_STATE_CONNECTING, sprawdza czy nieblokuj±cy socket nawi±za³
+    po³±czenie i jest gotowy do u¿ycia. Przenosi po³±czenie w stan GG_STATE_CONNECTED. W przypadku
+    braku po³±czenia zwraca GGH_RETURN_WAIT.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    - gg_event -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo46">GGEvent</a> opisujÄ…cÄ… nastÄ™pne zdarzenie.
+<pre>    - gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    - gg_event -- wska¼nik na strukturê <a href="./gglib_h.html#robo44">GGEvent</a> opisuj±c± nastêpne zdarzenie.
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    Kod powrotu z <a href="./gghandlers_h.html#robo3">gghandlers.h</a>.
-    Dodatkowo modyfikowany jest status poÅ‚Ä…czenia i ewentualnie kod bÅ‚Ä™du w gg_sess.
+    Dodatkowo modyfikowany jest status po³±czenia i ewentualnie kod b³êdu w gg_sess.
 </pre>
 
 <hr />
 <a name="gghandlers2ec2fGGHandleDisconnecting2829"></a>
-<a name="robo20"></a><h2>gghandlers.c/GGHandleDisconnecting() [ Functions ]</h2>
+<a name="robo19"></a><h2>gghandlers.c/GGHandleDisconnecting() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo2">gghandlers.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGHandleDisconnecting()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG GGHandleDisconnecting(struct <a href="./gglib_h.html#robo62">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo46">GGEvent</a> *gg_event)
+<pre>    LONG GGHandleDisconnecting(struct <a href="./gglib_h.html#robo60">GGSession</a> *gg_sess, struct <a href="./gglib_h.html#robo44">GGEvent</a> *gg_event)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja obsÅ‚uguje stan GGS_STATE_DISCONNECTED.
+<pre>    Funkcja obs³uguje stan GGS_STATE_DISCONNECTED.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo62">GGSession</a> odpowiadajÄ…ce za poÅ‚Ä…czenie;
-    gg_event -- wskaÅºnik na strukturÄ™ <a href="./gglib_h.html#robo46">GGEvent</a> opisujÄ…cÄ… nastÄ™pne zdarzenie.
+<pre>    gg_sess -- wska¼nik na strukturê <a href="./gglib_h.html#robo60">GGSession</a> odpowiadaj±ce za po³±czenie;
+    gg_event -- wska¼nik na strukturê <a href="./gglib_h.html#robo44">GGEvent</a> opisuj±c± nastêpne zdarzenie.
 </pre>
 <p class="item_name">RESULT</p>
 <pre>    Kod powrotu z <a href="./gghandlers_h.html#robo3">gghandlers.h</a>.
-    W przypadku bÅ‚Ä™du modyfikowany jest status poÅ‚Ä…czenia i kod bÅ‚Ä™du w gg_sess.
+    W przypadku b³êdu modyfikowany jest status po³±czenia i kod b³êdu w gg_sess.
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./gghandlers.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./gghandlers.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>

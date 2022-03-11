@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./gglib.h</title>
 <!-- Source: ./gglib.h -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -27,30 +27,30 @@
 <h3>TABLE OF CONTENTS</h3>
 <ul>
 <li><a href="#robo5">GGLib/gglib.h</a></li>
-<li><a href="#robo41">gglib.h/GG_SESSION_CHECK_READ()</a></li>
-<li><a href="#robo42">gglib.h/GG_SESSION_CHECK_WRITE()</a></li>
-<li><a href="#robo43">gglib.h/GG_SESSION_ERROR()</a></li>
-<li><a href="#robo44">gglib.h/GG_SESSION_IS_CONNECTED()</a></li>
-<li><a href="#robo45">gglib.h/GGE_TYPE_#?</a></li>
-<li><a href="#robo46">gglib.h/GGEvent</a></li>
-<li><a href="#robo47">gglib.h/GGEventError</a></li>
-<li><a href="#robo48">gglib.h/GGEventImageData</a></li>
-<li><a href="#robo49">gglib.h/GGEventImageRequest</a></li>
-<li><a href="#robo50">gglib.h/GGEventListExport</a></li>
-<li><a href="#robo51">gglib.h/GGEventListImport</a></li>
-<li><a href="#robo52">gglib.h/GGEventListStatus</a></li>
-<li><a href="#robo53">gglib.h/GGEventMultilogonInfo</a></li>
-<li><a href="#robo54">gglib.h/GGEventPubDirInfo</a></li>
-<li><a href="#robo55">gglib.h/GGEventRecvMsg</a></li>
-<li><a href="#robo56">gglib.h/GGEventStatusChange</a></li>
-<li><a href="#robo57">gglib.h/GGEventTypingNotify</a></li>
-<li><a href="#robo58">gglib.h/GGEventUsersData</a></li>
-<li><a href="#robo59">gglib.h/GGMultilogonInfo</a></li>
-<li><a href="#robo60">gglib.h/GGS_ERRNO_#?</a></li>
-<li><a href="#robo61">gglib.h/GGS_STATE_#?</a></li>
-<li><a href="#robo62">gglib.h/GGSession</a></li>
-<li><a href="#robo63">gglib.h/GGUserData</a></li>
-<li><a href="#robo64">gglib.h/GGUserDataAttr</a></li>
+<li><a href="#robo39">gglib.h/GG_SESSION_CHECK_READ()</a></li>
+<li><a href="#robo40">gglib.h/GG_SESSION_CHECK_WRITE()</a></li>
+<li><a href="#robo41">gglib.h/GG_SESSION_ERROR()</a></li>
+<li><a href="#robo42">gglib.h/GG_SESSION_IS_CONNECTED()</a></li>
+<li><a href="#robo43">gglib.h/GGE_TYPE_#?</a></li>
+<li><a href="#robo44">gglib.h/GGEvent</a></li>
+<li><a href="#robo45">gglib.h/GGEventError</a></li>
+<li><a href="#robo46">gglib.h/GGEventImageData</a></li>
+<li><a href="#robo47">gglib.h/GGEventImageRequest</a></li>
+<li><a href="#robo48">gglib.h/GGEventListExport</a></li>
+<li><a href="#robo49">gglib.h/GGEventListImport</a></li>
+<li><a href="#robo50">gglib.h/GGEventListStatus</a></li>
+<li><a href="#robo51">gglib.h/GGEventMultilogonInfo</a></li>
+<li><a href="#robo52">gglib.h/GGEventPubDirInfo</a></li>
+<li><a href="#robo53">gglib.h/GGEventRecvMsg</a></li>
+<li><a href="#robo54">gglib.h/GGEventStatusChange</a></li>
+<li><a href="#robo55">gglib.h/GGEventTypingNotify</a></li>
+<li><a href="#robo56">gglib.h/GGEventUsersData</a></li>
+<li><a href="#robo57">gglib.h/GGMultilogonInfo</a></li>
+<li><a href="#robo58">gglib.h/GGS_ERRNO_#?</a></li>
+<li><a href="#robo59">gglib.h/GGS_STATE_#?</a></li>
+<li><a href="#robo60">gglib.h/GGSession</a></li>
+<li><a href="#robo61">gglib.h/GGUserData</a></li>
+<li><a href="#robo62">gglib.h/GGUserDataAttr</a></li>
 </ul>
 <hr />
 <a name="GGLib2fgglib2eh"></a>
@@ -58,32 +58,32 @@
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>gglib.h</strong> -- GÅ‚Ã³wny plik nagÅ‚Ã³wkowy biblioteki.
+<pre>    <strong>gglib.h</strong> -- G³ówny plik nag³ówkowy biblioteki.
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip MaryjaÅ„ski
+<pre>    Filip Maryjañski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Plik definiuje wszystko co jest niezbÄ™dne, aby mÃ³c uÅ¼yÄ‡ biblioteki
+<pre>    Plik definiuje wszystko co jest niezbêdne, aby móc u¿yæ biblioteki
     w programie.
 </pre>
 
 <hr />
 <a name="gglib2eh2fGG5fSESSION5fCHECK5fREAD2829"></a>
-<a name="robo41"></a><h2>gglib.h/GG_SESSION_CHECK_READ() [ Functions ]</h2>
+<a name="robo39"></a><h2>gglib.h/GG_SESSION_CHECK_READ() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GG_SESSION_CHECK_READ()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    GG_SESSION_CHECK_READ(struct <a href="#robo62">GGSession</a> *gg_sess)
+<pre>    GG_SESSION_CHECK_READ(struct <a href="#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Makro sprawdza czy biblioteka chce czytaÄ‡ z socketu.
+<pre>    Makro sprawdza czy biblioteka chce czytaæ z socketu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess - wskaÅºnik na strukturÄ™ sesji do sprawdzenia.
+<pre>    gg_sess - wska¼nik na strukturê sesji do sprawdzenia.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_SESSION_CHECK_READ<span class="sign">(</span>gg_sess<span class="sign">)</span> <span class="sign">(</span><span class="sign">(</span>gg_sess<span class="sign">)</span><span class="sign">-</span><span class="sign">&gt;</span>ggs_Check <span class="sign">&amp;</span> GGS_CHECK_READ<span class="sign">)</span>
@@ -91,20 +91,20 @@
 
 <hr />
 <a name="gglib2eh2fGG5fSESSION5fCHECK5fWRITE2829"></a>
-<a name="robo42"></a><h2>gglib.h/GG_SESSION_CHECK_WRITE() [ Functions ]</h2>
+<a name="robo40"></a><h2>gglib.h/GG_SESSION_CHECK_WRITE() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GG_SESSION_CHECK_WRITE()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    GG_SESSION_CHECK_WRITE(struct <a href="#robo62">GGSession</a> *gg_sess)
+<pre>    GG_SESSION_CHECK_WRITE(struct <a href="#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Makro sprawdza czy biblioteka chce zapisywaÄ‡ do socketu.
+<pre>    Makro sprawdza czy biblioteka chce zapisywaæ do socketu.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess - wskaÅºnik na strukturÄ™ sesji do sprawdzenia.
+<pre>    gg_sess - wska¼nik na strukturê sesji do sprawdzenia.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_SESSION_CHECK_WRITE<span class="sign">(</span>gg_sess<span class="sign">)</span> <span class="sign">(</span><span class="sign">(</span>gg_sess<span class="sign">)</span><span class="sign">-</span><span class="sign">&gt;</span>ggs_Check <span class="sign">&amp;</span> GGS_CHECK_WRITE<span class="sign">)</span>
@@ -112,23 +112,23 @@
 
 <hr />
 <a name="gglib2eh2fGG5fSESSION5fERROR2829"></a>
-<a name="robo43"></a><h2>gglib.h/GG_SESSION_ERROR() [ Functions ]</h2>
+<a name="robo41"></a><h2>gglib.h/GG_SESSION_ERROR() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GG_SESSION_ERROR()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    GG_SESSION_ERROR(struct <a href="#robo62">GGSession</a> *gg_sess, ULONG errno)
+<pre>    GG_SESSION_ERROR(struct <a href="#robo60">GGSession</a> *gg_sess, ULONG errno)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Makro ustawia sesjÄ™ w stan bÅ‚Ä™du oraz ustawia ggs_Errno na podanÄ… wartoÅ›Ä‡.
+<pre>    Makro ustawia sesjê w stan b³êdu oraz ustawia ggs_Errno na podan± warto¶æ.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess - wskaÅºnik na strukturÄ™ sesji.
+<pre>    gg_sess - wska¼nik na strukturê sesji.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo61">GGS_STATE_#?</a>, <a href="#robo60">GGS_ERRNO_#?</a>
+<pre>    <a href="#robo59">GGS_STATE_#?</a>, <a href="#robo58">GGS_ERRNO_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_SESSION_ERROR<span class="sign">(</span>gg_sess<span class="sign">,</span> error<span class="sign">)</span> <span class="keyword">do</span><span class="sign">{</span>tprintf<span class="sign">(</span><span class="quote">"session error: %ld\n"</span><span class="sign">,</span> error<span class="sign">)</span><span class="sign">;</span> <span class="sign">(</span>gg_sess<span class="sign">)</span><span class="sign">-</span><span class="sign">&gt;</span>ggs_SessionState <span class="sign">=</span> GGS_STATE_ERROR<span class="sign">;</span> <span class="sign">(</span>gg_sess<span class="sign">)</span><span class="sign">-</span><span class="sign">&gt;</span>ggs_Errno <span class="sign">=</span> error<span class="sign">;</span><span class="sign">}</span><span class="keyword">while</span><span class="sign">(</span>0<span class="sign">)</span>
@@ -136,23 +136,23 @@
 
 <hr />
 <a name="gglib2eh2fGG5fSESSION5fIS5fCONNECTED2829"></a>
-<a name="robo44"></a><h2>gglib.h/GG_SESSION_IS_CONNECTED() [ Functions ]</h2>
+<a name="robo42"></a><h2>gglib.h/GG_SESSION_IS_CONNECTED() [ Functions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GG_SESSION_IS_CONNECTED()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    GG_SESSION_IS_CONNECTED(struct <a href="#robo62">GGSession</a> *gg_sess)
+<pre>    GG_SESSION_IS_CONNECTED(struct <a href="#robo60">GGSession</a> *gg_sess)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Makro sprawdza czy sesja jest poÅ‚Ä…czona z serwerem.
+<pre>    Makro sprawdza czy sesja jest po³±czona z serwerem.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    gg_sess -- wskaÅºnik na strukturÄ™ sesji do sprawdzenia.
+<pre>    gg_sess -- wska¼nik na strukturê sesji do sprawdzenia.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo61">GGS_STATE_#?</a>
+<pre>    <a href="#robo59">GGS_STATE_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_SESSION_IS_CONNECTED<span class="sign">(</span>gg_sess<span class="sign">)</span> <span class="sign">(</span><span class="sign">(</span>gg_sess<span class="sign">)</span><span class="sign">-</span><span class="sign">&gt;</span>ggs_SessionState <span class="sign">=</span><span class="sign">=</span> GGS_STATE_CONNECTED<span class="sign">)</span>
@@ -160,30 +160,30 @@
 
 <hr />
 <a name="gglib2eh2fGGE5fTYPE5f233f"></a>
-<a name="robo45"></a><h2>gglib.h/GGE_TYPE_#? [ Definitions ]</h2>
+<a name="robo43"></a><h2>gglib.h/GGE_TYPE_#? [ Definitions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGE_TYPE_#?</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Definicje rodzajÃ³w zdarzeÅ„ jakie moÅ¼e wygenerowaÄ‡ biblioteka.
+<pre>    Definicje rodzajów zdarzeñ jakie mo¿e wygenerowaæ biblioteka.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - GGE_TYPE_ERROR -- wystÄ…piÅ‚ bÅ‚Ä…d;
-    - GGE_TYPE_NOOP -- nie wydarzyÅ‚o siÄ™ nic istotnego;
-    - GGE_TYPE_CONNECTED -- udaÅ‚o siÄ™ nawiÄ…zaÄ‡ poÅ‚Ä…czenie z serwerem;
-    - GGE_TYPE_DISCONNECT -- poÅ‚Ä…czenie zostaÅ‚o zerwane;
-    - GGE_TYPE_LOGIN_SUCCESS -- logowanie powiodÅ‚o siÄ™;
-    - GGE_TYPE_LOGIN_FAIL -- logowanie nie powiodÅ‚o siÄ™ (zÅ‚e hasÅ‚o?);
-    - GGE_TYPE_STATUS_CHANGE -- zmiana statusu na liÅ›cie kontaktÃ³w;
-    - GGE_TYPE_LIST_STATUS -- zmiana wiÄ™cej niÅ¼ jednego statusu na liÅ›cie kontaktÃ³w;
+<pre>    - GGE_TYPE_ERROR -- wyst±pi³ b³±d;
+    - GGE_TYPE_NOOP -- nie wydarzy³o siê nic istotnego;
+    - GGE_TYPE_CONNECTED -- uda³o siê nawi±zaæ po³±czenie z serwerem;
+    - GGE_TYPE_DISCONNECT -- po³±czenie zosta³o zerwane;
+    - GGE_TYPE_LOGIN_SUCCESS -- logowanie powiod³o siê;
+    - GGE_TYPE_LOGIN_FAIL -- logowanie nie powiod³o siê (z³e has³o?);
+    - GGE_TYPE_STATUS_CHANGE -- zmiana statusu na li¶cie kontaktów;
+    - GGE_TYPE_LIST_STATUS -- zmiana wiêcej ni¿ jednego statusu na li¶cie kontaktów;
     - GGE_TYPE_TYPING_NOTIFY -- otrzymano powiadomienie o pisaniu;
-    - GGE_TYPE_RECV_MSG -- otrzymano nowÄ… wiadomoÅ›Ä‡;
-    - GGE_TYPE_USER_DATA -- otrzymano dodatkowe dane dotyczÄ…ce kontaktÃ³w;
-    - GGE_TYPE_LIST_IMPORT -- otrzymano listÄ™ kontaktÃ³w od serwera;
-    - GGE_TYPE_LIST_EXPORT -- wysÅ‚anie listy kontaktÃ³w do serwera;
-    - GGE_TYPE_MULTILOGON_INFO -- otrzymano informacje o rÃ³wnolegle zalogowanych klientach.
+    - GGE_TYPE_RECV_MSG -- otrzymano now± wiadomo¶æ;
+    - GGE_TYPE_USER_DATA -- otrzymano dodatkowe dane dotycz±ce kontaktów;
+    - GGE_TYPE_LIST_IMPORT -- otrzymano listê kontaktów od serwera;
+    - GGE_TYPE_LIST_EXPORT -- wys³anie listy kontaktów do serwera;
+    - GGE_TYPE_MULTILOGON_INFO -- otrzymano informacje o równolegle zalogowanych klientach.
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GGE_TYPE_ERROR           <span class="sign">(</span><span class="sign">-</span>1<span class="sign">)</span>
@@ -207,21 +207,21 @@
 
 <hr />
 <a name="gglib2eh2fGGEvent"></a>
-<a name="robo46"></a><h2>gglib.h/GGEvent [ Structures ]</h2>
+<a name="robo44"></a><h2>gglib.h/GGEvent [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEvent</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisujÄ…ca aktualne zdarzenie.
+<pre>    Struktura opisuj±ca aktualne zdarzenie.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - gge_Type -- typ zdarzenia;
-    - gge_Event -- unia struktur opisujÄ…cych rÃ³Å¼ne rodzaje zdarzeÅ„ 
+    - gge_Event -- unia struktur opisuj±cych ró¿ne rodzaje zdarzeñ
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo45">GGE_TYPE_#?</a>, <a href="#robo47">GGEventError</a>, <a href="#robo56">GGEventStatusChange</a>
+<pre>    <a href="#robo43">GGE_TYPE_#?</a>, <a href="#robo45">GGEventError</a>, <a href="#robo54">GGEventStatusChange</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEvent</strong>
@@ -229,38 +229,38 @@
         LONG gge_Type<span class="sign">;</span>
         <span class="keyword">union</span> GGEvents
         <span class="sign">{</span>
-                <span class="keyword">struct</span> <a href="#robo47">GGEventError</a>            gge_Error<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo56">GGEventStatusChange</a>     gge_StatusChange<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo52">GGEventListStatus</a>       gge_ListStatus<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo57">GGEventTypingNotify</a>     gge_TypingNotify<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo55">GGEventRecvMsg</a>          gge_RecvMsg<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo58">GGEventUsersData</a>        gge_UsersData<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo51">GGEventListImport</a>       gge_ListImport<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo50">GGEventListExport</a>       gge_ListExport<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo53">GGEventMultilogonInfo</a>   gge_MultilogonInfo<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo48">GGEventImageData</a>        gge_ImageData<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo49">GGEventImageRequest</a>     gge_ImageRequest<span class="sign">;</span>
-                <span class="keyword">struct</span> <a href="#robo54">GGEventPubDirInfo</a>       gge_PubDirInfo<span class="sign">;</span>
-        <span class="sign">}</span> gge_Event<span class="sign">;</span> 
+                <span class="keyword">struct</span> <a href="#robo45">GGEventError</a>            gge_Error<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo54">GGEventStatusChange</a>     gge_StatusChange<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo50">GGEventListStatus</a>       gge_ListStatus<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo55">GGEventTypingNotify</a>     gge_TypingNotify<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo53">GGEventRecvMsg</a>          gge_RecvMsg<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo56">GGEventUsersData</a>        gge_UsersData<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo49">GGEventListImport</a>       gge_ListImport<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo48">GGEventListExport</a>       gge_ListExport<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo51">GGEventMultilogonInfo</a>   gge_MultilogonInfo<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo46">GGEventImageData</a>        gge_ImageData<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo47">GGEventImageRequest</a>     gge_ImageRequest<span class="sign">;</span>
+                <span class="keyword">struct</span> <a href="#robo52">GGEventPubDirInfo</a>       gge_PubDirInfo<span class="sign">;</span>
+        <span class="sign">}</span> gge_Event<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGEventError"></a>
-<a name="robo47"></a><h2>gglib.h/GGEventError [ Structures ]</h2>
+<a name="robo45"></a><h2>gglib.h/GGEventError [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventError</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie wystÄ…pienia bÅ‚Ä™du.
+<pre>    Struktura opisuje zdarzenie wyst±pienia b³êdu.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    ggee_Errno -- kod bÅ‚Ä™du.
+<pre>    ggee_Errno -- kod b³êdu.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo60">GGS_ERRNO_#?</a>
+<pre>    <a href="#robo58">GGS_ERRNO_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventError</strong>
@@ -271,28 +271,28 @@
 
 <hr />
 <a name="gglib2eh2fGGEventImageData"></a>
-<a name="robo48"></a><h2>gglib.h/GGEventImageData [ Structures ]</h2>
+<a name="robo46"></a><h2>gglib.h/GGEventImageData [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventImageData</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania danych Å¼Ä…danego obrazka.
+<pre>    Struktura opisuje zdarzenie odebrania danych ¿±danego obrazka.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggeid_Uin -- numer, od ktÃ³rego otrzymaliÅ›my dane obrazka;
-    - ggeid_Type -- pole opisujÄ…ce szczegÃ³Å‚y dotyczÄ…ce zdarzenia:
+<pre>    - ggeid_Uin -- numer, od którego otrzymali¶my dane obrazka;
+    - ggeid_Type -- pole opisuj±ce szczegó³y dotycz±ce zdarzenia:
      - GG_IMAGE_START_DATA -- pierwsza porcja danych obrazka;
      - GG_IMAGE_NEXT_DATA -- kolejne porcje danych obrazka;
     - ggeid_ImageSize -- rozmiar obrazka;
     - ggeid_Crc32 -- suma kontrolna obrazka (CRC32);
-    - ggeid_FileName -- wskaÅºnik na nazwÄ™ pliku (tylko przy pierwszej porcji danych obrazka);
+    - ggeid_FileName -- wska¼nik na nazwê pliku (tylko przy pierwszej porcji danych obrazka);
     - ggeid_DataSize -- rozmiar pola wskazywanego przez ggeid_Data;
-    - ggeid_Data -- wskaÅºnik na zawartoÅ›Ä‡ obrazka.
+    - ggeid_Data -- wska¼nik na zawarto¶æ obrazka.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo76">GGPacketHandlerRecvMsg()</a>, <a href="./gglib_c.html#robo36">GGRequestImage()</a>
+<pre>    <a href="./ggpackets_c.html#robo74">GGPacketHandlerRecvMsg()</a>, <a href="./gglib_c.html#robo34">GGRequestImage()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_IMAGE_START_DATA <span class="sign">(</span>1UL<span class="sign">)</span>
@@ -312,22 +312,22 @@
 
 <hr />
 <a name="gglib2eh2fGGEventImageRequest"></a>
-<a name="robo49"></a><h2>gglib.h/GGEventImageRequest [ Structures ]</h2>
+<a name="robo47"></a><h2>gglib.h/GGEventImageRequest [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventImageRequest</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania Å¼Ä…dania obrazka.
+<pre>    Struktura opisuje zdarzenie odebrania ¿±dania obrazka.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - geeid_Uin -- numer, od ktÃ³rego odebrano Å¼Ä…danie obrazka;
-    - ggeid_ImageSize -- rozmiar Å¼Ä…danego obrazka;
-    - ggeid_Crc32 -- suma kontrolna Å¼Ä…danego obrazka (CRC32).
+<pre>    - geeid_Uin -- numer, od którego odebrano ¿±danie obrazka;
+    - ggeid_ImageSize -- rozmiar ¿±danego obrazka;
+    - ggeid_Crc32 -- suma kontrolna ¿±danego obrazka (CRC32).
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo76">GGPacketHandlerRecvMsg()</a>, <a href="./gglib_c.html#robo36">GGRequestImage()</a>
+<pre>    <a href="./ggpackets_c.html#robo74">GGPacketHandlerRecvMsg()</a>, <a href="./gglib_c.html#robo34">GGRequestImage()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventImageRequest</strong>
@@ -340,21 +340,21 @@
 
 <hr />
 <a name="gglib2eh2fGGEventListExport"></a>
-<a name="robo50"></a><h2>gglib.h/GGEventListExport [ Structures ]</h2>
+<a name="robo48"></a><h2>gglib.h/GGEventListExport [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventListExport</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania potwierdzenia eksportu listy kontaktÃ³w.
+<pre>    Struktura opisuje zdarzenie odebrania potwierdzenia eksportu listy kontaktów.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggeil_Version -- wersja listy kontaktÃ³w;
-    - ggeil_Accept -- TRUE jeÅ›li lista zostaÅ‚a zaakceptowana przez serwer, FALSE w.p.p..
+<pre>    - ggeil_Version -- wersja listy kontaktów;
+    - ggeil_Accept -- TRUE je¶li lista zosta³a zaakceptowana przez serwer, FALSE w.p.p..
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo81">GGPacketHandlerUserListReply()</a>
+<pre>    <a href="./ggpackets_c.html#robo79">GGPacketHandlerUserListReply()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventListExport</strong>
@@ -366,22 +366,22 @@
 
 <hr />
 <a name="gglib2eh2fGGEventListImport"></a>
-<a name="robo51"></a><h2>gglib.h/GGEventListImport [ Structures ]</h2>
+<a name="robo49"></a><h2>gglib.h/GGEventListImport [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventListImport</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania listy kontaktÃ³w od serwera.
+<pre>    Struktura opisuje zdarzenie odebrania listy kontaktów od serwera.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggeil_Version -- wersja listy kontaktÃ³w;
-    - ggeil_Format -- typ formatu listy kontaktÃ³w;
-    - ggeil_Data -- lista kontaktÃ³w.
+<pre>    - ggeil_Version -- wersja listy kontaktów;
+    - ggeil_Format -- typ formatu listy kontaktów;
+    - ggeil_Data -- lista kontaktów.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo81">GGPacketHandlerUserListReply()</a>, <a href="./ggdefs_h.html#robo14">GG_LIST_FORMAT_#?</a>
+<pre>    <a href="./ggpackets_c.html#robo79">GGPacketHandlerUserListReply()</a>, <a href="./ggdefs_h.html#robo13">GG_LIST_FORMAT_#?</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventListImport</strong>
@@ -394,59 +394,59 @@
 
 <hr />
 <a name="gglib2eh2fGGEventListStatus"></a>
-<a name="robo52"></a><h2>gglib.h/GGEventListStatus [ Structures ]</h2>
+<a name="robo50"></a><h2>gglib.h/GGEventListStatus [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventListStatus</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania statusÃ³w kontaktÃ³w z listy.
+<pre>    Struktura opisuje zdarzenie odebrania statusów kontaktów z listy.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggels_ChangesNo -- dÅ‚ugoÅ›Ä‡ tablicy ggels_StatusChanges;
-    - ggels_StatusChanges - tablica struktur opisujÄ…cych zmiany statusu.
+<pre>    - ggels_ChangesNo -- d³ugo¶æ tablicy ggels_StatusChanges;
+    - ggels_StatusChanges - tablica struktur opisuj±cych zmiany statusu.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo56">GGEventStatusChange</a>, <a href="./ggpackets_c.html#robo72">GGPacketHandlerListStatus()</a>
+<pre>    <a href="#robo54">GGEventStatusChange</a>, <a href="./ggpackets_c.html#robo70">GGPacketHandlerListStatus()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventListStatus</strong>
 <span class="sign">{</span>
         LONG ggels_ChangesNo<span class="sign">;</span>
-        <span class="keyword">struct</span> <a href="#robo56">GGEventStatusChange</a> <span class="sign">*</span>ggels_StatusChanges<span class="sign">;</span>
+        <span class="keyword">struct</span> <a href="#robo54">GGEventStatusChange</a> <span class="sign">*</span>ggels_StatusChanges<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGEventMultilogonInfo"></a>
-<a name="robo53"></a><h2>gglib.h/GGEventMultilogonInfo [ Structures ]</h2>
+<a name="robo51"></a><h2>gglib.h/GGEventMultilogonInfo [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventMultilogonInfo</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania informacji o innych rÃ³wnolegle zalogowanych klientach.
+<pre>    Struktura opisuje zdarzenie odebrania informacji o innych równolegle zalogowanych klientach.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggemi_No -- iloÅ›Ä‡ rÃ³wnolegle zalogowanych klientÃ³w;
-    - ggemi_Data -- wskaÅºnik na tablicÄ™ struktur opisujÄ…cych rÃ³wnolegle zalogowane klienty.
+<pre>    - ggemi_No -- ilo¶æ równolegle zalogowanych klientów;
+    - ggemi_Data -- wska¼nik na tablicê struktur opisuj±cych równolegle zalogowane klienty.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo74">GGPacketHandlerMultilogonInfo()</a>
+<pre>    <a href="./ggpackets_c.html#robo72">GGPacketHandlerMultilogonInfo()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventMultilogonInfo</strong>
 <span class="sign">{</span>
         ULONG ggemi_No<span class="sign">;</span>
-        <span class="keyword">struct</span> <a href="#robo59">GGMultilogonInfo</a> <span class="sign">*</span>ggemi_Data<span class="sign">;</span>
+        <span class="keyword">struct</span> <a href="#robo57">GGMultilogonInfo</a> <span class="sign">*</span>ggemi_Data<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGEventPubDirInfo"></a>
-<a name="robo54"></a><h2>gglib.h/GGEventPubDirInfo [ Structures ]</h2>
+<a name="robo52"></a><h2>gglib.h/GGEventPubDirInfo [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -456,17 +456,17 @@
 <pre>    Struktura opisuje zdarzenie odebrania danych z katalogu publicznego.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - geepdi_Uin -- numer, ktÃ³rego dotyczÄ… dane;
-    - ggepdi_FirstName -- imiÄ™ kontaktu;
+<pre>    - geepdi_Uin -- numer, którego dotycz± dane;
+    - ggepdi_FirstName -- imiê kontaktu;
     - ggepdi_LastName -- nazwisko kontaktu;
     - ggepdi_NickName -- nick kontaktu;
     - ggepdi_BirthYear -- rok urodzenia kontaktu;
     - ggepdi_City -- miejsce zamieszkania kontaktu;
-    - ggpedi_Gender -- pÅ‚eÄ‡ kontaktu;
+    - ggpedi_Gender -- p³eæ kontaktu;
     - ggpedi_Status -- aktualny status kontaktu.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo75">GGPacketHandlerPubDirInfo()</a>, <a href="./gglib_c.html#robo29">GGFindInPubDir()</a>
+<pre>    <a href="./ggpackets_c.html#robo73">GGPacketHandlerPubDirInfo()</a>, <a href="./gglib_c.html#robo27">GGFindInPubDir()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_INFO_GENDER_UNKNOWN 0
@@ -483,33 +483,33 @@
         STRPTR ggepdi_BirthYear<span class="sign">;</span>
         STRPTR ggepdi_City<span class="sign">;</span>
         ULONG  ggepdi_Gender<span class="sign">;</span>
-        ULONG  ggepdi_Status<span class="sign">;</span> 
+        ULONG  ggepdi_Status<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGEventRecvMsg"></a>
-<a name="robo55"></a><h2>gglib.h/GGEventRecvMsg [ Structures ]</h2>
+<a name="robo53"></a><h2>gglib.h/GGEventRecvMsg [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGEventRecvMsg</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura opisuje zdarzenie odebrania nowej wiadomoÅ›ci.
+<pre>    Struktura opisuje zdarzenie odebrania nowej wiadomo¶ci.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggerm_Uin -- uin nadawcy;
-    - ggerm_Time -- czas nadania wiadomoÅ›ci (UTC, Amiga era);
-    - ggerm_Flags -- flagi wiadomoÅ›ci:
-     - GG_MSG_NORMAL -- zwykÅ‚a wiadomoÅ›Ä‡;
-     - GG_MSG_OWN -- wiadomoÅ›Ä‡ wysÅ‚ana z innego, rÃ³wnoczeÅ›nie zalogowanego klienta
-    - ggerm_Txt -- treÅ›Ä‡ wiadomoÅ›ci (czysty tekst, kodowanie UTF-8, 
-     moÅ¼e byÄ‡ NULL w przypadku samego obrazka);
-    - ggerm_ImageId -- identyfikator obrazka (jeÅ›li wystÄ…piÅ‚ w wiadomoÅ›ci).
+    - ggerm_Time -- czas nadania wiadomo¶ci (UTC, Amiga era);
+    - ggerm_Flags -- flagi wiadomo¶ci:
+     - GG_MSG_NORMAL -- zwyk³a wiadomo¶æ;
+     - GG_MSG_OWN -- wiadomo¶æ wys³ana z innego, równocze¶nie zalogowanego klienta
+    - ggerm_Txt -- tre¶æ wiadomo¶ci (czysty tekst, kodowanie UTF-8,
+     mo¿e byæ NULL w przypadku samego obrazka);
+    - ggerm_ImageId -- identyfikator obrazka (je¶li wyst±pi³ w wiadomo¶ci).
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo76">GGPacketHandlerRecvMsg()</a>
+<pre>    <a href="./ggpackets_c.html#robo74">GGPacketHandlerRecvMsg()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GG_MSG_NORMAL <span class="sign">(</span>0UL<span class="sign">)</span>
@@ -527,7 +527,7 @@
 
 <hr />
 <a name="gglib2eh2fGGEventStatusChange"></a>
-<a name="robo56"></a><h2>gglib.h/GGEventStatusChange [ Structures ]</h2>
+<a name="robo54"></a><h2>gglib.h/GGEventStatusChange [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -535,13 +535,13 @@
 </pre>
 <p class="item_name">FUNCTION</p>
 <pre>    Struktura opisuje zdarzenie zmiany statusu przez kontakt z listy
-    podanej wczeÅ›niej przez <a href="./gglib_c.html#robo32">GGNotifyList()</a>.
+    podanej wcze¶niej przez <a href="./gglib_c.html#robo30">GGNotifyList()</a>.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggesc_Uin -- numer GG uÅ¼ytkownika zmieniajÄ…cego status;
+<pre>    - ggesc_Uin -- numer GG u¿ytkownika zmieniaj±cego status;
     - ggesc_Status -- nowy status;
-    - ggesc_ImageSize -- maksymalny rozmiar odbieranych przez uÅ¼ytkownika obrazkÃ³w;
-    - ggesc_Description -- opis statusu (NULL jeÅ›li brak).
+    - ggesc_ImageSize -- maksymalny rozmiar odbieranych przez u¿ytkownika obrazków;
+    - ggesc_Description -- opis statusu (NULL je¶li brak).
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventStatusChange</strong>
@@ -555,7 +555,7 @@
 
 <hr />
 <a name="gglib2eh2fGGEventTypingNotify"></a>
-<a name="robo57"></a><h2>gglib.h/GGEventTypingNotify [ Structures ]</h2>
+<a name="robo55"></a><h2>gglib.h/GGEventTypingNotify [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -565,11 +565,11 @@
 <pre>    Struktura opisuje zdarzenie odebrania powiadomienia o pisaniu.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggetn_Uin -- uin uÅ¼ytkownika, ktÃ³ry pisze do nas wiadomoÅ›Ä‡;
-    - ggetn_Length -- dÅ‚ugoÅ›Ä‡ tekstu wpisana w pole edycji.
+<pre>    - ggetn_Uin -- uin u¿ytkownika, który pisze do nas wiadomo¶æ;
+    - ggetn_Length -- d³ugo¶æ tekstu wpisana w pole edycji.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo78">GGPacketHandlerTypingNotify()</a>
+<pre>    <a href="./ggpackets_c.html#robo76">GGPacketHandlerTypingNotify()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventTypingNotify</strong>
@@ -581,7 +581,7 @@
 
 <hr />
 <a name="gglib2eh2fGGEventUsersData"></a>
-<a name="robo58"></a><h2>gglib.h/GGEventUsersData [ Structures ]</h2>
+<a name="robo56"></a><h2>gglib.h/GGEventUsersData [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
@@ -592,42 +592,42 @@
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggeud_Type -- typ danych;
-    - ggeud_UsersNo -- iloÅ›Ä‡ opisywanych kontaktÃ³w;
-    - ggeud_Data -- wskaÅºnik na tablicÄ™ struktur opisujÄ…cych dane o kontakcie.
+    - ggeud_UsersNo -- ilo¶æ opisywanych kontaktów;
+    - ggeud_Data -- wska¼nik na tablicê struktur opisuj±cych dane o kontakcie.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="./ggpackets_c.html#robo80">GGPacketHandlerUserData()</a>, <a href="#robo63">GGUserData</a>
+<pre>    <a href="./ggpackets_c.html#robo78">GGPacketHandlerUserData()</a>, <a href="#robo61">GGUserData</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGEventUsersData</strong>
 <span class="sign">{</span>
         ULONG ggeud_Type<span class="sign">;</span>
         ULONG ggeud_UsersNo<span class="sign">;</span>
-        <span class="keyword">struct</span> <a href="#robo63">GGUserData</a> <span class="sign">*</span>ggeud_Data<span class="sign">;</span>
+        <span class="keyword">struct</span> <a href="#robo61">GGUserData</a> <span class="sign">*</span>ggeud_Data<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGMultilogonInfo"></a>
-<a name="robo59"></a><h2>gglib.h/GGMultilogonInfo [ Structures ]</h2>
+<a name="robo57"></a><h2>gglib.h/GGMultilogonInfo [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGMultilogonInfo</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura przechowujÄ…ca atrybuty opisujÄ…ce inne rÃ³wnolegÅ‚e poÅ‚Ä…czenie.
+<pre>    Struktura przechowuj±ca atrybuty opisuj±ce inne równoleg³e po³±czenie.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - ggmi_Ip -- IP poÅ‚Ä…czenia;
-    - ggmi_Flags -- flagi jakie podaÅ‚ klient przy poÅ‚Ä…czeniu;
-    - ggmi_Features -- obsÅ‚ugiwane przez klienta opcje protokoÅ‚u;
-    - ggmi_Timestamp -- czas zalogowania siÄ™ klienta;
-    - ggmi_Id -- identyfikator poÅ‚Ä…czenia;
+<pre>    - ggmi_Ip -- IP po³±czenia;
+    - ggmi_Flags -- flagi jakie poda³ klient przy po³±czeniu;
+    - ggmi_Features -- obs³ugiwane przez klienta opcje protoko³u;
+    - ggmi_Timestamp -- czas zalogowania siê klienta;
+    - ggmi_Id -- identyfikator po³±czenia;
     - ggmi_Name -- nazwa klienta.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo45">GGE_TYPE_#?</a>, <a href="#robo53">GGEventMultilogonInfo</a>
+<pre>    <a href="#robo43">GGE_TYPE_#?</a>, <a href="#robo51">GGEventMultilogonInfo</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGMultilogonInfo</strong>
@@ -643,30 +643,30 @@
 
 <hr />
 <a name="gglib2eh2fGGS5fERRNO5f233f"></a>
-<a name="robo60"></a><h2>gglib.h/GGS_ERRNO_#? [ Definitions ]</h2>
+<a name="robo58"></a><h2>gglib.h/GGS_ERRNO_#? [ Definitions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGS_ERRNO_#?</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Definicje wartoÅ›ci pola ggs_Errno w strukturze <a href="#robo62">GGSession</a>.
-    JeÅ›li bÅ‚Ä…d nie zostanie obsÅ‚uÅ¼ony wewnÄ…trz biblioteki
-    zostanie wygenerowane zdarzenie GGE_TYPE_ERROR, w ktÃ³rym
-    w polu ggee_Errno bÄ™dzie znajdowaÅ‚ siÄ™ jeden z poniÅ¼szych kodÃ³w.
+<pre>    Definicje warto¶ci pola ggs_Errno w strukturze <a href="#robo60">GGSession</a>.
+    Je¶li b³±d nie zostanie obs³u¿ony wewn±trz biblioteki
+    zostanie wygenerowane zdarzenie GGE_TYPE_ERROR, w którym
+    w polu ggee_Errno bêdzie znajdowa³ siê jeden z poni¿szych kodów.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - GGS_ERRNO_OK -- wszystko w porzÄ…dku (nie wystÄ…piÅ‚ Å¼aden bÅ‚Ä…d);
-    - GGS_ERRNO_MEM -- brak pamiÄ™ci;
-    - GGS_ERRNO_SOCKETLIB -- bÅ‚Ä…d bsdsocket.library;
-    - GGS_ERRNO_HUB_FAILED -- bÅ‚Ä…d poÅ‚Ä…czenia z HUBem GG;
-    - GGS_ERRNO_INTERRUPT -- wystÄ…piÅ‚ sygnaÅ‚ przerwania (CTRL-C);
-    - GGS_ERRNO_SERVER_OFF -- poÅ‚Ä…czenie zostaÅ‚o zerwane;
-    - GGS_ERRNO_TRY_AGAIN -- chwilowy bÅ‚Ä…d, sprÃ³buj ponownie;
+<pre>    - GGS_ERRNO_OK -- wszystko w porz±dku (nie wyst±pi³ ¿aden b³±d);
+    - GGS_ERRNO_MEM -- brak pamiêci;
+    - GGS_ERRNO_SOCKETLIB -- b³±d bsdsocket.library;
+    - GGS_ERRNO_HUB_FAILED -- b³±d po³±czenia z HUBem GG;
+    - GGS_ERRNO_INTERRUPT -- wyst±pi³ sygna³ przerwania (CTRL-C);
+    - GGS_ERRNO_SERVER_OFF -- po³±czenie zosta³o zerwane;
+    - GGS_ERRNO_TRY_AGAIN -- chwilowy b³±d, spróbuj ponownie;
     - GGS_ERRNO_UNKNOWN_PACKET -- nieznany pakiet.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo62">GGSession</a>, <a href="#robo47">GGEventError</a>
+<pre>    <a href="#robo60">GGSession</a>, <a href="#robo45">GGEventError</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GGS_ERRNO_OK             <span class="sign">(</span>0<span class="sign">)</span>
@@ -681,26 +681,26 @@
 
 <hr />
 <a name="gglib2eh2fGGS5fSTATE5f233f"></a>
-<a name="robo61"></a><h2>gglib.h/GGS_STATE_#? [ Definitions ]</h2>
+<a name="robo59"></a><h2>gglib.h/GGS_STATE_#? [ Definitions ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_definitions.html#robo_top_of_doc">Definitions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGS_STATE_#?</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Definicje wartoÅ›ci pola ggs_SessionState w strukturze <a href="#robo62">GGSession</a>.
-    KaÅ¼dy z poniÅ¼szych stanÃ³w powinen zostaÄ‡ obsÅ‚uÅ¼ony przez odpowiedni
-    handler z pliku <a href="./gghandlers_c.html#robo2">gghandlers.c</a>.
+<pre>    Definicje warto¶ci pola ggs_SessionState w strukturze <a href="#robo60">GGSession</a>.
+    Ka¿dy z poni¿szych stanów powinen zostaæ obs³u¿ony przez odpowiedni
+    handler z pliku <a href="./gghandlers_c.html#robo_top_of_doc">gghandlers.c</a>.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
-<pre>    - GGS_STATE_ERROR -- bÅ‚Ä…d, naleÅ¼y sprawdziÄ‡ wartoÅ›Ä‡ pola ggs_Errno w celu ustalenia kodu (GGS_ERRNO_#?);
-    - GGS_STATE_DISCONNECTED -- biblioteka nie nawiÄ…zaÅ‚a jeszcze poÅ‚Ä…czenia;
-    - GGS_STATE_CONNECTING -- rozpoczÄ™to nawiÄ…zywanie asynchronicznego poÅ‚Ä…czenia z serwerem;
-    - GGS_STATE_CONNECTED -- poÅ‚Ä…czono z serwerem;
-    - GGS_STATE_DISCONNECTING -- poÅ‚Ä…czenie zostaÅ‚o zerwane, naleÅ¼y wywoÅ‚aÄ‡ <a href="./gglib_c.html#robo40">GGWatchEvent()</a>.
+<pre>    - GGS_STATE_ERROR -- b³±d, nale¿y sprawdziæ warto¶æ pola ggs_Errno w celu ustalenia kodu (GGS_ERRNO_#?);
+    - GGS_STATE_DISCONNECTED -- biblioteka nie nawi±za³a jeszcze po³±czenia;
+    - GGS_STATE_CONNECTING -- rozpoczêto nawi±zywanie asynchronicznego po³±czenia z serwerem;
+    - GGS_STATE_CONNECTED -- po³±czono z serwerem;
+    - GGS_STATE_DISCONNECTING -- po³±czenie zosta³o zerwane, nale¿y wywo³aæ <a href="./gglib_c.html#robo38">GGWatchEvent()</a>.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo62">GGSession</a>
+<pre>    <a href="#robo60">GGSession</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">#define</span> GGS_STATE_ERROR          <span class="sign">(</span><span class="sign">-</span>1<span class="sign">)</span>
@@ -712,36 +712,36 @@
 
 <hr />
 <a name="gglib2eh2fGGSession"></a>
-<a name="robo62"></a><h2>gglib.h/GGSession [ Structures ]</h2>
+<a name="robo60"></a><h2>gglib.h/GGSession [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGSession</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura przechowujÄ…ca aktualny stan sesji GG.
+<pre>    Struktura przechowuj±ca aktualny stan sesji GG.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggs_Uin -- numer GG;
     - ggs_Status -- aktualny status GG;
     - ggs_StatusDescription -- aktualny opis statusu;
-    - ggs_Pass - hasÅ‚o (uwaga: zapisane otwartym tekstem!);
-    - ggs_ImageSize - maksymalny rozmiar odbieranych obrazkÃ³w;
-    - ggs_Ip -- ip serwera, do ktÃ³rego Å‚Ä…czymy siÄ™;
-    - ggs_Errno -- kod bÅ‚Ä™du;
-    - ggs_SessionState -- status poÅ‚Ä…czenia;
-    - ggs_Socket -- socket poÅ‚Ä…czenia;
-    - ggs_RecvBuffer -- bufor na dane wysyÅ‚ane;
-    - ggs_RecvLen -- iloÅ›Ä‡ juÅ¼ odebranych danych;
-    - ggs_WriteBuffer -- bufor na dane wysyÅ‚ane;
-    - ggs_WriteLen -- aktualna dÅ‚ugoÅ›Ä‡ bufora wysyÅ‚anych danych;
-    - ggs_WrittenLen -- iloÅ›Ä‡ danych z bufora wysyÅ‚ania, ktÃ³ra zostaÅ‚a juÅ¼ wysÅ‚ana;
-    - ggs_Check -- pole bitowe informujÄ…ce czy biblioteka chce
-      czytaÄ‡ czy pisaÄ‡ do socketu;
-    - SocketBase -- wskaÅºnik na bazÄ™ bsdsocket.library.
+    - ggs_Pass - has³o (uwaga: zapisane otwartym tekstem!);
+    - ggs_ImageSize - maksymalny rozmiar odbieranych obrazków;
+    - ggs_Ip -- ip serwera, do którego ³±czymy siê;
+    - ggs_Errno -- kod b³êdu;
+    - ggs_SessionState -- status po³±czenia;
+    - ggs_Socket -- socket po³±czenia;
+    - ggs_RecvBuffer -- bufor na dane wysy³ane;
+    - ggs_RecvLen -- ilo¶æ ju¿ odebranych danych;
+    - ggs_WriteBuffer -- bufor na dane wysy³ane;
+    - ggs_WriteLen -- aktualna d³ugo¶æ bufora wysy³anych danych;
+    - ggs_WrittenLen -- ilo¶æ danych z bufora wysy³ania, która zosta³a ju¿ wys³ana;
+    - ggs_Check -- pole bitowe informuj±ce czy biblioteka chce
+      czytaæ czy pisaæ do socketu;
+    - SocketBase -- wska¼nik na bazê bsdsocket.library.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo60">GGS_ERRNO_#?</a>, <a href="#robo61">GGS_STATE_#?</a>, <a href="#robo42">GG_SESSION_CHECK_WRITE()</a>, <a href="#robo41">GG_SESSION_CHECK_READ()</a>
+<pre>    <a href="#robo58">GGS_ERRNO_#?</a>, <a href="#robo59">GGS_STATE_#?</a>, <a href="#robo40">GG_SESSION_CHECK_WRITE()</a>, <a href="#robo39">GG_SESSION_CHECK_READ()</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGSession</strong>
@@ -764,55 +764,58 @@
         LONG ggs_WrittenLen<span class="sign">;</span>
         LONG ggs_Check<span class="sign">;</span>
         <span class="keyword">struct</span> Library<span class="sign">*</span> SocketBase<span class="sign">;</span>
+
+        SSL <span class="sign">*</span>ggs_SSL<span class="sign">;</span>
+        SSL_CTX <span class="sign">*</span>ggs_SSLCtx<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGUserData"></a>
-<a name="robo63"></a><h2>gglib.h/GGUserData [ Structures ]</h2>
+<a name="robo61"></a><h2>gglib.h/GGUserData [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGUserData</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura przechowujÄ…ca atrybuty opisujÄ…ce dany kontakt.
+<pre>    Struktura przechowuj±ca atrybuty opisuj±ce dany kontakt.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - ggudd_Uin -- numer opisywanego kontaktu;
-    - ggudd_AttrsNo -- iloÅ›Ä‡ atrybutÃ³w;
-    - ggudd_Attrs -- tablica struktur opisujÄ…cych atrybut.
+    - ggudd_AttrsNo -- ilo¶æ atrybutów;
+    - ggudd_Attrs -- tablica struktur opisuj±cych atrybut.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo45">GGE_TYPE_#?</a>, <a href="#robo64">GGUserDataAttr</a>, <a href="#robo58">GGEventUsersData</a>
+<pre>    <a href="#robo43">GGE_TYPE_#?</a>, <a href="#robo62">GGUserDataAttr</a>, <a href="#robo56">GGEventUsersData</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGUserData</strong>
 <span class="sign">{</span>
         ULONG ggud_Uin<span class="sign">;</span>
         ULONG ggud_AttrsNo<span class="sign">;</span>
-        <span class="keyword">struct</span> <a href="#robo64">GGUserDataAttr</a> <span class="sign">*</span>ggud_Attrs<span class="sign">;</span>
+        <span class="keyword">struct</span> <a href="#robo62">GGUserDataAttr</a> <span class="sign">*</span>ggud_Attrs<span class="sign">;</span>
 <span class="sign">}</span><span class="sign">;</span>
 </pre>
 
 <hr />
 <a name="gglib2eh2fGGUserDataAttr"></a>
-<a name="robo64"></a><h2>gglib.h/GGUserDataAttr [ Structures ]</h2>
+<a name="robo62"></a><h2>gglib.h/GGUserDataAttr [ Structures ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo5">gglib.h</a> ] [ <a href="./robo_strutures.html#robo_top_of_doc">Structures</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>GGUserDataAttr</strong>
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Struktura przechowujÄ…ca atrybut opisujÄ…cy kontakt.
+<pre>    Struktura przechowuj±ca atrybut opisuj±cy kontakt.
 </pre>
 <p class="item_name">ATTRIBUTES</p>
 <pre>    - gguda_Type -- typ atrybutu;
     - gguda_Key -- nazwa atrybutu;
-    - gguda_Value -- wartoÅ›Ä‡ atrybutu.
+    - gguda_Value -- warto¶æ atrybutu.
 </pre>
 <p class="item_name">SEE ALSO</p>
-<pre>    <a href="#robo45">GGE_TYPE_#?</a>, <a href="#robo63">GGUserData</a>, <a href="#robo58">GGEventUsersData</a>
+<pre>    <a href="#robo43">GGE_TYPE_#?</a>, <a href="#robo61">GGUserData</a>, <a href="#robo56">GGEventUsersData</a>
 </pre>
 <p class="item_name">SOURCE</p>
 <pre class="source"><span class="keyword">struct</span> <strong>GGUserDataAttr</strong>
@@ -825,7 +828,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./gglib.h with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./gglib.h with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>

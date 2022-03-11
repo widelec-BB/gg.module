@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-2"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 <link rel="stylesheet" href="./robodoc.css" type="text/css" />
 <title>./support.c</title>
 <!-- Source: ./support.c -->
-<!-- Generated with ROBODoc Version 4.99.43 (Feb  9 2018) -->
+<!-- Generated with ROBODoc Version 4.99.38 (Mar 11 2022) -->
 </head>
 <body>
 <div id="logo">
@@ -26,41 +26,41 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li><a href="#robo13">GGLib/support.c</a></li>
-<li><a href="#robo99">support.c/Deflate()</a></li>
-<li><a href="#robo100">support.c/DumpBinaryData()</a></li>
-<li><a href="#robo101">support.c/FileCrc32()</a></li>
-<li><a href="#robo102">support.c/InetToStr()</a></li>
-<li><a href="#robo103">support.c/Inflate()</a></li>
-<li><a href="#robo104">support.c/MemSet()</a></li>
-<li><a href="#robo105">support.c/RecvAll()</a></li>
-<li><a href="#robo106">support.c/SendAll()</a></li>
-<li><a href="#robo107">support.c/StrByteToByte()</a></li>
-<li><a href="#robo108">support.c/StrIEqu()</a></li>
-<li><a href="#robo109">support.c/StrNewLen()</a></li>
+<li><a href="#robo12">GGLib/support.c</a></li>
+<li><a href="#robo95">support.c/Deflate()</a></li>
+<li><a href="#robo96">support.c/DumpBinaryData()</a></li>
+<li><a href="#robo97">support.c/FileCrc32()</a></li>
+<li><a href="#robo98">support.c/InetToStr()</a></li>
+<li><a href="#robo99">support.c/Inflate()</a></li>
+<li><a href="#robo100">support.c/MemSet()</a></li>
+<li><a href="#robo101">support.c/RecvAllSSL()</a></li>
+<li><a href="#robo102">support.c/SendAllSSL()</a></li>
+<li><a href="#robo103">support.c/StrByteToByte()</a></li>
+<li><a href="#robo104">support.c/StrIEqu()</a></li>
+<li><a href="#robo105">support.c/StrNewLen()</a></li>
 </ul>
 <hr />
 <a name="GGLib2fsupport2ec"></a>
-<a name="robo13"></a><h2>GGLib/support.c [ Modules ]</h2>
+<a name="robo12"></a><h2>GGLib/support.c [ Modules ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_modules.html#robo_top_of_doc">Modules</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>support.c</strong> -- Funkcje dodatkowe
 </pre>
 <p class="item_name">AUTHOR</p>
-<pre>    Filip MaryjaÅ„ski
+<pre>    Filip Maryjañski
 </pre>
 <p class="item_name">DESCRIPTION</p>
-<pre>    Funkcje wykorzystywane przez rÃ³Å¼ne elementy GGLib.
+<pre>    Funkcje wykorzystywane przez ró¿ne elementy GGLib.
 </pre>
 
 <hr />
 <a name="support2ec2fDeflate2829"></a>
-<a name="robo99"></a><h2>support.c/Deflate() [ Functions ]</h2>
+<a name="robo95"></a><h2>support.c/Deflate() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <a href="#robo103">Inflate()</a>
+<pre>    <a href="#robo99">Inflate()</a>
 </pre>
 <p class="item_name">SYNOPSIS</p>
 <pre>    UBYTE *Deflate(UBYTE *data, ULONG *len)
@@ -69,22 +69,22 @@
 <pre>    Funkcja przeprowadza pakowanie danych algorytmem Deflate.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - data -- wskaÅºnik na bufor zawierajÄ…cy dane;
-    - len -- wskaÅºnik na zmiennÄ… zawierajÄ…cÄ… rozmiar bufora z danymi.
-      Po spakowaniu zostanie tam umieszczona wielkoÅ›Ä‡ spakowanych danych.
+<pre>    - data -- wska¼nik na bufor zawieraj±cy dane;
+    - len -- wska¼nik na zmienn± zawieraj±c± rozmiar bufora z danymi.
+      Po spakowaniu zostanie tam umieszczona wielko¶æ spakowanych danych.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na bufor zawierajÄ…cy spakowane dane. Bufor jest zakoÅ„czony znakiem '\0'.
+<pre>    Wska¼nik na bufor zawieraj±cy spakowane dane. Bufor jest zakoñczony znakiem '\0'.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    ZwrÃ³cony bufor naleÅ¼y zwolniÄ‡ poprzez wywoÅ‚anie FreeVec(). Funkcja otwiera i zamyka z.library.
+<pre>    Zwrócony bufor nale¿y zwolniæ poprzez wywo³anie FreeVec(). Funkcja otwiera i zamyka z.library.
 </pre>
 
 <hr />
 <a name="support2ec2fDumpBinaryData2829"></a>
-<a name="robo100"></a><h2>support.c/DumpBinaryData() [ Functions ]</h2>
+<a name="robo96"></a><h2>support.c/DumpBinaryData() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>DumpBinaryData()</strong>
 </pre>
@@ -92,24 +92,24 @@
 <pre>    VOID DumpBinaryData(UBYTE *data, ULONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja wykonuje zrzut do debugloga danych wskazywanych przez data o dÅ‚ugoÅ›ci len.
-    Dane przedstawiane sÄ… jako liczby szesnastkowe (bajtami) oraz ich interpretacja ASCII
-    (tylko w przypadku, gdy znak jest tzw. widocznym znakiem ASCII, w pozostaÅ‚ych przypadkach
-    wyÅ›wietlana jest kropka).
+<pre>    Funkcja wykonuje zrzut do debugloga danych wskazywanych przez data o d³ugo¶ci len.
+    Dane przedstawiane s± jako liczby szesnastkowe (bajtami) oraz ich interpretacja ASCII
+    (tylko w przypadku, gdy znak jest tzw. widocznym znakiem ASCII, w pozosta³ych przypadkach
+    wy¶wietlana jest kropka).
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - data -- wskaÅºnik na dane;
-    - len -- dÅ‚ugoÅ›Ä‡ danych wskazywanych przez data.
+<pre>    - data -- wska¼nik na dane;
+    - len -- d³ugo¶æ danych wskazywanych przez data.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Funkcja dostÄ™pna jest tylko w przypadku kompilacji z zdefiniowanym symbolem __DEBUG__.
+<pre>    Funkcja dostêpna jest tylko w przypadku kompilacji z zdefiniowanym symbolem __DEBUG__.
 </pre>
 
 <hr />
 <a name="support2ec2fFileCrc322829"></a>
-<a name="robo101"></a><h2>support.c/FileCrc32() [ Functions ]</h2>
+<a name="robo97"></a><h2>support.c/FileCrc32() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>FileCrc32()</strong>
 </pre>
@@ -117,24 +117,24 @@
 <pre>    ULONG FileCrc32(BPTR fh)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja wykonuje cyklicznÄ… kontrolÄ™ nadmiarowÄ… pliku na 32 bitach.
+<pre>    Funkcja wykonuje cykliczn± kontrolê nadmiarow± pliku na 32 bitach.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - fh -- uchwyt do pliku, na ktÃ³rym majÄ… zostaÄ‡ wykonane obliczenia.
+<pre>    - fh -- uchwyt do pliku, na którym maj± zostaæ wykonane obliczenia.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    Wynik funkcji CRC-32 dla podanego pliku. W przypadku bÅ‚Ä™du wartoÅ›Ä‡ 0xFFFFFFFF.
+<pre>    Wynik funkcji CRC-32 dla podanego pliku. W przypadku b³êdu warto¶æ 0xFFFFFFFF.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Funkcja automatycznie przewija wskaÅºnik pliku na poczÄ…tek przed wykonaniem siÄ™.
-    Przed zakoÅ„czeniem funkcja przywraca starÄ… pozycjÄ™ w pliku.
+<pre>    Funkcja automatycznie przewija wska¼nik pliku na pocz±tek przed wykonaniem siê.
+    Przed zakoñczeniem funkcja przywraca star± pozycjê w pliku.
 </pre>
 
 <hr />
 <a name="support2ec2fInetToStr2829"></a>
-<a name="robo102"></a><h2>support.c/InetToStr() [ Functions ]</h2>
+<a name="robo98"></a><h2>support.c/InetToStr() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>InetToStr()</strong>
 </pre>
@@ -142,20 +142,20 @@
 <pre>    STRPTR InetToStr(ULONG no)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja zmienia numer ip zapisany w postaci pojedyÅ„czej liczby 32 bitowej na tekst w postaci notacji XXX.XXX.XXX.XXX.
+<pre>    Funkcja zmienia numer ip zapisany w postaci pojedyñczej liczby 32 bitowej na tekst w postaci notacji XXX.XXX.XXX.XXX.
 </pre>
 <p class="item_name">INPUTS</p>
 <pre>    - no -- adres IP.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na statyczny bufor.
+<pre>    Wska¼nik na statyczny bufor.
 </pre>
 
 <hr />
 <a name="support2ec2fInflate2829"></a>
-<a name="robo103"></a><h2>support.c/Inflate() [ Functions ]</h2>
+<a name="robo99"></a><h2>support.c/Inflate() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>Inflate()</strong>
 </pre>
@@ -166,22 +166,22 @@
 <pre>    Funkcja przeprowadza rozpakowanie danych spakowanych algorytmem Deflate.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - data -- wskaÅºnik na bufor zawierajÄ…cy spakowane dane;
-    - len -- wskaÅºnik na zmiennÄ… zawierajÄ…cÄ… rozmiar bufora ze spakowanymi danymi.
-      Po rozpakowaniu zostanie tam umieszczona wielkoÅ›Ä‡ rozpakowanych danych.
+<pre>    - data -- wska¼nik na bufor zawieraj±cy spakowane dane;
+    - len -- wska¼nik na zmienn± zawieraj±c± rozmiar bufora ze spakowanymi danymi.
+      Po rozpakowaniu zostanie tam umieszczona wielko¶æ rozpakowanych danych.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na bufor zawierajÄ…cy rozpakowane dane. Bufor jest zakoÅ„czony znakiem '\0'.
+<pre>    Wska¼nik na bufor zawieraj±cy rozpakowane dane. Bufor jest zakoñczony znakiem '\0'.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    ZwrÃ³cony bufor naleÅ¼y zwolniÄ‡ poprzez wywoÅ‚anie FreeVec(). Funkcja otwiera i zamyka z.library.
+<pre>    Zwrócony bufor nale¿y zwolniæ poprzez wywo³anie FreeVec(). Funkcja otwiera i zamyka z.library.
 </pre>
 
 <hr />
 <a name="support2ec2fMemSet2829"></a>
-<a name="robo104"></a><h2>support.c/MemSet() [ Functions ]</h2>
+<a name="robo100"></a><h2>support.c/MemSet() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>MemSet()</strong>
 </pre>
@@ -189,71 +189,70 @@
 <pre>    VOID *MemSet(VOID* ptr, LONG word, LONG size)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja ustawia blok pamiÄ™ci od adresu ptr do adresu ptr + size na wartoÅ›Ä‡ word.
-    Word jest rzutowane do UBYTE, size powinno byÄ‡ podane w bajtach.
-    (wymuszone przez kompatybilnoÅ›Ä‡ z stdlib memset())
+<pre>    Funkcja ustawia blok pamiêci od adresu ptr do adresu ptr + size na warto¶æ word.
+    Word jest rzutowane do UBYTE, size powinno byæ podane w bajtach.
+    (wymuszone przez kompatybilno¶æ z stdlib memset())
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - ptr -- wskaÅºnik na blok pamiÄ™ci do ustawienia;
-    - size -- dÅ‚ugoÅ›Ä‡ bloku pamiÄ™ci do ustawienia;
-    - word -- sÅ‚owo na ktÃ³re blok ma zostaÄ‡ ustawiony.
+<pre>    - ptr -- wska¼nik na blok pamiêci do ustawienia;
+    - size -- d³ugo¶æ bloku pamiêci do ustawienia;
+    - word -- s³owo na które blok ma zostaæ ustawiony.
 </pre>
 
 <hr />
-<a name="support2ec2fRecvAll2829"></a>
-<a name="robo105"></a><h2>support.c/RecvAll() [ Functions ]</h2>
+<a name="support2ec2fRecvAllSSL2829"></a>
+<a name="robo101"></a><h2>support.c/RecvAllSSL() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>RecvAll()</strong>
+<pre>    <strong>RecvAllSSL()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG RecvAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+<pre>    LONG RecvAllSSL(struct Library *SocketBase, SSL *ssl, BYTE *buf, LONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja odbiera podanÄ… iloÅ›Ä‡ danych z socketu do podanego bufora.
-    Automatycznie zajmuje siÄ™ dzieleniem na porcje oraz bÅ‚Ä™dami przerwania wywoÅ‚ania systemowego.
+<pre>    Funkcja odbiera podan± ilo¶æ danych z socketu (u¿ywaj±c szyfrowanego po³±czenia) do podanego bufora.
+    Automatycznie zajmuje siê dzieleniem na porcje oraz b³êdami przerwania wywo³ania systemowego.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - SocketBase -- wskaÅºnik na bazÄ™ socket.library otwartÄ… dla danego procesu;
-    - sock -- socket, z ktÃ³rego majÄ… byÄ‡ odebrane dane;
-    - buf -- wskaÅºnik na bufor na dane;
-    - len -- dÅ‚ugoÅ›Ä‡ bufora.
+<pre>    - SocketBase -- wska¼nik na bazê socket.library otwart± dla danego procesu;
+    - ssl -- uchwyt do rozpoczêtego po³±czenia szyfrowanego;
+    - buf -- wska¼nik na bufor na dane;
+    - len -- d³ugo¶æ bufora.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    IloÅ›Ä‡ odebranych danych lub -1 w przypadku bÅ‚Ä™du. W przypadku bÅ‚Ä™du naleÅ¼y sprawdziÄ‡ Errno().
+<pre>    Ilo¶æ odebranych danych lub -1 w przypadku b³êdu. W przypadku b³êdu nale¿y sprawdziæ Errno().
 </pre>
 
 <hr />
-<a name="support2ec2fSendAll2829"></a>
-<a name="robo106"></a><h2>support.c/SendAll() [ Functions ]</h2>
+<a name="support2ec2fSendAllSSL2829"></a>
+<a name="robo102"></a><h2>support.c/SendAllSSL() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
-<pre>    <strong>SendAll()</strong>
+<pre>    <strong>SendAllSSL()</strong>
 </pre>
 <p class="item_name">SYNOPSIS</p>
-<pre>    LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+<pre>    LONG SendAllSSL(SSL *ssl, BYTE *buf, LONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja wysyÅ‚a podanÄ… iloÅ›Ä‡ danych z bufora przez podany socket. 
-    Automatycznie zajmuje siÄ™ dzieleniem na porcje oraz bÅ‚Ä™dami przerwania wywoÅ‚ania systemowego.
+<pre>    Funkcja wysy³a podan± ilo¶æ danych z bufora przez podany socket (u¿ywaj±c szyfrowanego po³±czenia).
+    Automatycznie zajmuje siê dzieleniem na porcje oraz b³êdami przerwania wywo³ania systemowego.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - SocketBase -- wskaÅºnik na bazÄ™ socket.library otwartÄ… dla danego procesu;
-    - sock -- socket, przez ktÃ³ry dane majÄ… wysÅ‚ane;
-    - buf -- wskaÅºnik na bufor z danymi;
-    - len -- dÅ‚ugoÅ›Ä‡ danych do wysÅ‚ania.
+<pre>    - ssl -- uchwyt do rozpoczêtego po³±czenia szyfrowanego;
+    - buf -- wska¼nik na bufor z danymi;
+    - len -- d³ugo¶æ danych do wys³ania.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    IloÅ›Ä‡ wysÅ‚anych danych lub -1 w przypadku bÅ‚Ä™du. W przypadku bÅ‚Ä™du naleÅ¼y sprawdziÄ‡ Errno().
+<pre>    Ilo¶æ wys³anych danych lub -1 w przypadku b³êdu. W przypadku b³êdu nale¿y sprawdziæ Errno().
 </pre>
 
 <hr />
 <a name="support2ec2fStrByteToByte2829"></a>
-<a name="robo107"></a><h2>support.c/StrByteToByte() [ Functions ]</h2>
+<a name="robo103"></a><h2>support.c/StrByteToByte() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>StrByteToByte()</strong>
 </pre>
@@ -261,24 +260,24 @@
 <pre>    UBYTE StrByteToByte(STRPTR str_byte)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja zamienia liczbÄ™ szesnastkowÄ… (8 bit) zapisanÄ… w formie tekstu na odpowiednik binarny.
+<pre>    Funkcja zamienia liczbê szesnastkow± (8 bit) zapisan± w formie tekstu na odpowiednik binarny.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - str_byte -- wskaÅºnik na oÅ›mio bitowÄ… liczbÄ™ szesnastkowÄ… zapisanÄ… w formie tekstu (dwa znaki).
+<pre>    - str_byte -- wska¼nik na o¶mio bitow± liczbê szesnastkow± zapisan± w formie tekstu (dwa znaki).
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    Bajt odopowiadajÄ…cy podanej liczbie.
+<pre>    Bajt odopowiadaj±cy podanej liczbie.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Funkcja korzysta tylko z dwÃ³ch pierwszych znakÃ³w podanego tekstu. Tekst nie musi byÄ‡ zakoÅ„czony przez '\0'.
-    Liczba musi byÄ‡ zapisana za pomocÄ… tylko cyfr i maÅ‚ych liter.
+<pre>    Funkcja korzysta tylko z dwóch pierwszych znaków podanego tekstu. Tekst nie musi byæ zakoñczony przez '\0'.
+    Liczba musi byæ zapisana za pomoc± tylko cyfr i ma³ych liter.
 </pre>
 
 <hr />
 <a name="support2ec2fStrIEqu2829"></a>
-<a name="robo108"></a><h2>support.c/StrIEqu() [ Functions ]</h2>
+<a name="robo104"></a><h2>support.c/StrIEqu() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>StrIEqu()</strong>
 </pre>
@@ -286,20 +285,20 @@
 <pre>    BOOL StrIEqu(STRPTR s, STRPTR d)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja porÃ³wnuje dwa napisy ignorujÄ…c wielkoÅ›Ä‡ liter.
+<pre>    Funkcja porównuje dwa napisy ignoruj±c wielko¶æ liter.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    * s, d -- wskaÅºniki na napisy do porÃ³wnania.
+<pre>    * s, d -- wska¼niki na napisy do porównania.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    TRUE jeÅ›li napisy sÄ… identyczne, w przeciwnym wypadku FALSE.
+<pre>    TRUE je¶li napisy s± identyczne, w przeciwnym wypadku FALSE.
 </pre>
 
 <hr />
 <a name="support2ec2fStrNewLen2829"></a>
-<a name="robo109"></a><h2>support.c/StrNewLen() [ Functions ]</h2>
+<a name="robo105"></a><h2>support.c/StrNewLen() [ Functions ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo13">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo12">support.c</a> ] [ <a href="./robo_functions.html#robo_top_of_doc">Functions</a> ]</p>
 <p class="item_name">NAME</p>
 <pre>    <strong>StrNewLen()</strong>
 </pre>
@@ -307,22 +306,22 @@
 <pre>    STRPTR StrNewLen(STRPTR s, LONG len)
 </pre>
 <p class="item_name">FUNCTION</p>
-<pre>    Funkcja tworzy nowy napis z podanej iloÅ›ci znakÃ³w napisu ÅºrÃ³dÅ‚owego.
+<pre>    Funkcja tworzy nowy napis z podanej ilo¶ci znaków napisu ¼ród³owego.
 </pre>
 <p class="item_name">INPUTS</p>
-<pre>    - s -- wskaÅºnik na napis ÅºrÃ³dÅ‚owy;
-    - len -- iloÅ›Ä‡ znakÃ³w do przekopiowania.
+<pre>    - s -- wska¼nik na napis ¼ród³owy;
+    - len -- ilo¶æ znaków do przekopiowania.
 </pre>
 <p class="item_name">RESULT</p>
-<pre>    WskaÅºnik na nowy napis.
+<pre>    Wska¼nik na nowy napis.
 </pre>
 <p class="item_name">NOTES</p>
-<pre>    Nowy napis naleÅ¼y zwolniÄ‡ poprzez wywoÅ‚anie FreeVec().
+<pre>    Nowy napis nale¿y zwolniæ poprzez wywo³anie FreeVec().
 </pre>
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./support.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.43 on Fri Feb 09 2018 19:57:04
+<p>Generated from ./support.c with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.38 on Fri Mar 11 2022 22:14:07
 </p>
 </div> <!-- footer -->
 </body>
