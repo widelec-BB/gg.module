@@ -44,7 +44,7 @@ LD = ppc-morphos-gcc-11
 LWARNS =
 LDEFS  =
 LFLAGS = -noixemul -nostdlib -nostartfiles
-LIBS   = -Lgglib/ -labox -lgg -lvstring
+LIBS   = -Lgglib/ -labox -lgg -lvstring -lssl_shared -lcrypto_shared
 # -ldebug
 
 LINK   = $(LD) $(TARGET) $(LWARNS) $(LDEFS) $(LFLAGS)
@@ -54,7 +54,7 @@ all: gglib/libgg.a $(PROJECT)
 	@$(TARGET_DONE)
 
 # depenedncies targets
-gglib/libgg.a:
+gglib/libgg.a: gglib/*.c gglib/*.h
 	@make -C gglib
 
 # target 'compiler' (compile target)
@@ -90,7 +90,7 @@ OBJS = $(OBJDIR)lib.c.o $(OBJDIR)class.c.o $(OBJDIR)events.c.o $(OBJDIR)gui.c.o 
  $(OBJDIR)support.c.o
 
 # link all file(s)
-$(PROJECT): $(OBJS)
+$(PROJECT): $(OBJS) gglib/libgg.a
 	@$(LINKING)
 	@$(LINK) $(OBJS) -o $(PROJECT) $(LIBS)
 

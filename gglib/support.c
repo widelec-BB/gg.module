@@ -27,9 +27,12 @@
 #include "globaldefines.h"
 #include "support.h"
 
-extern struct Library *SysBase, *DOSBase, *SocketBase;
-
+#define SocketBase WhyZLibIncludesSysSelectH
+extern struct Library *SocketBase;
 #include <proto/z.h>
+#undef SocketBase
+
+extern struct Library *SysBase, *DOSBase, *OpenSSL3Base;
 
 /****if* support.c/MemSet()
  *
@@ -89,21 +92,20 @@ STRPTR InetToStr(ULONG no)
 	return (STRPTR)result;
 }
 
-/****if* support.c/SendAll()
+/****if* support.c/SendAllSSL()
  *
  *  NAME
- *    SendAll()
+ *    SendAllSSL()
  *
  *  SYNOPSIS
- *    LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+ *    LONG SendAllSSL(SSL *ssl, BYTE *buf, LONG len)
  *
  *  FUNCTION
- *    Funkcja wysy³a podan± ilo¶æ danych z bufora przez podany socket.
+ *    Funkcja wysy³a podan± ilo¶æ danych z bufora przez podany socket (u¿ywaj±c szyfrowanego po³±czenia).
  *    Automatycznie zajmuje siê dzieleniem na porcje oraz b³êdami przerwania wywo³ania systemowego.
  *
  *  INPUTS
- *    - SocketBase -- wska¼nik na bazê socket.library otwart± dla danego procesu;
- *    - sock -- socket, przez który dane maj± wys³ane;
+ *    - ssl -- uchwyt do rozpoczêtego po³±czenia szyfrowanego;
  *    - buf -- wska¼nik na bufor z danymi;
  *    - len -- d³ugo¶æ danych do wys³ania.
  *
@@ -111,18 +113,26 @@ STRPTR InetToStr(ULONG no)
  *    Ilo¶æ wys³anych danych lub -1 w przypadku b³êdu. W przypadku b³êdu nale¿y sprawdziæ Errno().
  *
  *****/
-
-LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+LONG SendAllSSL(SSL *ssl, BYTE *buf, LONG len)
 {
 	LONG total = 0, bytesleft = len, n;
 
 	while(total < len)
 	{
-		n = send(sock, buf + total, bytesleft, 0);
+		n = SSL_write(ssl, buf + total, bytesleft);
 
-		if(n == -1 && Errno() != EINTR)
+		if(n == -1)
+		{
+			LONG err = SSL_get_error(ssl, n);
+
+			if(err == SSL_ERROR_WANT_WRITE || err == SSL_ERROR_WANT_READ)
+				return total;
+
+			if(err == SSL_ERROR_SYSCALL)
+				continue;
+
 			return -1;
-
+		}
 		total += n;
 		bytesleft -= n;
 	}
@@ -130,21 +140,21 @@ LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
 	return total;
 }
 
-/****if* support.c/RecvAll()
+/****if* support.c/RecvAllSSL()
  *
  *  NAME
- *    RecvAll()
+ *    RecvAllSSL()
  *
  *  SYNOPSIS
- *    LONG RecvAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+ *    LONG RecvAllSSL(struct Library *SocketBase, SSL *ssl, BYTE *buf, LONG len)
  *
  *  FUNCTION
- *    Funkcja odbiera podan± ilo¶æ danych z socketu do podanego bufora.
+ *    Funkcja odbiera podan± ilo¶æ danych z socketu (u¿ywaj±c szyfrowanego po³±czenia) do podanego bufora.
  *    Automatycznie zajmuje siê dzieleniem na porcje oraz b³êdami przerwania wywo³ania systemowego.
  *
  *  INPUTS
  *    - SocketBase -- wska¼nik na bazê socket.library otwart± dla danego procesu;
- *    - sock -- socket, z którego maj± byæ odebrane dane;
+ *    - ssl -- uchwyt do rozpoczêtego po³±czenia szyfrowanego;
  *    - buf -- wska¼nik na bufor na dane;
  *    - len -- d³ugo¶æ bufora.
  *
@@ -152,17 +162,21 @@ LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
  *    Ilo¶æ odebranych danych lub -1 w przypadku b³êdu. W przypadku b³êdu nale¿y sprawdziæ Errno().
  *
  *****/
-
-LONG RecvAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len)
+LONG RecvAllSSL(struct Library *SocketBase, SSL *ssl, BYTE *buf, LONG len)
 {
 	LONG result;
 
 	while(TRUE)
 	{
-		result = recv(sock, ((UBYTE*)buf), len, 0);
+		result = SSL_read(ssl, buf, len);
 
-		if(result == -1 && Errno() == EINTR)
-			continue;
+		if(result == -1)
+		{
+			LONG err = SSL_get_error(ssl, result);
+
+			if(err == SSL_ERROR_SYSCALL && Errno() == EINTR)
+				continue;
+		}
 
 		return result;
 	}

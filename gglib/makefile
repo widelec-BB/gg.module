@@ -53,10 +53,6 @@ $(OBJDIR)gglib.c.o: gglib.c globaldefines.h ggdefs.h gghandlers.h gglib.h
 	@$(COMPILE_FILE)
 	@$(COMPILE) -c -o $(OBJDIR)gglib.c.o gglib.c
 
-$(OBJDIR)http.c.o: http.c http.h globaldefines.h
-	@$(COMPILE_FILE)
-	@$(COMPILE) -c -o $(OBJDIR)http.c.o http.c
-
 $(OBJDIR)sha1.c.o: sha1.c globaldefines.h support.h
 	@$(COMPILE_FILE)
 	@$(COMPILE) -c -o $(OBJDIR)sha1.c.o sha1.c
@@ -66,7 +62,7 @@ $(OBJDIR)support.c.o: support.c globaldefines.h support.h
 	@$(COMPILE) -c -o $(OBJDIR)support.c.o support.c
 	
 $(OBJDIR)gghandlers.c.o: gghandlers.c globaldefines.h ggdefs.h support.h gglib.h \
- ggpackets.h gghandlers.h http.h
+ ggpackets.h gghandlers.h
 	@$(COMPILE_FILE)
 	@$(COMPILE) -c -o $(OBJDIR)gghandlers.c.o gghandlers.c
 	
@@ -79,7 +75,7 @@ $(OBJDIR)ggmessage.c.o: ggmessage.c globaldefines.h support.h ggmessage.h
 	@$(COMPILE_FILE)
 	@$(COMPILE) -c -o $(OBJDIR)ggmessage.c.o ggmessage.c
 
-OBJS = $(OBJDIR)gglib.c.o $(OBJDIR)http.c.o $(OBJDIR)sha1.c.o $(OBJDIR)support.c.o \
+OBJS = $(OBJDIR)gglib.c.o $(OBJDIR)sha1.c.o $(OBJDIR)support.c.o \
  $(OBJDIR)gghandlers.c.o $(OBJDIR)ggpackets.c.o $(OBJDIR)ggmessage.c.o
 
 # link all file(s)

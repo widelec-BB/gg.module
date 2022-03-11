@@ -34,7 +34,7 @@
 
 #define SocketBase gg_sess->SocketBase
 
-extern struct Library *SysBase, *DOSBase, *UtilityBase;
+extern struct Library *SysBase, *DOSBase, *UtilityBase, *OpenSSL3Base;
 
 /****if* ggpackets.c/GGReceivePacket()
  *
@@ -93,7 +93,7 @@ struct GGPHeader *GGReceivePacket(struct GGSession *gg_sess)
 			len = sizeof(struct GGPHeader) + EndianFix32(header->ggph_Length) - gg_sess->ggs_RecvLen;
 		}
 
-		res = RecvAll(SocketBase, gg_sess->ggs_Socket, (BYTE*)header + gg_sess->ggs_RecvLen, len);
+		res = RecvAllSSL(SocketBase, gg_sess->ggs_SSL, (BYTE*)header + gg_sess->ggs_RecvLen, len);
 
 		if(res == 0)
 		{
@@ -193,7 +193,7 @@ LONG GGWriteData(struct GGSession *gg_sess)
 		return 0;
 	}
 
-	result = SendAll(SocketBase, gg_sess->ggs_Socket, gg_sess->ggs_WriteBuffer + gg_sess->ggs_WrittenLen, gg_sess->ggs_WriteLen - gg_sess->ggs_WrittenLen);
+	result = SendAllSSL(gg_sess->ggs_SSL, gg_sess->ggs_WriteBuffer + gg_sess->ggs_WrittenLen, gg_sess->ggs_WriteLen - gg_sess->ggs_WrittenLen);
 
 	if(result == -1)
 	{

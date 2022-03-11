@@ -23,10 +23,10 @@
 #endif
 
 #define VERSION "0"
-#define REVISION "1"
+#define REVISION "2"
 #define VERS "gglib " VERSION "." REVISION
 #define AUTHOR "Filip \"widelec\" Maryjañski"
-#define COPYRIGHT "© 2013 - 2018 " AUTHOR
+#define COPYRIGHT "© 2013 - 2022 " AUTHOR
 #define VSTRING VERS __AMIGADATE__ " " COPYRIGHT
 #define VERSTAG "\0$VER: " VSTRING
 

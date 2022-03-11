@@ -60,24 +60,36 @@ extern struct Library *SysBase;
 
 LONG GGHandleConnecting(struct GGSession *gg_sess, struct GGEvent *gg_event)
 {
-	LONG result = GGH_RETURN_ERROR;
+	LONG ssl_res;
 	ENTER();
 
-	if(send(gg_sess->ggs_Socket, NULL, 0, 0) < 0)
+	ssl_res = SSL_connect(gg_sess->ggs_SSL);
+	if (ssl_res == -1)
 	{
-		if(Errno() == EWOULDBLOCK)
+		LONG err = SSL_get_error(gg_sess->ggs_SSL, ssl_res);
+		if (err == SSL_ERROR_WANT_READ || err == SSL_ERROR_WANT_WRITE)
+		{
+			if(err == SSL_ERROR_WANT_READ)
+				gg_sess->ggs_Check |= GGS_CHECK_READ;
+			if(err == SSL_ERROR_WANT_WRITE)
+				gg_sess->ggs_Check |= GGS_CHECK_WRITE;
+
+			LEAVE();
 			return GGH_RETURN_WAIT;
-		gg_sess->ggs_SessionState = GGS_STATE_ERROR;
-		return GGH_RETURN_ERROR;
+		}
 	}
-	else
+	else if (ssl_res >= 0)
 	{
+		gg_sess->ggs_Check = GGS_CHECK_READ;
 		gg_sess->ggs_SessionState = GGS_STATE_CONNECTED;
+		LEAVE();
 		return GGH_RETURN_NEXT;
 	}
 
+	gg_sess->ggs_SessionState = GGS_STATE_ERROR;
+	gg_sess->ggs_Errno = GGS_ERRNO_SERVER_OFF;
 	LEAVE();
-	return result;
+	return GGH_RETURN_ERROR;
 }
 
 

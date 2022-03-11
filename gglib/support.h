@@ -10,13 +10,14 @@
 #include <exec/types.h>
 #include <proto/exec.h>
 #include <proto/dos.h>
+#include <openssl/ssl.h>
 
 #define _between(a,x,b) ((x)>=(a) && (x)<=(b))
 
 VOID *MemSet(VOID *ptr, LONG word, LONG size);
 STRPTR InetToStr(ULONG no);
-LONG SendAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len);
-LONG RecvAll(struct Library *SocketBase, LONG sock, BYTE *buf, LONG len);
+LONG SendAllSSL(SSL *ssl, BYTE *buf, LONG len);
+LONG RecvAllSSL(struct Library *SocketBase, SSL *ssl, BYTE *buf, LONG len);
 BOOL StrIEqu(STRPTR s, STRPTR d); /* case insensitive */
 STRPTR StrNewLen(STRPTR s, LONG len);
 UBYTE *Inflate(UBYTE *data, ULONG *len);

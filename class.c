@@ -9,6 +9,8 @@
 #include <libvstring.h>
 #include <proto/ezxml.h>
 #include <proto/locale.h>
+#include <proto/socket.h>
+#include <netdb.h>
 #include "locale.h"
 #include "class.h"
 #include "events.h"
@@ -59,6 +61,8 @@ extern struct Library *SysBase, *DOSBase, *IntuitionBase, *UtilityBase, *EzxmlBa
 
 BOOL GGWriteData(struct GGSession*); /* get rid of "implict declaration" warning */
 
+struct Library *OpenSSL3Base;
+
 ULONG strlen(STRPTR a) /* for MakeDirAll()... */
 {
 	return StrLen(a);
@@ -84,6 +88,16 @@ static inline ULONG TranslateStatus(ULONG status)
 
 static IPTR mNew(Class *cl, Object *obj, struct opSet *msg)
 {
+	if(OpenSSL3Base == NULL)
+	{
+		if(!(OpenSSL3Base = OpenLibrary("openssl3.library", 1)))
+			return (IPTR)NULL;
+
+		SSL_library_init();
+		OpenSSL_add_all_algorithms();
+		SSL_load_error_strings();
+	}
+
 	if((obj = (Object*)DoSuperMethodA(cl, obj, (Msg)msg)))
 	{
 		BPTR avatars_dir, pictures_dir;
@@ -183,6 +197,11 @@ static IPTR mDispose(Class *cl, Object *obj, Msg msg)
 	while((n = RemHead((struct List*)&d->PicturesQueue)))
 		FreeMem(n, sizeof(struct PictureQueueEntry));
 
+	if (OpenSSL3Base)
+		CloseLibrary(OpenSSL3Base);
+
+	OpenSSL3Base = NULL;
+
 	return DoSuperMethodA(cl, obj, msg);
 }
 
@@ -268,7 +287,7 @@ static IPTR mConnect(Class *cl, Object *obj, struct KWAP_Connect *msg)
 
 					tprintf("no server addr!\n");
 
-					if((url = FmtNew("appmsg.gadu-gadu.pl/appsvc/appmsg_ver8.asp?fmnumber=%ld&fmt=2&lastmsg=0&version=" GGLIB_DEFAULT_CLIENT_VERSION, uin)))
+					if((url = FmtNew("appmsg.gadu-gadu.pl/appsvc/appmsg_ver11.asp?tls=1&fmnumber=%ld&fmt=2&lastmsg=0&version=" GGLIB_DEFAULT_CLIENT_VERSION, uin)))
 					{
 						tprintf("url: %ls\n", url);
 						AddHttpGetEvent(&d->EventsList, url, GG_HTTP_USERAGENT, GGM_HubDone, NULL);
@@ -956,34 +975,50 @@ static IPTR mFetchContactInfo(Class *cl, Object *obj, struct KWAP_FetchContactIn
 static IPTR mHubDone(Class *cl, Object *obj, struct KWAP_HttpCallBack *msg)
 {
 	struct ObjData *d = INST_DATA(cl, obj);
+	ENTER();
 
 	if(msg->DataLength > 0)
 	{
-		ULONG spaces_no = 0, ip_start = 0, ip_end;
+		ULONG spaces_no = 0, hostname_start = 0, hostname_end;
 
-		while(msg->Data[ip_start] != 0x00)
+		while(msg->Data[hostname_start] != 0x00)
 		{
-			if(msg->Data[ip_start++] == ' ')
+			if(msg->Data[hostname_start++] == ' ')
 				if(++spaces_no == 2)
 					break;
 		}
 
-		if(msg->Data[ip_start] != 0x00)
+		if(msg->Data[hostname_start] != 0x00)
 		{
-			ip_end = ip_start + 1;
+			hostname_end = hostname_start + 1;
 
-			while(msg->Data[ip_end] != 0x00 && msg->Data[ip_end] != ':' && msg->Data[ip_end++] != ' ');
+			while(msg->Data[hostname_end] != 0x00 && msg->Data[++hostname_end] != ':');
 
-			msg->Data[ip_end] = 0x00;
-
-			StrNCopy(msg->Data + ip_start, d->ServerIP, 16);
-
-			if(GGConnect(d->GGSession, d->ServerIP, GG_DEFAULT_PORT))
+			if(msg->Data[hostname_end] == ':')
 			{
-				AddErrorEvent(&d->EventsList, ERRNO_ONLY_MESSAGE, GetString(MSG_MODULE_MSG_START_CONNECTING));
+				struct hostent *he;
+
+				msg->Data[hostname_end] = 0x00;
+
+#define SocketBase d->GGSession->SocketBase
+				if((he = gethostbyname(msg->Data + hostname_start)) != NULL)
+				{
+					struct in_addr **addr_list = (struct in_addr**) he->h_addr_list;
+
+					StrNCopy(Inet_NtoA(addr_list[0]->s_addr), d->ServerIP, sizeof(d->ServerIP));
+
+					if(GGConnect(d->GGSession, d->ServerIP, GG_DEFAULT_PORT))
+						AddErrorEvent(&d->EventsList, ERRNO_ONLY_MESSAGE, GetString(MSG_MODULE_MSG_START_CONNECTING));
+					else
+						AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, NULL);
+				}
+				else
+					AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, GetString(MSG_MODULE_MSG_HUB_FAIL));
+#undef SocketBase
+
 			}
 			else
-				AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, NULL);
+				AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, GetString(MSG_MODULE_MSG_HUB_FAIL));
 		}
 		else
 			AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, GetString(MSG_MODULE_MSG_HUB_FAIL));
@@ -991,7 +1026,7 @@ static IPTR mHubDone(Class *cl, Object *obj, struct KWAP_HttpCallBack *msg)
 	else
 		AddErrorEvent(&d->EventsList, ERRNO_CONNECTION_FAILED, GetString(MSG_MODULE_MSG_HUB_FAIL));
 
-
+	LEAVE();
 	return (IPTR)0;
 }
 

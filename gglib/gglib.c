@@ -27,20 +27,20 @@
 #include <dos/dos.h>
 #include <netdb.h>
 #include <errno.h>
+#include <openssl/ssl.h>
 #include "globaldefines.h"
 #include "support.h"
 #include "endianess.h"
 #include "gghandlers.h"
 #include "ggpackets.h"
 #include "ggmessage.h"
-#include "http.h"
 #include "gglib.h"
 
 #define SocketBase gg_sess->SocketBase
 
-extern struct Library *SysBase, *UtilityBase, *DOSBase;
+extern struct Library *SysBase, *UtilityBase, *DOSBase, *OpenSSL3Base;
 
-__attribute__((section(".text"))) const UBYTE GGLibVTag[] = VERSTAG;
+__attribute__((section(".text.const"))) const UBYTE GGLibVTag[] = VERSTAG;
 
 /****f* gglib.c/GGCreateSessionTagList()
  *
@@ -122,7 +122,7 @@ struct GGSession *GGCreateSessionTagList(ULONG uin, STRPTR password, struct TagI
 					gg_sess->ggs_StatusDescription = StrNew(desc);
 					gg_sess->ggs_ImageSize = GetTagData(GGA_CreateSession_Image_Size, 0, taglist);
 					gg_sess->ggs_SessionState = GGS_STATE_DISCONNECTED;
-					gg_sess->ggs_Check |= GGS_CHECK_READ; /* biblioteka bêdzie najpierw czytaæ (czekamy na pakiet GGPWelcome) */
+					gg_sess->ggs_Check |= GGS_CHECK_WRITE; /* biblioteka bêdzie najpierw pisaæ (SSL handshake) */
 					tprintf("GGCreateSession() succeded\n");
 				}
 				else
@@ -160,11 +160,19 @@ VOID GGFreeSession(struct GGSession *gg_sess)
 	{
 		if(gg_sess->ggs_Socket != -1)
 		{
+			if (gg_sess->ggs_SSL)
+				SSL_shutdown(gg_sess->ggs_SSL);
 			GGWriteData(gg_sess);
-
-			CloseSocket(gg_sess->ggs_Socket);
-			gg_sess->ggs_Socket = -1;
 		}
+
+		if (gg_sess->ggs_SSL)
+			SSL_free(gg_sess->ggs_SSL);
+
+		if (gg_sess->ggs_SSLCtx)
+			SSL_CTX_free(gg_sess->ggs_SSLCtx);
+
+		if(gg_sess->ggs_Socket != -1)
+			CloseSocket(gg_sess->ggs_Socket);
 
 		if(SocketBase)
 			CloseLibrary(SocketBase);
@@ -186,82 +194,6 @@ VOID GGFreeSession(struct GGSession *gg_sess)
 	LEAVE();
 }
 
-/****f* gglib.c/GGAskHub()
- *
- *  NAME
- *    GGAskHub()
- *
- *  SYNOPSIS
- *    BOOL GGAskHub(ULONG uin, UBYTE *server, USHORT *port)
- *
- *  FUNCTION
- *    Funkcja s³u¿y do odpytania HUBa sieci GG o adres serwera, z którym
- *    mo¿na siê po³±czyæ. Wska¼nik na adres IP w formie ³añcucha znaków zostanie wpisany
- *    do bufora wskazywanego przez server, natomiast port w zmiennej wskazywanej przez port.
- *
- *  INPUTS
- *    uin -- numer GG, który chce siê po³aczyæ;
- *    server -- wska¼nik na bufor, do którego zostanie wpisany adres serwera;
- *    port -- wska¼nik na zmienn±, do której zostanie wpisany numer portu.
- *
- *  RESULT
- *    - TRUE -- sukces
- *    - FALSE -- w.p.p.
- *
- *   NOTES
- *    Funkcja blokuje wykonywany proces na czas wykonania zapytania HTTP.
- *    Bufor na adres serwera powinien mieæ przynajmniej 16 bajtów.
- *
- *****/
-
-BOOL GGAskHub(ULONG uin, UBYTE *server, USHORT *port)
-{
-	BOOL result = FALSE;
-	STRPTR url;
-	LONG res_len;
-	ENTER();
-
-	if(server != NULL && port != NULL)
-	{
-		if((url = FmtNew("appmsg.gadu-gadu.pl/appsvc/appmsg_ver8.asp?fmnumber=%ld&fmt=2&lastmsg=0&version=" GGLIB_DEFAULT_CLIENT_VERSION, uin)))
-		{
-			UBYTE *http_req;
-
-			if((http_req = HttpGetRequest(url, &res_len, GG_HTTP_USERAGENT)) && res_len)
-			{
-				ULONG spaces_no = 0, ip_start = 0, ip_end;
-
-				while(http_req[ip_start] != 0x00)
-				{
-					if(http_req[ip_start++] == ' ')
-						if(++spaces_no == 2)
-							break;
-				}
-
-				if(http_req[ip_start] != 0x00)
-				{
-					ip_end = ip_start + 1;
-
-					while(http_req[ip_end] != 0x00 && http_req[ip_end] != ':' && http_req[ip_end++] != ' ');
-
-					http_req[ip_end] = 0x00;
-
-					StrNCopy(http_req + ip_start, server, 16);
-					*port = GG_DEFAULT_PORT;
-
-					result = TRUE;
-				}
-				FreeVec(http_req);
-			}
-			FmtFree(url);
-		}
-	}
-
-	LEAVE();
-	return result;
-}
-
-
 /****f* gglib.c/GGConnect()
  *
  *  NAME
@@ -272,12 +204,9 @@ BOOL GGAskHub(ULONG uin, UBYTE *server, USHORT *port)
  *
  *  FUNCTION
  *    Funkcja s³u¿y do rozpoczêcia nawi±zywania po³±czenia z sieci± GG. Nawi±zywanie
- *    jest tylko rozpoczynane, poniewa¿ po³±czenie jest asynchroniczne.
- *    W przypadku kiedy adres serwera nie jest podany (server == NULL) funkcja
- *    "blokuje" wykonywany proces w celu wykonania zapytania HTTP do HUB-a sieci GG.
- *    Pó¼niej nastêpuje rozpoczêcie nawi±zywania bezpo¶redniego po³±czenia
- *    do podanego przez HUB serwera. Po wykonaniu tej funkcji nale¿y przej¶æ do oczekiwania
- *    na zdarzenia dotycz±ce socketu po³±czenia i je¶li takie wyst±pi± wywo³aæ GGWatchEvent().
+ *    jest tylko rozpoczynane, poniewa¿ po³±czenie jest asynchroniczne. Po wykonaniu
+ *    tej funkcji nale¿y przej¶æ do oczekiwania na zdarzenia dotycz±ce socketu
+ *    po³±czenia i je¶li takie wyst±pi± wywo³aæ GGWatchEvent().
  *
  *  INPUTS
  *    gg_sess -- struktura GGSession odpowiadaj±ce za po³±czenie.
@@ -293,21 +222,8 @@ BOOL GGConnect(struct GGSession *gg_sess, STRPTR server, USHORT port)
 	ENTER();
 	BOOL result = FALSE;
 
-	if(gg_sess)
+	if(gg_sess && server && port != 0)
 	{
-		UBYTE buffer[16];
-
-		if(server == NULL || port == 0)
-		{
-			if(!GGAskHub(gg_sess->ggs_Uin, buffer, &port))
-			{
-				LEAVE();
-				return FALSE;
-			}
-
-			server = (STRPTR)buffer;
-		}
-
 		if((gg_sess->ggs_Ip = inet_addr(server)) != INADDR_NONE)
 		{
 			gg_sess->ggs_Port = port;
@@ -329,15 +245,28 @@ BOOL GGConnect(struct GGSession *gg_sess, STRPTR server, USHORT port)
 
 						if(he)
 						{
-							addrname.sin_port = htons(GG_DEFAULT_PORT);
+							addrname.sin_port = htons(port);
 							addrname.sin_family = AF_INET;
 							addrname.sin_addr = *((struct in_addr *) he->h_addr);
 
 							if(connect(gg_sess->ggs_Socket, (struct sockaddr*)&addrname, sizeof(addrname)) != -1 || Errno() == EINPROGRESS)
 							{
-								gg_sess->ggs_SessionState = GGS_STATE_CONNECTING;
-								gg_sess->ggs_Check |= GGS_CHECK_WRITE;
-								result = TRUE;
+								if((gg_sess->ggs_SSLCtx = SSL_CTX_new(TLS_client_method())))
+								{
+									SSL_CTX_set_verify(gg_sess->ggs_SSLCtx, SSL_VERIFY_NONE, NULL);
+
+									if ((gg_sess->ggs_SSL = SSL_new(gg_sess->ggs_SSLCtx)))
+									{
+										SSL_set_fd(gg_sess->ggs_SSL, gg_sess->ggs_Socket);
+										gg_sess->ggs_SessionState = GGS_STATE_CONNECTING;
+										gg_sess->ggs_Check |= GGS_CHECK_WRITE;
+										result = TRUE;
+									}
+									else
+										GG_SESSION_ERROR(gg_sess, GGS_ERRNO_SOCKET_LIB);
+								}
+								else
+									GG_SESSION_ERROR(gg_sess, GGS_ERRNO_SOCKET_LIB);
 							}
 							else
 								GG_SESSION_ERROR(gg_sess, GGS_ERRNO_SOCKET_LIB);

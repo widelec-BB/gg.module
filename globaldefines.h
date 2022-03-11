@@ -9,12 +9,12 @@
 
 #define CLASSNAME "gg.module"
 #define VERSION 1
-#define REVISION 3
+#define REVISION 4
 #define DATE __AMIGADATE__
-#define VERS "gg.module 1.3"
+#define VERS "gg.module 1.4"
 #define AUTHOR "Filip \"widelec\" Maryjañski"
 #define DESC "GG Module for KwaKwa"
-#define COPYRIGHT "© " "2013 - 2018 " AUTHOR
+#define COPYRIGHT "© " "2013 - 2022 " AUTHOR
 #define VSTRING VERS DATE COPYRIGHT
 #define VERSTAG "\0$VER: " VSTRING
 #define RELEASE_TAG "F1"

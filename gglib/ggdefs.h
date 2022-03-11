@@ -22,7 +22,7 @@
 #define __GGDEFS_H__
 
 /* po³±czenie */
-#define GG_DEFAULT_PORT    (8074)
+#define GG_DEFAULT_PORT    (443)
 #define GG_HTTP_USERAGENT  "Mozilla/4.7 [en] (Win98; I)"
 
 /* flagi ficzerów */
@@ -46,7 +46,7 @@
 /* wersje protoko³u */
 #define GGLIB_DEFAULT_PROTOCOL_VERSION (0x40)                /* jedna, jedyna obs³ugiwana, domy¶lna */
 #define GGLIB_DEFAULT_CLIENT_NAME      "KwaKwa "
-#define GGLIB_DEFAULT_CLIENT_VERSION   "1.5"
+#define GGLIB_DEFAULT_CLIENT_VERSION   "1.9"
 
 /* definicje zgodne z oryginalnym klientem GG (Gadu-Gadu 10) */
 //#define GGLIB_DEFAULT_CLIENT_NAME      "Gadu-Gadu Client Build "

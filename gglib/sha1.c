@@ -40,7 +40,7 @@ A million repetitions of "a"
 #include <proto/exec.h>
 #include <libvstring.h>
 #include "globaldefines.h"
-#include "support.h"
+VOID *MemSet(VOID *ptr, LONG word, LONG size);
 #define memset(ptr, ch, len) MemSet(ptr, ch, len)
 #define memcpy(dst, src, len) CopyMem((APTR)src, (APTR)dst, len)
 typedef ULONG uint32_t;

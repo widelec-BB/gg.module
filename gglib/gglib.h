@@ -29,6 +29,8 @@
 #include <dos/dos.h>
 #endif
 
+#include <openssl/ssl.h>
+
 #include "ggdefs.h"
 
 /* Definicje tagów, które rozpoznaje funkcja GGCreateSessionTagList() */
@@ -206,6 +208,9 @@ struct GGSession
 	LONG ggs_WrittenLen;
 	LONG ggs_Check;
 	struct Library* SocketBase;
+
+	SSL *ggs_SSL;
+	SSL_CTX *ggs_SSLCtx;
 };
 
 /********GGSession****/
