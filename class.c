@@ -271,9 +271,7 @@ static IPTR mConnect(Class *cl, Object *obj, struct KWAP_Connect *msg)
 					if((url = FmtNew("appmsg.gadu-gadu.pl/appsvc/appmsg_ver8.asp?fmnumber=%ld&fmt=2&lastmsg=0&version=" GGLIB_DEFAULT_CLIENT_VERSION, uin)))
 					{
 						tprintf("url: %ls\n", url);
-						tprintf("first Event: %lp\n", d->EventsList.mlh_Head);
 						AddHttpGetEvent(&d->EventsList, url, GG_HTTP_USERAGENT, GGM_HubDone, NULL);
-						tprintf("first Event2: %lp\n", d->EventsList.mlh_Head);
 						result = TRUE;
 					}
 					else
@@ -867,20 +865,14 @@ static IPTR mSendPicture(Class *cl, Object *obj, struct KWAP_SendPicture *msg)
 
 	if(StrToLong(msg->ContactID, &uin) != -1)
 	{
-		tprintf("wysy³am na UIN: %ld\n", uin);
 		if((org_fh = Open(msg->Path, MODE_OLDFILE)))
 		{
 			id = GGCreateImageId(org_fh);
 
-			tprintf("oryginalny otwarty, id: %ls\n", id);
-
 			FmtNPut(buffer, CACHE_PICTURES_DIR"%ls", sizeof(buffer), id);
-
-			tprintf("sciezka w cachu: %ls\n", buffer);
 
 			if((cache_fh = Open(buffer, MODE_OLDFILE)))
 			{
-				tprintf("wysy³am z cachu\n");
 				if(GGSendMessage(d->GGSession, uin, NULL, id))
 					result = TRUE;
 				Close(cache_fh);
@@ -902,7 +894,6 @@ static IPTR mSendPicture(Class *cl, Object *obj, struct KWAP_SendPicture *msg)
 
 				if(result)
 				{
-					tprintf("wysylam wczytany\n");
 					if(!GGSendMessage(d->GGSession, uin, NULL, id))
 						result = FALSE;
 				}
@@ -919,8 +910,6 @@ static IPTR mSendPicture(Class *cl, Object *obj, struct KWAP_SendPicture *msg)
 		FmtNPut(buffer, GetString(MSG_MODULE_MSG_PIC_SEND_FAILED), sizeof(buffer), id ? id : (STRPTR)"NULL");
 		AddErrorEvent(&d->EventsList, ERRNO_ONLY_MESSAGE, buffer);
 	}
-	else
-		tprintf("poszlo\n");
 
 	return (IPTR)result;
 }
