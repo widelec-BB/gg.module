@@ -253,7 +253,9 @@ BOOL GGConnect(struct GGSession *gg_sess, STRPTR server, USHORT port)
 							{
 								if((gg_sess->ggs_SSLCtx = SSL_CTX_new(TLS_client_method())))
 								{
+#ifdef __DEBUG__
 									SSL_CTX_set_verify(gg_sess->ggs_SSLCtx, SSL_VERIFY_NONE, NULL);
+#endif
 
 									if ((gg_sess->ggs_SSL = SSL_new(gg_sess->ggs_SSLCtx)))
 									{
