@@ -135,7 +135,7 @@ ifeq ($(OS),MorphOS)
 	@copy $(OUTDIR)$(OUTFILE) RAM:$(OUTFILE)/modules/$(OUTFILE) >NIL:
 	@copy $(OUTDIR)catalogs RAM:$(OUTFILE)/catalogs ALL >NIL:
 	@copy doc RAM:$(OUTFILE) ALL >NIL:
-	@copy LICENCE RAM:$(OUTFILE) >NIL:
+	@copy LICENSE RAM:$(OUTFILE) >NIL:
 	@strip --strip-unneeded --remove-section .comment RAM:$(OUTFILE)/modules/$(OUTFILE) >NIL:
 	@find RAM:$(OUTFILE) \( -name .svn -o -name .git \) -printf "\"%p\"\n" | xargs rm -rf
 	@MOSSYS:C/LHa a -r -a RAM:$(OUTFILE).lha RAM:$(OUTFILE)/ >NIL:
