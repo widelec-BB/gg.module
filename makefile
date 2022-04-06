@@ -8,6 +8,7 @@ TARGET_DONE=printf "\033[K\033[0;32mTarget \"$@\" successfully done.\033[0m\n"
 LINKING=printf "\033[K\033[1;34mLinking project \"$@\"... \033[0m\n"
 NOTMORPHOS=printf "\033[K\033[1;91mTarget \"$@\" is not supported in non-MorphOS enviroment. \033[0m\n"
 
+# VARIABLES #
 OS = $(shell uname -s)
 
 NIL = /dev/null 2>&1
@@ -58,7 +59,7 @@ gglib/libgg.a: gglib/*.c gglib/*.h
 	@make -C gglib
 
 # target 'compiler' (compile target)
-$(OBJDIR)class.c.o: class.c class.h globaldefines.h
+$(OBJDIR)class.c.o: class.c class.h globaldefines.h translations.h
 	@$(COMPILE_FILE)
 	@$(COMPILE) -c -o $(OBJDIR)class.c.o class.c
 
@@ -95,12 +96,24 @@ $(PROJECT): $(OBJS) gglib/libgg.a
 	@$(LINK) $(OBJS) -o $(PROJECT) $(LIBS)
 
 # any other targets
+.PHONY: strip clean dump dist install
+
+translations.h: locale/$(OUTFILE).cs
+ifeq ($(OS),MorphOS)
+	MakeDir ALL $(OUTDIR)catalogs/polski
+	SimpleCat locale/$(OUTFILE).cs
+else
+	@$(NOTMORPHOS)
+endif
 
 strip:
 	@strip --strip-unneeded --remove-section=.comment $(PROJECT)
 	@$(TARGET_DONE)
 
 clean:
+ifeq ($(OS),MorphOS)
+	@-rm -rf translations.h $(OUTDIR)catalogs
+endif
 	@make -C gglib clean >$(NIL)
 	@-rm $(PROJECT) >$(NIL)
 	@-rm $(OBJDIR)*.o >$(NIL)
@@ -120,12 +133,22 @@ ifeq ($(OS),MorphOS)
 	@mkdir RAM:$(OUTFILE) >NIL:
 	@mkdir RAM:$(OUTFILE)/modules >NIL:
 	@copy $(OUTDIR)$(OUTFILE) RAM:$(OUTFILE)/modules/$(OUTFILE) >NIL:
-	@-copy $(OUTDIR)catalogs RAM:$(OUTFILE)/catalogs ALL >NIL:
+	@copy $(OUTDIR)catalogs RAM:$(OUTFILE)/catalogs ALL >NIL:
 	@copy doc RAM:$(OUTFILE) ALL >NIL:
 	@copy LICENCE RAM:$(OUTFILE) >NIL:
 	@strip --strip-unneeded --remove-section .comment RAM:$(OUTFILE)/modules/$(OUTFILE) >NIL:
 	@find RAM:$(OUTFILE) \( -name .svn -o -name .git \) -printf "\"%p\"\n" | xargs rm -rf
 	@MOSSYS:C/LHa a -r -a RAM:$(OUTFILE).lha RAM:$(OUTFILE)/ >NIL:
+	@$(TARGET_DONE)
+else
+	@$(NOTMORPHOS)
+endif
+
+install:
+ifeq ($(OS),MorphOS)
+	@copy $(OUTDIR)$($OUTFILE) SYS:Applications/KwaKwa/modules/ >NIL:
+	@copy ALL bin/catalogs/ SYS:Applications/KwaKwa/catalogs/ >NIL:
+	@avail flush
 	@$(TARGET_DONE)
 else
 	@$(NOTMORPHOS)

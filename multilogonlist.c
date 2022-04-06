@@ -50,6 +50,7 @@ static IPTR MultilogonListNew(Class *cl, Object *obj, struct opSet *msg)
 	Object *mstrp, *discon;
 
 	obj = (Object*)DoSuperNew((IPTR)cl, (IPTR)obj,
+		MUIA_Unicode, TRUE,
 		MUIA_Background, MUII_ReadListBack,
 		MUIA_Frame, MUIV_Frame_ReadList,
 		MUIA_List_Format, (IPTR)"PREPARSE=\33c, PREPARSE=\33c, PREPARSE=\33c, PREPARSE=\33c",
@@ -57,6 +58,7 @@ static IPTR MultilogonListNew(Class *cl, Object *obj, struct opSet *msg)
 		MUIA_ContextMenu, (IPTR)(mstrp = MUI_NewObjectM(MUIC_Menustrip,
 			MUIA_Group_Child, MUI_NewObjectM(MUIC_Menu,
 				MUIA_Group_Child, (IPTR)(discon = MUI_NewObjectM(MUIC_Menuitem,
+					MUIA_Unicode, TRUE,
 					MUIA_Menuitem_Title, GetString(MSG_MULTILOGON_WINDOW_LIST_MENU_DISCONNECT),
 				TAG_END)),
 			TAG_END),
@@ -213,6 +215,6 @@ static IPTR MultilogonListDispatcher(VOID)
 		case MLM_InsertData: return(MultilogonListInsertData(cl, obj, (struct MLP_InsertData*)msg));
 		case MLM_Disconnect: return(MultilogonListDisconnect(cl, obj));
 		case MLM_OpenWebPubDir: return(MultilogonListOpenWebPubDir(cl, obj));
-		default:  return (DoSuperMethodA(cl, obj, msg));
+		default: return (DoSuperMethodA(cl, obj, msg));
 	}
 }

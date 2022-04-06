@@ -49,7 +49,6 @@ LONG dummy_function(void)
 
 __attribute__ ((section(".text.consts"))) const char VTag[] = VERSTAG;
 
-
 Class* InitClass(struct ClassBase *cb)
 {
 	Class *cl = NULL;
@@ -76,7 +75,7 @@ BOOL InitResources(struct ClassBase *cb)
 	if(!(EzxmlBase = OpenLibrary("ezxml.library", 8))) return FALSE;
 	if(!(OpenURLBase = OpenLibrary("openurl.library", 1))) return FALSE;
 	if(!(CharsetsBase = OpenLibrary("charsets.library", 53))) return FALSE;
-	Locale_Open(CLASSNAME".catalog", 1, 0);
+	Locale_Open(CLASSNAME".catalog", 2, 0);
 	if(!CreateMultilogonListClass()) return FALSE;
 	if(!(InitClass(cb))) return FALSE;
 	return TRUE;
